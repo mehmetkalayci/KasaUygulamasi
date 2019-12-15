@@ -1,0 +1,9 @@
+<logEntry>
+  <Date>15.12.2019 02:24:50</Date>
+  <Exception>
+    <Source>CashBookApp.WinForm</Source>
+    <Message>HRESULT özel durum döndürdü: 0x800A03EC</Message>
+    <Stack>   konum: Microsoft.Office.Interop.Excel._Worksheet.PasteSpecial(Object Format, Object Link, Object DisplayAsIcon, Object IconFileName, Object IconIndex, Object IconLabel, Object NoHTMLFormatting)
+   konum: CashBookApp.WinForm.Helper.ExcelHelper.ExportToExcel(String path) C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\Helper\ExcelHelper.cs içinde: satır 86</Stack>
+  </Exception>
+</logEntry>

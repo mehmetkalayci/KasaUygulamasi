@@ -34,5 +34,65 @@ namespace CashBookApp.WinForm.Properties {
                 this["ProgramName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public string StockQuantityLimit {
+            get {
+                return ((string)(this["StockQuantityLimit"]));
+            }
+            set {
+                this["StockQuantityLimit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string Username {
+            get {
+                return ((string)(this["Username"]));
+            }
+            set {
+                this["Username"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("150")]
+        public int SummarySplitterDistance {
+            get {
+                return ((int)(this["SummarySplitterDistance"]));
+            }
+            set {
+                this["SummarySplitterDistance"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowSummaryInPayments {
+            get {
+                return ((bool)(this["ShowSummaryInPayments"]));
+            }
+            set {
+                this["ShowSummaryInPayments"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public int SalesListSplitter {
+            get {
+                return ((int)(this["SalesListSplitter"]));
+            }
+            set {
+                this["SalesListSplitter"] = value;
+            }
+        }
     }
 }

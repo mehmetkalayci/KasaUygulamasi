@@ -27,8 +27,8 @@ namespace CashBookApp.WinForm.Model
         public string Size { get; set; }
         public string Color { get; set; }
         public Nullable<int> Quantity { get; set; }
-        public Nullable<System.DateTime> CreatedAt { get; set; }
-        public Nullable<bool> IsDeleted { get; set; }
+        public System.DateTime CreatedAt { get; set; }
+        public bool IsDeleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetail { get; set; }

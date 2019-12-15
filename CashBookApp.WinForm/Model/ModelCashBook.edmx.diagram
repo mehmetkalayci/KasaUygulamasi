@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e479b09b0bda4099a6fb85487006ee06" Name="Diagram1">
-        <EntityTypeShape EntityType="CashBookModel.Customer" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CashBookModel.Order" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CashBookModel.OrderDetail" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CashBookModel.Payment" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CashBookModel.PaymentType" Width="1.5" PointX="6" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CashBookModel.Product" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CashBookModel.User" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
-        <AssociationConnector Association="CashBookModel.FK_Order_Customer" ManuallyRouted="false" />
-        <AssociationConnector Association="CashBookModel.FK_OrderDetail_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="CashBookModel.FK_OrderDetail_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="CashBookModel.FK_Payment_PaymentType" ManuallyRouted="false" />
-        <AssociationConnector Association="CashBookModel.OrderPayment" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CashBookModel.Customer" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="CashBookModel.Order" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="CashBookModel.OrderDetail" Width="1.5" PointX="8.25" PointY="5" />
+        <EntityTypeShape EntityType="CashBookModel.Payment" Width="1.5" PointX="5.25" PointY="4.875" />
+        <EntityTypeShape EntityType="CashBookModel.PaymentType" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="CashBookModel.Product" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="CashBookModel.User" Width="1.5" PointX="0.75" PointY="8.875" />
+        <AssociationConnector Association="CashBookModel.FK_Order_Customer" />
+        <AssociationConnector Association="CashBookModel.FK_OrderDetail_Order" />
+        <AssociationConnector Association="CashBookModel.FK_OrderDetail_Product" />
+        <AssociationConnector Association="CashBookModel.FK_Payment_PaymentType" />
+        <AssociationConnector Association="CashBookModel.OrderPayment" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -18,6 +18,9 @@ namespace CashBookApp.WinForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
+
+
+
         }
     }
 }

@@ -134,11 +134,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CashBook\FrmPaymentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CashBook\FrmPaymentAdd.Designer.cs">
+      <DependentUpon>FrmPaymentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CashBook\FrmPaymentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CashBook\FrmPaymentList.Designer.cs">
+      <DependentUpon>FrmPaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Client\FrmCustomerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Client\FrmCustomerEdit.Designer.cs">
+      <DependentUpon>FrmCustomerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Client\FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Client\FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
@@ -146,21 +175,109 @@
     <Compile Include="UI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Sales\FrmEditSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmEditSales.Designer.cs">
+      <DependentUpon>FrmEditSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesAdd.Designer.cs">
+      <DependentUpon>FrmSalesAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesList.Designer.cs">
+      <DependentUpon>FrmSalesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Setting\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Setting\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Setting\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Setting\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Setting\FrmLoginSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Setting\FrmLoginSettings.Designer.cs">
+      <DependentUpon>FrmLoginSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stock\FrmStockEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Stock\FrmStockEdit.Designer.cs">
+      <DependentUpon>FrmStockEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stock\FrmStockAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Stock\FrmStockAdd.Designer.cs">
+      <DependentUpon>FrmStockAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stock\FrmStockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Stock\FrmStockList.Designer.cs">
+      <DependentUpon>FrmStockList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UI\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CashBook\FrmPaymentAdd.resx">
+      <DependentUpon>FrmPaymentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CashBook\FrmPaymentList.resx">
+      <DependentUpon>FrmPaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Client\FrmCustomerEdit.resx">
+      <DependentUpon>FrmCustomerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Client\FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmEditSales.resx">
+      <DependentUpon>FrmEditSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmSalesAdd.resx">
+      <DependentUpon>FrmSalesAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmSalesList.resx">
+      <DependentUpon>FrmSalesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Setting\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Setting\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Setting\FrmLoginSettings.resx">
+      <DependentUpon>FrmLoginSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Stock\FrmStockEdit.resx">
+      <DependentUpon>FrmStockEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Stock\FrmStockAdd.resx">
+      <DependentUpon>FrmStockAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Stock\FrmStockList.resx">
+      <DependentUpon>FrmStockList.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\ModelCashBook.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -184,14 +301,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CashBook.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CashBook_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CashBook.mdf</DependentUpon>
-    </Content>
+    <Content Include="Backup.exe" />
     <Content Include="Data\CashBook.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CashBook_log.ldf">
+      <DependentUpon>CashBook.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Model\ModelCashBook.Context.tt">
@@ -204,6 +319,28 @@
       <DependentUpon>ModelCashBook.edmx</DependentUpon>
       <LastGenOutput>ModelCashBook.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\barcode-scanner.png" />
+    <None Include="Resources\barcode.png" />
+    <None Include="Resources\supermarket-barcode.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\package-search.png" />
+    <None Include="Resources\package-add.png" />
+    <None Include="Resources\user-settings.png" />
+    <None Include="Resources\sales-list1.png" />
+    <None Include="Resources\graph.png" />
+    <None Include="Resources\search-person.png" />
+    <None Include="Resources\servers.png" />
+    <None Include="Resources\approve.png" />
+    <None Include="Resources\turkish-lira.png" />
+    <None Include="Resources\shopping-bag.png" />
+    <None Include="Resources\summary.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\add.png" />
     <None Include="Resources\loading.gif" />
   </ItemGroup>
   <ItemGroup />

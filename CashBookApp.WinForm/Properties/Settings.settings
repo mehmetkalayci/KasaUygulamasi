@@ -5,5 +5,20 @@
     <Setting Name="ProgramName" Type="System.String" Scope="User">
       <Value Profile="(Default)">La Nina's Shoes &amp;&amp; Bags</Value>
     </Setting>
+    <Setting Name="StockQuantityLimit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="SummarySplitterDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
+    <Setting Name="ShowSummaryInPayments" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SalesListSplitter" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

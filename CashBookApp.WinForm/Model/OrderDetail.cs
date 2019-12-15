@@ -19,7 +19,7 @@ namespace CashBookApp.WinForm.Model
         public int ProductID { get; set; }
         public decimal Price { get; set; }
         public string ProductName { get; set; }
-        public Nullable<bool> IsDeleted { get; set; }
+        public bool IsDeleted { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

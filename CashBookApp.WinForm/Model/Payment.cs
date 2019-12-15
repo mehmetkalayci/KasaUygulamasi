@@ -25,8 +25,8 @@ namespace CashBookApp.WinForm.Model
         public decimal Amount { get; set; }
         public int PaymentTypeID { get; set; }
         public string Description { get; set; }
-        public Nullable<bool> IsExpense { get; set; }
-        public Nullable<bool> IsDeleted { get; set; }
+        public bool IsExpense { get; set; }
+        public bool IsDeleted { get; set; }
     
         public virtual PaymentType PaymentType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
