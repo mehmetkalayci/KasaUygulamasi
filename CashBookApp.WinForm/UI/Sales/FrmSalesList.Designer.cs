@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelCountOrderDetails = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelCountOrders = new System.Windows.Forms.ToolStripStatusLabel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnFilter = new MetroFramework.Controls.MetroButton();
             this.btnClear = new MetroFramework.Controls.MetroButton();
-            this.dtCreatedAtBefore = new MetroFramework.Controls.MetroDateTime();
+            this.dtEndDate = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.dtCreatedAtAfter = new MetroFramework.Controls.MetroDateTime();
+            this.dtStartDate = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.txtProductName = new MetroFramework.Controls.MetroTextBox();
-            this.txtBarcode = new MetroFramework.Controls.MetroTextBox();
+            this.txtCustomerPhone = new MetroFramework.Controls.MetroTextBox();
+            this.txtCustomerName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgDataOrders = new System.Windows.Forms.DataGridView();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelCountOrders = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgDataOrderDetails = new System.Windows.Forms.DataGridView();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelCountOrderDetails = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonFilter = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonExcel = new System.Windows.Forms.ToolStripButton();
-            this.statusStrip2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonReturn = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,45 +68,11 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDataOrders)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDataOrderDetails)).BeginInit();
+            this.statusStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // statusStrip2
-            // 
-            this.statusStrip2.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelCountOrderDetails});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 567);
-            this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.statusStrip2.Size = new System.Drawing.Size(350, 22);
-            this.statusStrip2.SizingGrip = false;
-            this.statusStrip2.TabIndex = 7;
-            // 
-            // toolStripStatusLabelCountOrderDetails
-            // 
-            this.toolStripStatusLabelCountOrderDetails.Name = "toolStripStatusLabelCountOrderDetails";
-            this.toolStripStatusLabelCountOrderDetails.Size = new System.Drawing.Size(16, 17);
-            this.toolStripStatusLabelCountOrderDetails.Text = "...";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelCountOrders});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 567);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(498, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 5;
-            // 
-            // toolStripStatusLabelCountOrders
-            // 
-            this.toolStripStatusLabelCountOrders.Name = "toolStripStatusLabelCountOrders";
-            this.toolStripStatusLabelCountOrders.Size = new System.Drawing.Size(16, 17);
-            this.toolStripStatusLabelCountOrders.Text = "...";
             // 
             // splitContainer1
             // 
@@ -120,14 +86,14 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btnFilter);
             this.splitContainer1.Panel1.Controls.Add(this.btnClear);
-            this.splitContainer1.Panel1.Controls.Add(this.dtCreatedAtBefore);
+            this.splitContainer1.Panel1.Controls.Add(this.dtEndDate);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel8);
-            this.splitContainer1.Panel1.Controls.Add(this.dtCreatedAtAfter);
+            this.splitContainer1.Panel1.Controls.Add(this.dtStartDate);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel7);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel9);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel10);
-            this.splitContainer1.Panel1.Controls.Add(this.txtProductName);
-            this.splitContainer1.Panel1.Controls.Add(this.txtBarcode);
+            this.splitContainer1.Panel1.Controls.Add(this.txtCustomerPhone);
+            this.splitContainer1.Panel1.Controls.Add(this.txtCustomerName);
             this.splitContainer1.Panel1.Controls.Add(this.metroLabel2);
             this.splitContainer1.Panel1MinSize = 200;
             // 
@@ -143,60 +109,66 @@
             // btnFilter
             // 
             this.btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFilter.Location = new System.Drawing.Point(109, 294);
+            this.btnFilter.Location = new System.Drawing.Point(109, 248);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
             this.btnFilter.TabIndex = 38;
             this.btnFilter.Text = "Filtrele";
             this.btnFilter.UseSelectable = true;
+            this.btnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(14, 294);
+            this.btnClear.Location = new System.Drawing.Point(14, 248);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 39;
             this.btnClear.Text = "Temizle";
             this.btnClear.UseSelectable = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
-            // dtCreatedAtBefore
+            // dtEndDate
             // 
-            this.dtCreatedAtBefore.Checked = false;
-            this.dtCreatedAtBefore.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtCreatedAtBefore.Location = new System.Drawing.Point(14, 259);
-            this.dtCreatedAtBefore.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtCreatedAtBefore.Name = "dtCreatedAtBefore";
-            this.dtCreatedAtBefore.ShowCheckBox = true;
-            this.dtCreatedAtBefore.Size = new System.Drawing.Size(170, 29);
-            this.dtCreatedAtBefore.TabIndex = 37;
+            this.dtEndDate.Checked = false;
+            this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtEndDate.Location = new System.Drawing.Point(14, 213);
+            this.dtEndDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtEndDate.Name = "dtEndDate";
+            this.dtEndDate.ShowCheckBox = true;
+            this.dtEndDate.Size = new System.Drawing.Size(170, 29);
+            this.dtEndDate.TabIndex = 37;
+            this.dtEndDate.ValueChanged += new System.EventHandler(this.DtStartDate_ValueChanged);
             // 
             // metroLabel8
             // 
-            this.metroLabel8.Location = new System.Drawing.Point(14, 214);
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(14, 191);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(170, 42);
+            this.metroLabel8.Size = new System.Drawing.Size(66, 19);
             this.metroLabel8.TabIndex = 36;
-            this.metroLabel8.Text = "İşlem tarihi x\'den önceki satışlar";
+            this.metroLabel8.Text = "Bitiş Tarihi";
             this.metroLabel8.WrapToLine = true;
             // 
-            // dtCreatedAtAfter
+            // dtStartDate
             // 
-            this.dtCreatedAtAfter.Checked = false;
-            this.dtCreatedAtAfter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtCreatedAtAfter.Location = new System.Drawing.Point(14, 182);
-            this.dtCreatedAtAfter.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtCreatedAtAfter.Name = "dtCreatedAtAfter";
-            this.dtCreatedAtAfter.ShowCheckBox = true;
-            this.dtCreatedAtAfter.Size = new System.Drawing.Size(170, 29);
-            this.dtCreatedAtAfter.TabIndex = 35;
+            this.dtStartDate.Checked = false;
+            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStartDate.Location = new System.Drawing.Point(14, 159);
+            this.dtStartDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.ShowCheckBox = true;
+            this.dtStartDate.Size = new System.Drawing.Size(170, 29);
+            this.dtStartDate.TabIndex = 35;
+            this.dtStartDate.ValueChanged += new System.EventHandler(this.DtStartDate_ValueChanged);
             // 
             // metroLabel7
             // 
+            this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(14, 137);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(167, 42);
+            this.metroLabel7.Size = new System.Drawing.Size(97, 19);
             this.metroLabel7.TabIndex = 34;
-            this.metroLabel7.Text = "İşlem tarihi x\'den sonraki satışlar";
+            this.metroLabel7.Text = "Başlangıç Tarihi";
             this.metroLabel7.WrapToLine = true;
             // 
             // metroLabel9
@@ -217,65 +189,67 @@
             this.metroLabel10.TabIndex = 22;
             this.metroLabel10.Text = "Müşteri Ad Soyad";
             // 
-            // txtProductName
+            // txtCustomerPhone
             // 
             // 
             // 
             // 
-            this.txtProductName.CustomButton.Image = null;
-            this.txtProductName.CustomButton.Location = new System.Drawing.Point(148, 1);
-            this.txtProductName.CustomButton.Name = "";
-            this.txtProductName.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtProductName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtProductName.CustomButton.TabIndex = 1;
-            this.txtProductName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtProductName.CustomButton.UseSelectable = true;
-            this.txtProductName.CustomButton.Visible = false;
-            this.txtProductName.Lines = new string[0];
-            this.txtProductName.Location = new System.Drawing.Point(14, 111);
-            this.txtProductName.MaxLength = 32767;
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.PasswordChar = '\0';
-            this.txtProductName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtProductName.SelectedText = "";
-            this.txtProductName.SelectionLength = 0;
-            this.txtProductName.SelectionStart = 0;
-            this.txtProductName.ShortcutsEnabled = true;
-            this.txtProductName.Size = new System.Drawing.Size(170, 23);
-            this.txtProductName.TabIndex = 25;
-            this.txtProductName.UseSelectable = true;
-            this.txtProductName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtProductName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerPhone.CustomButton.Image = null;
+            this.txtCustomerPhone.CustomButton.Location = new System.Drawing.Point(148, 1);
+            this.txtCustomerPhone.CustomButton.Name = "";
+            this.txtCustomerPhone.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCustomerPhone.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCustomerPhone.CustomButton.TabIndex = 1;
+            this.txtCustomerPhone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCustomerPhone.CustomButton.UseSelectable = true;
+            this.txtCustomerPhone.CustomButton.Visible = false;
+            this.txtCustomerPhone.Lines = new string[0];
+            this.txtCustomerPhone.Location = new System.Drawing.Point(14, 111);
+            this.txtCustomerPhone.MaxLength = 32767;
+            this.txtCustomerPhone.Name = "txtCustomerPhone";
+            this.txtCustomerPhone.PasswordChar = '\0';
+            this.txtCustomerPhone.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCustomerPhone.SelectedText = "";
+            this.txtCustomerPhone.SelectionLength = 0;
+            this.txtCustomerPhone.SelectionStart = 0;
+            this.txtCustomerPhone.ShortcutsEnabled = true;
+            this.txtCustomerPhone.Size = new System.Drawing.Size(170, 23);
+            this.txtCustomerPhone.TabIndex = 25;
+            this.txtCustomerPhone.UseSelectable = true;
+            this.txtCustomerPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCustomerPhone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownFilter);
             // 
-            // txtBarcode
+            // txtCustomerName
             // 
             // 
             // 
             // 
-            this.txtBarcode.CustomButton.Image = null;
-            this.txtBarcode.CustomButton.Location = new System.Drawing.Point(148, 1);
-            this.txtBarcode.CustomButton.Name = "";
-            this.txtBarcode.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtBarcode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBarcode.CustomButton.TabIndex = 1;
-            this.txtBarcode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBarcode.CustomButton.UseSelectable = true;
-            this.txtBarcode.CustomButton.Visible = false;
-            this.txtBarcode.Lines = new string[0];
-            this.txtBarcode.Location = new System.Drawing.Point(14, 63);
-            this.txtBarcode.MaxLength = 32767;
-            this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.PasswordChar = '\0';
-            this.txtBarcode.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBarcode.SelectedText = "";
-            this.txtBarcode.SelectionLength = 0;
-            this.txtBarcode.SelectionStart = 0;
-            this.txtBarcode.ShortcutsEnabled = true;
-            this.txtBarcode.Size = new System.Drawing.Size(170, 23);
-            this.txtBarcode.TabIndex = 23;
-            this.txtBarcode.UseSelectable = true;
-            this.txtBarcode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBarcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerName.CustomButton.Image = null;
+            this.txtCustomerName.CustomButton.Location = new System.Drawing.Point(148, 1);
+            this.txtCustomerName.CustomButton.Name = "";
+            this.txtCustomerName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCustomerName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCustomerName.CustomButton.TabIndex = 1;
+            this.txtCustomerName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCustomerName.CustomButton.UseSelectable = true;
+            this.txtCustomerName.CustomButton.Visible = false;
+            this.txtCustomerName.Lines = new string[0];
+            this.txtCustomerName.Location = new System.Drawing.Point(14, 63);
+            this.txtCustomerName.MaxLength = 32767;
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.PasswordChar = '\0';
+            this.txtCustomerName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCustomerName.SelectedText = "";
+            this.txtCustomerName.SelectionLength = 0;
+            this.txtCustomerName.SelectionStart = 0;
+            this.txtCustomerName.ShortcutsEnabled = true;
+            this.txtCustomerName.Size = new System.Drawing.Size(170, 23);
+            this.txtCustomerName.TabIndex = 23;
+            this.txtCustomerName.UseSelectable = true;
+            this.txtCustomerName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCustomerName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownFilter);
             // 
             // metroLabel2
             // 
@@ -321,14 +295,15 @@
             this.dgDataOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDataOrders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDataOrders.Location = new System.Drawing.Point(0, 19);
+            this.dgDataOrders.MultiSelect = false;
             this.dgDataOrders.Name = "dgDataOrders";
             this.dgDataOrders.ReadOnly = true;
             this.dgDataOrders.RowHeadersVisible = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgDataOrders.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgDataOrders.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgDataOrders.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgDataOrders.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgDataOrders.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -336,7 +311,7 @@
             this.dgDataOrders.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgDataOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDataOrders.Size = new System.Drawing.Size(498, 548);
-            this.dgDataOrders.TabIndex = 7;
+            this.dgDataOrders.TabIndex = 9;
             this.dgDataOrders.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDataOrders_CellContentDoubleClick);
             this.dgDataOrders.SelectionChanged += new System.EventHandler(this.DgDataOrders_SelectionChanged);
             // 
@@ -349,6 +324,24 @@
             this.metroLabel3.TabIndex = 6;
             this.metroLabel3.Text = "Satış Listesi";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelCountOrders});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 567);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(498, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 5;
+            // 
+            // toolStripStatusLabelCountOrders
+            // 
+            this.toolStripStatusLabelCountOrders.Name = "toolStripStatusLabelCountOrders";
+            this.toolStripStatusLabelCountOrders.Size = new System.Drawing.Size(16, 17);
+            this.toolStripStatusLabelCountOrders.Text = "...";
+            // 
             // dgDataOrderDetails
             // 
             this.dgDataOrderDetails.AllowUserToAddRows = false;
@@ -360,14 +353,15 @@
             this.dgDataOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDataOrderDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDataOrderDetails.Location = new System.Drawing.Point(0, 19);
+            this.dgDataOrderDetails.MultiSelect = false;
             this.dgDataOrderDetails.Name = "dgDataOrderDetails";
             this.dgDataOrderDetails.ReadOnly = true;
             this.dgDataOrderDetails.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgDataOrderDetails.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgDataOrderDetails.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgDataOrderDetails.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgDataOrderDetails.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgDataOrderDetails.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -386,6 +380,24 @@
             this.metroLabel5.TabIndex = 9;
             this.metroLabel5.Text = "Satış Detayları";
             // 
+            // statusStrip2
+            // 
+            this.statusStrip2.BackColor = System.Drawing.Color.Transparent;
+            this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelCountOrderDetails});
+            this.statusStrip2.Location = new System.Drawing.Point(0, 567);
+            this.statusStrip2.Name = "statusStrip2";
+            this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip2.Size = new System.Drawing.Size(350, 22);
+            this.statusStrip2.SizingGrip = false;
+            this.statusStrip2.TabIndex = 7;
+            // 
+            // toolStripStatusLabelCountOrderDetails
+            // 
+            this.toolStripStatusLabelCountOrderDetails.Name = "toolStripStatusLabelCountOrderDetails";
+            this.toolStripStatusLabelCountOrderDetails.Size = new System.Drawing.Size(16, 17);
+            this.toolStripStatusLabelCountOrderDetails.Text = "...";
+            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -395,18 +407,15 @@
             this.toolStripButtonUpdate,
             this.toolStripButtonFilter,
             this.toolStripSeparator1,
-            this.toolStripButtonExcel});
+            this.toolStripButtonExcel,
+            this.toolStripSeparator2,
+            this.toolStripButtonReturn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(857, 29);
             this.toolStrip1.TabIndex = 3;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
             // 
             // toolStripButtonDelete
             // 
@@ -439,6 +448,11 @@
             this.toolStripButtonFilter.Text = "Filtrele";
             this.toolStripButtonFilter.Click += new System.EventHandler(this.ToolStripButtonFilter_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
+            // 
             // toolStripButtonExcel
             // 
             this.toolStripButtonExcel.Image = global::CashBookApp.WinForm.Properties.Resources.excel;
@@ -449,6 +463,20 @@
             this.toolStripButtonExcel.Text = "Excel\'e Aktar";
             this.toolStripButtonExcel.Click += new System.EventHandler(this.ToolStripButtonExcel_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 23);
+            // 
+            // toolStripButtonReturn
+            // 
+            this.toolStripButtonReturn.Image = global::CashBookApp.WinForm.Properties.Resources._return;
+            this.toolStripButtonReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonReturn.Name = "toolStripButtonReturn";
+            this.toolStripButtonReturn.Size = new System.Drawing.Size(96, 20);
+            this.toolStripButtonReturn.Text = "İade İşlemleri";
+            this.toolStripButtonReturn.Click += new System.EventHandler(this.ToolStripButtonReturn_Click);
+            // 
             // FrmSalesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,10 +486,6 @@
             this.Name = "FrmSalesList";
             this.Text = "Satış Listesi";
             this.Load += new System.EventHandler(this.FrmSalesList_Load);
-            this.statusStrip2.ResumeLayout(false);
-            this.statusStrip2.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -475,7 +499,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgDataOrders)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDataOrderDetails)).EndInit();
+            this.statusStrip2.ResumeLayout(false);
+            this.statusStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -491,7 +519,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.DataGridView dgDataOrders;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.DataGridView dgDataOrderDetails;
         private MetroFramework.Controls.MetroLabel metroLabel5;
@@ -503,13 +530,16 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonExcel;
         private MetroFramework.Controls.MetroButton btnFilter;
         private MetroFramework.Controls.MetroButton btnClear;
-        private MetroFramework.Controls.MetroDateTime dtCreatedAtBefore;
+        private MetroFramework.Controls.MetroDateTime dtEndDate;
         private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroDateTime dtCreatedAtAfter;
+        private MetroFramework.Controls.MetroDateTime dtStartDate;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroTextBox txtProductName;
-        private MetroFramework.Controls.MetroTextBox txtBarcode;
+        private MetroFramework.Controls.MetroTextBox txtCustomerPhone;
+        private MetroFramework.Controls.MetroTextBox txtCustomerName;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButtonReturn;
+        private System.Windows.Forms.DataGridView dgDataOrders;
     }
 }

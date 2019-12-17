@@ -24,25 +24,14 @@ namespace CashBookApp.WinForm.UI.CashBook
 
         #region functions
 
-        void Reset()
+        void ResetFilter()
         {
-            dtTransactionTimeStart.Value = dtTransactionTimeStart.Value = DateTime.Today.Date;
+            dtTransactionTimeStart.Value = dtTransactionTimeEnd.Value = DateTime.Today.Date;
             dtTransactionTimeStart.Checked = dtTransactionTimeEnd.Checked = chkExpenses.Checked = false;
             txtDescription.Text = "";
             cmbPaymentType.ResetText();
 
             LoadPayments();
-        }
-
-        private void ApplyStyle2Grid()
-        {
-            for (int i = 0; i < dgPaymentList.Rows.Count; i++)
-            {
-                if (bool.Parse(dgPaymentList.Rows[i].Cells["IsExpense"].Value.ToString()))
-                {
-                    dgPaymentList.Rows[i].DefaultCellStyle.BackColor = Color.Cornsilk;
-                }
-            }
         }
 
         public void LoadPayments()
@@ -55,7 +44,7 @@ namespace CashBookApp.WinForm.UI.CashBook
                 i.PaymentType.PaymentTypeName,
                 i.Description,
                 i.IsExpense
-            }).ToList();
+            }).OrderByDescending(q => q.PaymentID).ToList();
 
 
 
@@ -104,7 +93,10 @@ namespace CashBookApp.WinForm.UI.CashBook
             dgSummary.Columns[4].HeaderText = "Gelir İşlem Sayısı";
             dgSummary.Columns[5].HeaderText = "Gider İşlem Sayısı";
 
-            ApplyStyle2Grid();
+            decimal income = paymentSummary.Sum(q => q.Income);
+            decimal expense = paymentSummary.Sum(q => q.Expense);
+
+            toolStripStatusLabelSummary.Text = string.Format("GELİR NAKİT+KART={0}     -     GİDER NAKİT+KART={1}     -     GELİR KALAN={2}",income, expense, income-expense);
         }
 
         public void LoadFilter()
@@ -121,7 +113,7 @@ namespace CashBookApp.WinForm.UI.CashBook
 
             if (dtTransactionTimeStart.Checked)
             {
-                results = results.Where(q => q.PaymentTime >= dtTransactionTimeStart.Value);
+                results = results.Where(q => DbFunctions.TruncateTime(q.PaymentTime) >= dtTransactionTimeStart.Value.Date);
             }
             else
             {
@@ -130,11 +122,11 @@ namespace CashBookApp.WinForm.UI.CashBook
 
             if (dtTransactionTimeEnd.Checked)
             {
-                results = results.Where(q => q.PaymentTime <= dtTransactionTimeEnd.Value);
+                results = results.Where(q => DbFunctions.TruncateTime(q.PaymentTime) <= dtTransactionTimeEnd.Value.Date);
             }
             else
             {
-                results = results.Where(i => DbFunctions.TruncateTime(i.PaymentTime) <= DateTime.Today.Date);
+                // there is no entry for future
             }
 
 
@@ -152,7 +144,7 @@ namespace CashBookApp.WinForm.UI.CashBook
                 results = results.Where(q => q.IsExpense == true);
             }
 
-            var filteredStocks = results.ToList();
+            var filteredStocks = results.OrderByDescending(q => q.PaymentID).ToList();
 
             dgPaymentList.DataSource = filteredStocks;
             toolStripStatusLabelTransactionCount.Text = string.Format("{0} adet işlem", filteredStocks.Count);
@@ -188,7 +180,11 @@ namespace CashBookApp.WinForm.UI.CashBook
             dgSummary.Columns[4].HeaderText = "Gelir İşlem Sayısı";
             dgSummary.Columns[5].HeaderText = "Gider İşlem Sayısı";
 
-            ApplyStyle2Grid();
+
+            decimal income = salesSummary.Sum(q => q.Income);
+            decimal expense = salesSummary.Sum(q => q.Expense);
+
+            toolStripStatusLabelSummary.Text = string.Format("GELİR NAKİT+KART={0}     -     GİDER NAKİT+KART={1}     -     GELİR KALAN={2}", income, expense, income - expense);
         }
 
         #endregion
@@ -248,26 +244,42 @@ namespace CashBookApp.WinForm.UI.CashBook
 
                     if (MessageHelper.AskMessage("İşlem silinsin mi?") == DialogResult.Yes)
                     {
-                        Payment selectedPayment = db.Payment.Where(q => q.PaymentID == paymentID).FirstOrDefault();
-                        if (selectedPayment != null)
+                        Payment selectedPayment = db.Payment.Where(q => q.PaymentID == paymentID && q.IsDeleted == false).FirstOrDefault();
+
+
+                        int countOrders = selectedPayment.Order.Count;
+
+                        if (countOrders > 0 && selectedPayment.IsExpense)
                         {
-                            db.Payment.Remove(selectedPayment);
-                            int num = db.SaveChanges();
-
-                            if (num > 0)
-                            {
-                                LoadPayments();
-
-                                MessageHelper.InfoMessage("İşlem silindi!");
-                            }
-                            else
-                            {
-                                MessageHelper.InfoMessage("Hata!");
-                            }
+                            // MessageBox.Show("Sipariş iadeyi aç");
+                            int orderID = selectedPayment.Order.FirstOrDefault().OrderID;
+                            FormHelper.ShowDialog<Sales.FrmSalesReturn>(orderID);
                         }
                         else
                         {
-                            MessageHelper.InfoMessage("Kayıtlı işlem bulunamadı!");
+
+                            if (selectedPayment != null)
+                            {
+                                selectedPayment.IsDeleted = true;
+
+
+                                int num = db.SaveChanges();
+
+                                if (num > 0)
+                                {
+                                    LoadPayments();
+
+                                    MessageHelper.InfoMessage("İşlem silindi!");
+                                }
+                                else
+                                {
+                                    MessageHelper.InfoMessage("Hata!");
+                                }
+                            }
+                            else
+                            {
+                                MessageHelper.InfoMessage("Kayıtlı işlem bulunamadı!");
+                            }
                         }
 
                     }
@@ -291,16 +303,22 @@ namespace CashBookApp.WinForm.UI.CashBook
                 {
                     int paymentID = int.Parse(dgPaymentList.SelectedRows[0].Cells[0].Value.ToString());
 
-                    // check if it's in orderpayment
 
-                    int countOrders = db.Payment.Where(q=>q.PaymentID == paymentID && q.IsDeleted == false).Count(x => x.Order.Count > 0);
+                    // check if it's in orderpayment
+                    Payment selectedPayment = db.Payment.Where(q => q.PaymentID == paymentID && q.IsDeleted == false).FirstOrDefault();
+
+                    int countOrders = selectedPayment.Order.Count;
+
                     if (countOrders > 0)
                     {
-                        MessageBox.Show("Satış düzenleyi aç");
+                        // MessageBox.Show("Satış düzenleyi aç");
+                        int orderID = selectedPayment.Order.FirstOrDefault().OrderID;
+                        FormHelper.ShowDialog<Sales.FrmSalesEdit>(orderID);
                     }
                     else
                     {
-                        MessageBox.Show("Kasa işlem düzenleyi aç");
+                        //MessageBox.Show("Kasa işlem düzenleyi aç");
+                        FormHelper.ShowDialog<FrmPaymentEdit>(paymentID);
                     }
 
                 }
@@ -316,5 +334,47 @@ namespace CashBookApp.WinForm.UI.CashBook
         }
 
         #endregion
+
+        #region filter buttons
+
+        private void BtnClean_Click(object sender, EventArgs e)
+        {
+            ResetFilter();
+        }
+
+        private void BtnFilter_Click(object sender, EventArgs e)
+        {
+            LoadFilter();
+        }
+
+        private void KeyDownFilter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadFilter();
+            }
+        }
+
+        private void CmbPaymentType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadFilter();
+        }
+
+        private void DtTransactionTimeEnd_ValueChanged(object sender, EventArgs e)
+        {
+            LoadFilter();
+        }
+
+        private void ChkExpenses_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadFilter();
+        }
+
+        #endregion
+
+        private void DgPaymentList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ToolStripButtonUpdate_Click(sender, e);
+        }
     }
 }

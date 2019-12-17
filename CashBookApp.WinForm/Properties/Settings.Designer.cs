@@ -94,5 +94,17 @@ namespace CashBookApp.WinForm.Properties {
                 this["SalesListSplitter"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://telgrafla.com/update/laninas.xml")]
+        public string UpdateURL {
+            get {
+                return ((string)(this["UpdateURL"]));
+            }
+            set {
+                this["UpdateURL"] = value;
+            }
+        }
     }
 }

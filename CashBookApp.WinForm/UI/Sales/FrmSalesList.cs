@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,20 +26,87 @@ namespace CashBookApp.WinForm.UI.Sales
         #region functions
 
 
-        void LoadOrders()
+        void ResetFilter()
         {
-            var orders = db.Order.Where(q => q.IsDeleted == false).Select(q => new
+            dtStartDate.Value = dtEndDate.Value = DateTime.Today.Date;
+            dtStartDate.Checked = dtEndDate.Checked = false;
+            txtCustomerName.Text = txtCustomerPhone.Text = "";
+
+            LoadOrders();
+        }
+
+
+        public void LoadOrders()
+        {
+            var orders = db.Order.Where(q => q.IsDeleted == false && DbFunctions.TruncateTime(q.OrderDate) == DateTime.Today).Select(q => new
             {
                 q.OrderID,
                 q.OrderDate,
                 q.Customer.FullName,
                 q.Customer.Phone,
-                Pay = q.Payment.Count + " adet ödeme",
-                Total = q.Payment.Sum(x => x.Amount).ToString()
-            }).ToList();
+                Pay = q.Payment.Count(z => z.IsDeleted == false) + " adet ödeme",
+                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString()
+            }).OrderByDescending(q => q.OrderID).ToList();
 
             dgDataOrders.DataSource = orders;
             toolStripStatusLabelCountOrders.Text = string.Format("{0} adet satış", orders.Count);
+
+            dgDataOrders.Columns[0].Visible = false;
+            dgDataOrders.Columns[0].HeaderText = "Satış ID";
+            dgDataOrders.Columns[1].HeaderText = "Satış Tarihi";
+            dgDataOrders.Columns[2].HeaderText = "Müşteri Ad Soyad";
+            dgDataOrders.Columns[3].HeaderText = "Müşteri Telefon";
+            dgDataOrders.Columns[4].HeaderText = "Ödemeler";
+            dgDataOrders.Columns[5].HeaderText = "Ödenen Tutar";
+        }
+
+        void FilterOrders()
+        {
+            var filteredOrders = db.Order.Where(q => q.IsDeleted == false).Select(q => new
+            {
+                q.OrderID,
+                q.OrderDate,
+                q.Customer.FullName,
+                q.Customer.Phone,
+                Pay = q.Payment.Count(z => z.IsDeleted == false) + " adet ödeme",
+                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString()
+            }).AsQueryable();
+
+            if (txtCustomerName.Text.Trim().Length > 0)
+            {
+                filteredOrders = filteredOrders.Where(q => q.FullName.ToString().ToLower().Contains(txtCustomerName.Text.ToLower()));
+            }
+            if (txtCustomerPhone.Text.Trim().Length > 0)
+            {
+                filteredOrders = filteredOrders.Where(q => q.Phone.ToString().ToLower().Contains(txtCustomerPhone.Text.ToLower()));
+            }
+
+
+            if (dtStartDate.Checked)
+            {
+                filteredOrders = filteredOrders.Where(q => DbFunctions.TruncateTime(q.OrderDate) >= dtStartDate.Value.Date);
+            }
+            else
+            {
+                filteredOrders = filteredOrders.Where(i => DbFunctions.TruncateTime(i.OrderDate) >= DateTime.Today.Date);
+            }
+
+            if (dtEndDate.Checked)
+            {
+                filteredOrders = filteredOrders.Where(q => DbFunctions.TruncateTime(q.OrderDate) <= dtEndDate.Value.Date);
+            }
+            else
+            {
+                filteredOrders = filteredOrders.Where(q => DbFunctions.TruncateTime(q.OrderDate) <= DateTime.Today.Date);
+            }
+
+
+
+            var filteredCustomers = filteredOrders.OrderByDescending(q => q.OrderID).ToList();
+
+            dgDataOrders.DataSource = filteredCustomers;
+            toolStripStatusLabelCountOrders.Text = string.Format("{0} adet satış", filteredCustomers.Count);
+
 
             dgDataOrders.Columns[0].Visible = false;
             dgDataOrders.Columns[0].HeaderText = "Satış ID";
@@ -93,7 +161,7 @@ namespace CashBookApp.WinForm.UI.Sales
 
         private void DgDataOrders_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void ToolStripButtonDelete_Click(object sender, EventArgs e)
@@ -104,10 +172,25 @@ namespace CashBookApp.WinForm.UI.Sales
                 {
                     int orderID = int.Parse(dgDataOrders.SelectedRows[0].Cells[0].Value.ToString());
 
-                    if (MessageHelper.AskMessage("Satış silinsin mi?") == DialogResult.Yes)
+                    if (MessageHelper.AskMessage("Satış silinsin mi?Satışı silerseniz, ödemesi de silinecektir.") == DialogResult.Yes)
                     {
                         Order selectedOrder = db.Order.Where(q => q.OrderID == orderID && q.IsDeleted == false).FirstOrDefault();
                         selectedOrder.IsDeleted = true;
+
+                        /*
+                         satış silinirse satışın ödemeleri de silinecek
+                         detayları da
+                         
+                         */
+                        foreach (var item in selectedOrder.Payment)
+                        {
+                            item.IsDeleted = true;
+                        }
+                        foreach (var item in selectedOrder.OrderDetail)
+                        {
+                            item.IsDeleted = true;
+                        }
+
 
                         int num = db.SaveChanges();
 
@@ -139,7 +222,7 @@ namespace CashBookApp.WinForm.UI.Sales
             if (dgDataOrders.SelectedRows.Count > 0)
             {
                 int orderID = int.Parse(dgDataOrders.SelectedRows[0].Cells[0].Value.ToString());
-                FormHelper.ShowDialog<FrmEditSales>(orderID);
+                FormHelper.ShowDialog<FrmSalesEdit>(orderID);
             }
             else
             {
@@ -156,6 +239,42 @@ namespace CashBookApp.WinForm.UI.Sales
         {
             ExcelHelper excelHelper = new ExcelHelper(dgDataOrders, "Satış Listesi.xlsx");
             excelHelper.ShowDialog();
+        }
+
+        private void BtnFilter_Click(object sender, EventArgs e)
+        {
+            FilterOrders();
+        }
+
+        private void KeyDownFilter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                FilterOrders();
+            }
+        }
+
+        private void DtStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            FilterOrders();
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            ResetFilter();
+        }
+
+        private void ToolStripButtonReturn_Click(object sender, EventArgs e)
+        {
+            if (dgDataOrders.SelectedRows.Count > 0)
+            {
+                int orderID = int.Parse(dgDataOrders.SelectedRows[0].Cells[0].Value.ToString());
+                FormHelper.ShowDialog<FrmSalesReturn>(orderID);
+            }
+            else
+            {
+                MessageHelper.InfoMessage("Listeden satış seçin!");
+            }
         }
     }
 }

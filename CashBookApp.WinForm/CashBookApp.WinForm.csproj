@@ -151,6 +151,12 @@
     <Compile Include="UI\CashBook\FrmPaymentAdd.Designer.cs">
       <DependentUpon>FrmPaymentAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CashBook\FrmPaymentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CashBook\FrmPaymentEdit.Designer.cs">
+      <DependentUpon>FrmPaymentEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CashBook\FrmPaymentList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,11 +181,11 @@
     <Compile Include="UI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Sales\FrmEditSales.cs">
+    <Compile Include="UI\Sales\FrmSalesReturnAddDescription4Product.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Sales\FrmEditSales.Designer.cs">
-      <DependentUpon>FrmEditSales.cs</DependentUpon>
+    <Compile Include="UI\Sales\FrmSalesReturnAddDescription4Product.Designer.cs">
+      <DependentUpon>FrmSalesReturnAddDescription4Product.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Sales\FrmSalesAdd.cs">
       <SubType>Form</SubType>
@@ -187,11 +193,35 @@
     <Compile Include="UI\Sales\FrmSalesAdd.Designer.cs">
       <DependentUpon>FrmSalesAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Sales\FrmSalesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesEdit.Designer.cs">
+      <DependentUpon>FrmSalesEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Sales\FrmSalesList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Sales\FrmSalesList.Designer.cs">
       <DependentUpon>FrmSalesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesReturnAddExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesReturnAddExpense.Designer.cs">
+      <DependentUpon>FrmSalesReturnAddExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesPaymentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesPaymentEdit.Designer.cs">
+      <DependentUpon>FrmSalesPaymentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesReturn.Designer.cs">
+      <DependentUpon>FrmSalesReturn.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Setting\FrmAbout.cs">
       <SubType>Form</SubType>
@@ -240,6 +270,9 @@
     <EmbeddedResource Include="UI\CashBook\FrmPaymentAdd.resx">
       <DependentUpon>FrmPaymentAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CashBook\FrmPaymentEdit.resx">
+      <DependentUpon>FrmPaymentEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CashBook\FrmPaymentList.resx">
       <DependentUpon>FrmPaymentList.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,14 +285,26 @@
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Sales\FrmEditSales.resx">
-      <DependentUpon>FrmEditSales.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Sales\FrmSalesReturnAddDescription4Product.resx">
+      <DependentUpon>FrmSalesReturnAddDescription4Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sales\FrmSalesAdd.resx">
       <DependentUpon>FrmSalesAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmSalesEdit.resx">
+      <DependentUpon>FrmSalesEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Sales\FrmSalesList.resx">
       <DependentUpon>FrmSalesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmSalesReturnAddExpense.resx">
+      <DependentUpon>FrmSalesReturnAddExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmSalesPaymentEdit.resx">
+      <DependentUpon>FrmSalesPaymentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmSalesReturn.resx">
+      <DependentUpon>FrmSalesReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Setting\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
@@ -319,6 +364,7 @@
       <DependentUpon>ModelCashBook.edmx</DependentUpon>
       <LastGenOutput>ModelCashBook.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\return.png" />
     <None Include="Resources\barcode-scanner.png" />
     <None Include="Resources\barcode.png" />
     <None Include="Resources\supermarket-barcode.png" />

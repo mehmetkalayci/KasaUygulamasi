@@ -126,6 +126,7 @@
             this.btnFilter.TabIndex = 66;
             this.btnFilter.Text = "Filtrele";
             this.btnFilter.UseSelectable = true;
+            this.btnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
             // 
             // btnClean
             // 
@@ -135,6 +136,7 @@
             this.btnClean.TabIndex = 66;
             this.btnClean.Text = "Temizle";
             this.btnClean.UseSelectable = true;
+            this.btnClean.Click += new System.EventHandler(this.BtnClean_Click);
             // 
             // chkExpenses
             // 
@@ -145,6 +147,7 @@
             this.chkExpenses.TabIndex = 65;
             this.chkExpenses.Text = "Sadece Giderler";
             this.chkExpenses.UseSelectable = true;
+            this.chkExpenses.CheckedChanged += new System.EventHandler(this.ChkExpenses_CheckedChanged);
             // 
             // metroLabel4
             // 
@@ -184,6 +187,7 @@
             this.txtDescription.UseSelectable = true;
             this.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownFilter);
             // 
             // cmbPaymentType
             // 
@@ -194,6 +198,7 @@
             this.cmbPaymentType.Size = new System.Drawing.Size(170, 29);
             this.cmbPaymentType.TabIndex = 62;
             this.cmbPaymentType.UseSelectable = true;
+            this.cmbPaymentType.SelectedIndexChanged += new System.EventHandler(this.CmbPaymentType_SelectedIndexChanged);
             // 
             // metroLabel3
             // 
@@ -222,6 +227,7 @@
             this.dtTransactionTimeEnd.ShowCheckBox = true;
             this.dtTransactionTimeEnd.Size = new System.Drawing.Size(170, 29);
             this.dtTransactionTimeEnd.TabIndex = 59;
+            this.dtTransactionTimeEnd.ValueChanged += new System.EventHandler(this.DtTransactionTimeEnd_ValueChanged);
             // 
             // metroLabel1
             // 
@@ -241,6 +247,7 @@
             this.dtTransactionTimeStart.ShowCheckBox = true;
             this.dtTransactionTimeStart.Size = new System.Drawing.Size(170, 29);
             this.dtTransactionTimeStart.TabIndex = 57;
+            this.dtTransactionTimeStart.ValueChanged += new System.EventHandler(this.DtTransactionTimeEnd_ValueChanged);
             // 
             // splitContainer2
             // 
@@ -282,6 +289,7 @@
             this.dgSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgSummary.Location = new System.Drawing.Point(0, 25);
+            this.dgSummary.MultiSelect = false;
             this.dgSummary.Name = "dgSummary";
             this.dgSummary.ReadOnly = true;
             this.dgSummary.RowHeadersVisible = false;
@@ -339,6 +347,7 @@
             this.dgPaymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPaymentList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgPaymentList.Location = new System.Drawing.Point(0, 54);
+            this.dgPaymentList.MultiSelect = false;
             this.dgPaymentList.Name = "dgPaymentList";
             this.dgPaymentList.ReadOnly = true;
             this.dgPaymentList.RowHeadersVisible = false;
@@ -355,6 +364,7 @@
             this.dgPaymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgPaymentList.Size = new System.Drawing.Size(855, 389);
             this.dgPaymentList.TabIndex = 75;
+            this.dgPaymentList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgPaymentList_CellContentDoubleClick);
             // 
             // toolStrip2
             // 

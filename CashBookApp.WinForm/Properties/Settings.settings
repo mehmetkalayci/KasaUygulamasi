@@ -20,5 +20,8 @@
     <Setting Name="SalesListSplitter" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">500</Value>
     </Setting>
+    <Setting Name="UpdateURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://telgrafla.com/update/laninas.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

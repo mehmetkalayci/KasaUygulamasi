@@ -1,5 +1,6 @@
 ﻿using CashBookApp.WinForm.Helper;
 using CashBookApp.WinForm.Model;
+using CashBookApp.WinForm.UI.Sales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,28 +24,28 @@ namespace CashBookApp.WinForm.UI.Client
 
         #region functions
 
+
+
         public void LoadShoppings(int customerID)
         {
-            var shoppings = db.Order.Where(q => q.CustomerID == customerID && q.IsDeleted == false).Select(q=>q.OrderID).ToList();
-
-            var orderDetails = db.OrderDetail.Where(item =>  shoppings.Contains(item.OrderID)).Select(q => new
+            var shoppings = db.Order.Where(q => q.CustomerID == customerID && q.IsDeleted == false).Select(q => new
             {
-                q.Product.Barcode,
-                q.ProductName,
-                q.Price,
-                ActualPrice = q.Product.Price,
-            }).ToList();
+                q.OrderID,
+                q.OrderDate,
+                Pay = q.Payment.Count(z => z.IsDeleted == false) + " adet ödeme",
+                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString()
+            }).OrderByDescending(q=>q.OrderID).ToList();
 
 
 
-            dgDataShoppings.DataSource = orderDetails;
-            toolStripStatusLabelCountShoppings.Text = string.Format("{0} adet ürün", orderDetails.Count);
+            dgDataShoppings.DataSource = shoppings;
+            toolStripStatusLabelCountShoppings.Text = string.Format("{0} adet alışveriş", shoppings.Count);
 
-            dgDataShoppings.Columns[0].HeaderText = "Barkod";
-            dgDataShoppings.Columns[1].HeaderText = "Fiyat";
-            dgDataShoppings.Columns[2].HeaderText = "Stok Adı";
-
-            dgDataShoppings.Columns[3].HeaderText = "Şu anki Fiyat";
+            dgDataShoppings.Columns[0].Visible = false;
+            dgDataShoppings.Columns[0].HeaderText = "Satış ID";
+            dgDataShoppings.Columns[1].HeaderText = "Satış Tarihi";
+            dgDataShoppings.Columns[2].HeaderText = "Ödemeler";
+            dgDataShoppings.Columns[3].HeaderText = "Ödenen Tutar";
         }
 
         public void LoadCustomers()
@@ -55,7 +56,7 @@ namespace CashBookApp.WinForm.UI.Client
                 q.FullName,
                 q.Phone,
                 q.CreatedAt
-            }).ToList();
+            }).OrderByDescending(q => q.CustomerID).ToList();
 
             dgDataCustomers.DataSource = customers;
             toolStripStatusLabelCountCustomer.Text = string.Format("{0} adet müşteri", customers.Count);
@@ -88,7 +89,7 @@ namespace CashBookApp.WinForm.UI.Client
             }
 
 
-            var filteredCustomers = customers.ToList();
+            var filteredCustomers = customers.OrderByDescending(q => q.CustomerID).ToList();
 
             dgDataCustomers.DataSource = filteredCustomers;
             toolStripStatusLabelCountCustomer.Text = string.Format("{0} adet müşteri", filteredCustomers.Count);
@@ -222,6 +223,19 @@ namespace CashBookApp.WinForm.UI.Client
             else
             {
                 dgDataShoppings.DataSource = null;
+            }
+        }
+
+        private void DgDataShoppings_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgDataShoppings.SelectedRows.Count > 0)
+            {
+                int orderID = int.Parse(dgDataShoppings.SelectedRows[0].Cells[0].Value.ToString());
+                FormHelper.ShowDialog<FrmSalesReturn>(orderID);
+            }
+            else
+            {
+                MessageHelper.InfoMessage("Listeden satış seçin!");
             }
         }
     }

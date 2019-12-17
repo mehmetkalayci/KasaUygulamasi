@@ -1,4 +1,6 @@
 ﻿using CashBookApp.WinForm.UI;
+using CashBookApp.WinForm.UI.Sales;
+using CashBookApp.WinForm.UI.Setting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +19,23 @@ namespace CashBookApp.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            System.Globalization.CultureInfo cultureInfo = new System.Globalization.CultureInfo("tr-TR");
+            cultureInfo.NumberFormat.CurrencySymbol = "₺";
+
             Application.Run(new FrmMain());
 
 
+            /*
+            FrmLogin frmLogin = new FrmLogin();
+            Application.Run(frmLogin);
 
+
+            if (frmLogin.IsLoggedin)
+            {
+                Application.Run(new FrmMain());
+            }
+            */
         }
     }
 }

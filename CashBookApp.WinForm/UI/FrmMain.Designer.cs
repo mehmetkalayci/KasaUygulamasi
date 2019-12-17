@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tlBackupRestore = new MetroFramework.Controls.MetroTile();
             this.tlSalesList = new MetroFramework.Controls.MetroTile();
             this.tlExit = new MetroFramework.Controls.MetroTile();
-            this.tlReports = new MetroFramework.Controls.MetroTile();
             this.tlSales = new MetroFramework.Controls.MetroTile();
             this.tlAddExpense = new MetroFramework.Controls.MetroTile();
             this.tlUserSettings = new MetroFramework.Controls.MetroTile();
@@ -44,14 +41,8 @@
             this.tlCustomers = new MetroFramework.Controls.MetroTile();
             this.tlAbout = new MetroFramework.Controls.MetroTile();
             this.tlSearchStock = new MetroFramework.Controls.MetroTile();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.SuspendLayout();
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = global::CashBookApp.WinForm.Properties.Settings.Default.ProgramName;
-            this.notifyIcon1.Visible = true;
             // 
             // tlBackupRestore
             // 
@@ -101,27 +92,11 @@
             this.tlExit.TileImage = global::CashBookApp.WinForm.Properties.Resources.close;
             this.tlExit.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tlExit.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroToolTip1.SetToolTip(this.tlExit, "Programı Kapat");
             this.tlExit.UseCustomBackColor = true;
             this.tlExit.UseSelectable = true;
             this.tlExit.UseTileImage = true;
             this.tlExit.Click += new System.EventHandler(this.TlExit_Click);
-            // 
-            // tlReports
-            // 
-            this.tlReports.ActiveControl = null;
-            this.tlReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tlReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tlReports.Location = new System.Drawing.Point(184, 243);
-            this.tlReports.Name = "tlReports";
-            this.tlReports.Size = new System.Drawing.Size(150, 70);
-            this.tlReports.TabIndex = 0;
-            this.tlReports.Text = "Raporlar";
-            this.tlReports.TileImage = global::CashBookApp.WinForm.Properties.Resources.graph;
-            this.tlReports.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tlReports.UseCustomBackColor = true;
-            this.tlReports.UseSelectable = true;
-            this.tlReports.UseTileImage = true;
-            this.tlReports.Click += new System.EventHandler(this.TlReports_Click);
             // 
             // tlSales
             // 
@@ -198,7 +173,7 @@
             this.tlStocks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tlStocks.Location = new System.Drawing.Point(496, 87);
             this.tlStocks.Name = "tlStocks";
-            this.tlStocks.Size = new System.Drawing.Size(150, 70);
+            this.tlStocks.Size = new System.Drawing.Size(150, 150);
             this.tlStocks.TabIndex = 0;
             this.tlStocks.Text = "Stok İşlemleri";
             this.tlStocks.TileImage = global::CashBookApp.WinForm.Properties.Resources.package_add;
@@ -221,6 +196,7 @@
             this.tlLock.TileImage = global::CashBookApp.WinForm.Properties.Resources.padlock;
             this.tlLock.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tlLock.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroToolTip1.SetToolTip(this.tlLock, "Kilitle");
             this.tlLock.UseCustomBackColor = true;
             this.tlLock.UseSelectable = true;
             this.tlLock.UseTileImage = true;
@@ -231,7 +207,7 @@
             this.tlCustomers.ActiveControl = null;
             this.tlCustomers.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.tlCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tlCustomers.Location = new System.Drawing.Point(28, 319);
+            this.tlCustomers.Location = new System.Drawing.Point(184, 243);
             this.tlCustomers.Name = "tlCustomers";
             this.tlCustomers.Size = new System.Drawing.Size(150, 70);
             this.tlCustomers.TabIndex = 0;
@@ -256,6 +232,7 @@
             this.tlAbout.TileImage = global::CashBookApp.WinForm.Properties.Resources.about;
             this.tlAbout.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tlAbout.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroToolTip1.SetToolTip(this.tlAbout, "Program Hakkında");
             this.tlAbout.UseCustomBackColor = true;
             this.tlAbout.UseSelectable = true;
             this.tlAbout.UseTileImage = true;
@@ -266,7 +243,7 @@
             this.tlSearchStock.ActiveControl = null;
             this.tlSearchStock.BackColor = System.Drawing.Color.DodgerBlue;
             this.tlSearchStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tlSearchStock.Location = new System.Drawing.Point(496, 167);
+            this.tlSearchStock.Location = new System.Drawing.Point(28, 319);
             this.tlSearchStock.Name = "tlSearchStock";
             this.tlSearchStock.Size = new System.Drawing.Size(150, 70);
             this.tlSearchStock.TabIndex = 0;
@@ -278,6 +255,12 @@
             this.tlSearchStock.UseTileImage = true;
             this.tlSearchStock.Click += new System.EventHandler(this.TlSearchStock_Click);
             // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,7 +269,6 @@
             this.Controls.Add(this.tlBackupRestore);
             this.Controls.Add(this.tlSalesList);
             this.Controls.Add(this.tlExit);
-            this.Controls.Add(this.tlReports);
             this.Controls.Add(this.tlSales);
             this.Controls.Add(this.tlAddExpense);
             this.Controls.Add(this.tlUserSettings);
@@ -301,6 +283,7 @@
             this.Name = "FrmMain";
             this.Resizable = false;
             this.Text = global::CashBookApp.WinForm.Properties.Settings.Default.ProgramName;
+            this.Shown += new System.EventHandler(this.FrmMain_Shown);
             this.ResumeLayout(false);
 
         }
@@ -316,10 +299,9 @@
         private MetroFramework.Controls.MetroTile tlCashBook;
         private MetroFramework.Controls.MetroTile tlAddExpense;
         private MetroFramework.Controls.MetroTile tlSales;
-        private MetroFramework.Controls.MetroTile tlReports;
         private MetroFramework.Controls.MetroTile tlExit;
         private MetroFramework.Controls.MetroTile tlSalesList;
         private MetroFramework.Controls.MetroTile tlBackupRestore;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
     }
 }

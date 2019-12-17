@@ -1,4 +1,5 @@
-﻿using CashBookApp.WinForm.Helper;
+﻿using AutoUpdaterDotNET;
+using CashBookApp.WinForm.Helper;
 using CashBookApp.WinForm.UI.Setting;
 using System;
 using System.Collections.Generic;
@@ -24,13 +25,11 @@ namespace CashBookApp.WinForm.UI
 
         private void TlCustomers_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
             FormHelper.ShowDialog<Client.FrmCustomerList>();
         }
 
         private void TlSearchStock_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
             FormHelper.ShowDialog<Stock.FrmStockList>();
         }
 
@@ -72,28 +71,19 @@ namespace CashBookApp.WinForm.UI
 
         private void TlCashBook_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
             FormHelper.ShowDialog<CashBook.FrmPaymentList>();
         }
 
         private void TlSales_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-
             FormHelper.ShowDialog<Sales.FrmSalesAdd>();
         }
 
         private void TlSalesList_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
             FormHelper.ShowDialog<Sales.FrmSalesList>();
         }
 
-        private void TlReports_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
 
         private void TlBackupRestore_Click(object sender, EventArgs e)
         {
@@ -111,6 +101,11 @@ namespace CashBookApp.WinForm.UI
             {
                 MessageBox.Show("Yedekleme / geri yükleme dosyası silinmiş ya da hatalı/eksik kurulum!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FrmMain_Shown(object sender, EventArgs e)
+        {
+            AutoUpdater.Start(Properties.Settings.Default.UpdateURL);
         }
     }
 }

@@ -34,4 +34,9 @@ C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookA
 C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.exe
 C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.pdb
 C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.Sales.FrmSalesList.resources
-C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.Sales.FrmEditSales.resources
+C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.CashBook.FrmPaymentEdit.resources
+C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.Sales.FrmSalesEdit.resources
+C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.Sales.FrmSalesPaymentEdit.resources
+C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.Sales.FrmSalesReturn.resources
+C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.Sales.FrmSalesReturnAddExpense.resources
+C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.UI.Sales.FrmSalesReturnAddDescription4Product.resources

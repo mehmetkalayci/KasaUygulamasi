@@ -16,7 +16,7 @@
     </Key>
     <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OrderDate" Type="datetime" Nullable="false" />
-    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderDetail">
@@ -26,7 +26,7 @@
     <Property Name="OrderDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OrderID" Type="int" Nullable="false" />
     <Property Name="ProductID" Type="int" Nullable="false" />
-    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar" MaxLength="1024" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
   </EntityType>
@@ -44,7 +44,7 @@
     </Key>
     <Property Name="PaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PaymentTime" Type="datetime" Nullable="false" />
-    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="PaymentTypeID" Type="int" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="1024" />
     <Property Name="IsExpense" Type="bit" Nullable="false" />
@@ -65,7 +65,7 @@
     <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Barcode" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar" MaxLength="1024" Nullable="false" />
-    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Size" Type="nvarchar" MaxLength="64" />
     <Property Name="Color" Type="nvarchar" MaxLength="64" />
     <Property Name="Quantity" Type="int" />
@@ -81,7 +81,7 @@
     <Property Name="Password" Type="nvarchar" MaxLength="64" Nullable="false" />
   </EntityType>
   <Association Name="FK_Order_Customer">
-    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Customer">

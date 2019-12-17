@@ -57,7 +57,7 @@ namespace CashBookApp.WinForm.UI.Stock
                 q.Size,
                 q.Quantity,
                 q.CreatedAt
-            }).ToList();
+            }).OrderByDescending(q => q.ProductID).ToList();
 
             dgDataStocks.DataSource = stocks;
             toolStripStatusLabelStockQuantity.Text = string.Format("{0} adet stok", stocks.Count);
@@ -123,7 +123,7 @@ namespace CashBookApp.WinForm.UI.Stock
 
 
 
-            var filteredStocks = stocks.ToList();
+            var filteredStocks = stocks.OrderByDescending(q => q.ProductID).ToList();
 
             dgDataStocks.DataSource = filteredStocks;
             toolStripStatusLabelStockQuantity.Text = string.Format("{0} adet stok", filteredStocks.Count);

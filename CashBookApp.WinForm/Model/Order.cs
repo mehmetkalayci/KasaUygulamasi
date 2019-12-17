@@ -23,7 +23,7 @@ namespace CashBookApp.WinForm.Model
     
         public int OrderID { get; set; }
         public System.DateTime OrderDate { get; set; }
-        public int CustomerID { get; set; }
+        public Nullable<int> CustomerID { get; set; }
         public bool IsDeleted { get; set; }
     
         public virtual Customer Customer { get; set; }

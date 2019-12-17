@@ -303,6 +303,7 @@
             this.dgDataCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDataCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDataCustomers.Location = new System.Drawing.Point(0, 19);
+            this.dgDataCustomers.MultiSelect = false;
             this.dgDataCustomers.Name = "dgDataCustomers";
             this.dgDataCustomers.ReadOnly = true;
             this.dgDataCustomers.RowHeadersVisible = false;
@@ -360,6 +361,7 @@
             this.dgDataShoppings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDataShoppings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDataShoppings.Location = new System.Drawing.Point(0, 19);
+            this.dgDataShoppings.MultiSelect = false;
             this.dgDataShoppings.Name = "dgDataShoppings";
             this.dgDataShoppings.ReadOnly = true;
             this.dgDataShoppings.RowHeadersVisible = false;
@@ -376,6 +378,7 @@
             this.dgDataShoppings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDataShoppings.Size = new System.Drawing.Size(429, 548);
             this.dgDataShoppings.TabIndex = 10;
+            this.dgDataShoppings.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDataShoppings_CellContentDoubleClick);
             // 
             // metroLabel5
             // 

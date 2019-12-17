@@ -118,7 +118,7 @@
             // btnFilter
             // 
             this.btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFilter.Location = new System.Drawing.Point(109, 484);
+            this.btnFilter.Location = new System.Drawing.Point(109, 438);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
             this.btnFilter.TabIndex = 19;
@@ -128,7 +128,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(14, 484);
+            this.btnClear.Location = new System.Drawing.Point(14, 438);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 20;
@@ -140,7 +140,7 @@
             // 
             this.dtCreatedAtBefore.Checked = false;
             this.dtCreatedAtBefore.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtCreatedAtBefore.Location = new System.Drawing.Point(14, 449);
+            this.dtCreatedAtBefore.Location = new System.Drawing.Point(14, 403);
             this.dtCreatedAtBefore.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtCreatedAtBefore.Name = "dtCreatedAtBefore";
             this.dtCreatedAtBefore.ShowCheckBox = true;
@@ -150,18 +150,19 @@
             // 
             // metroLabel8
             // 
-            this.metroLabel8.Location = new System.Drawing.Point(14, 404);
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(14, 381);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(170, 42);
+            this.metroLabel8.Size = new System.Drawing.Size(132, 19);
             this.metroLabel8.TabIndex = 17;
-            this.metroLabel8.Text = "Ürün kayıt tarihi x\'den önceki ürünler";
+            this.metroLabel8.Text = "Ürün Kayıt Tarihi, Bitiş";
             this.metroLabel8.WrapToLine = true;
             // 
             // dtCreatedAtAfter
             // 
             this.dtCreatedAtAfter.Checked = false;
             this.dtCreatedAtAfter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtCreatedAtAfter.Location = new System.Drawing.Point(14, 372);
+            this.dtCreatedAtAfter.Location = new System.Drawing.Point(14, 349);
             this.dtCreatedAtAfter.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtCreatedAtAfter.Name = "dtCreatedAtAfter";
             this.dtCreatedAtAfter.ShowCheckBox = true;
@@ -171,11 +172,12 @@
             // 
             // metroLabel7
             // 
+            this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(14, 327);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(167, 42);
+            this.metroLabel7.Size = new System.Drawing.Size(163, 19);
             this.metroLabel7.TabIndex = 15;
-            this.metroLabel7.Text = "Ürün kayıt tarihi x\'den sonraki ürünler";
+            this.metroLabel7.Text = "Ürün Kayıt Tarihi, Başlangıç";
             this.metroLabel7.WrapToLine = true;
             // 
             // chkLess
@@ -183,9 +185,9 @@
             this.chkLess.AutoSize = true;
             this.chkLess.Location = new System.Drawing.Point(14, 283);
             this.chkLess.Name = "chkLess";
-            this.chkLess.Size = new System.Drawing.Size(124, 15);
+            this.chkLess.Size = new System.Drawing.Size(108, 15);
             this.chkLess.TabIndex = 13;
-            this.chkLess.Text = "Stok adedi x\'den az";
+            this.chkLess.Text = "Stok Adedi, Bitiş";
             this.chkLess.UseSelectable = true;
             this.chkLess.CheckedChanged += new System.EventHandler(this.ChkMore_CheckedChanged);
             // 
@@ -239,9 +241,9 @@
             this.chkMore.AutoSize = true;
             this.chkMore.Location = new System.Drawing.Point(14, 236);
             this.chkMore.Name = "chkMore";
-            this.chkMore.Size = new System.Drawing.Size(132, 15);
+            this.chkMore.Size = new System.Drawing.Size(136, 15);
             this.chkMore.TabIndex = 11;
-            this.chkMore.Text = "Stok adedi x\'den çok";
+            this.chkMore.Text = "Stok Adedi, Başlangıç";
             this.chkMore.UseSelectable = true;
             this.chkMore.CheckedChanged += new System.EventHandler(this.ChkMore_CheckedChanged);
             // 
@@ -396,6 +398,7 @@
             this.dgDataStocks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDataStocks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDataStocks.Location = new System.Drawing.Point(0, 29);
+            this.dgDataStocks.MultiSelect = false;
             this.dgDataStocks.Name = "dgDataStocks";
             this.dgDataStocks.ReadOnly = true;
             this.dgDataStocks.RowHeadersVisible = false;
