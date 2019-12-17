@@ -1,5 +1,6 @@
 ﻿using CashBookApp.WinForm.Helper;
 using CashBookApp.WinForm.Model;
+using CashBookApp.WinForm.UI.CashBook;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,13 +30,16 @@ namespace CashBookApp.WinForm.UI.Sales
 
         void Add2Basket(Product p)
         {
-            this.order4Update.OrderDetail.Add(new OrderDetail()
+            order4Update.OrderDetail.Add(new OrderDetail()
             {
                 Product = p,
                 ProductID = p.ProductID,
                 ProductName = p.ProductName,
-                Price = p.Price
+                Price = p.Price,
+                IsDeleted = false
             });
+
+            int i = db.SaveChanges();
 
             LoadBasket();
         }
@@ -43,8 +47,15 @@ namespace CashBookApp.WinForm.UI.Sales
 
         void LoadBasket()
         {
-            var orderDetails = this.order4Update.OrderDetail.Where(q => q.IsDeleted == false).Select(i => new
+            dgBasket.Columns.Clear();
+            dgBasket.RowTemplate.Height = 40;
+
+
+            Order myOrder = db.Order.Where(q => q.OrderID == this.orderID && q.IsDeleted == false).FirstOrDefault();
+
+            var orderDetails = myOrder.OrderDetail.Where(q => q.IsDeleted == false).Select(i => new
             {
+                i.OrderDetailID,
                 i.ProductID,
                 i.Product.Barcode,
                 i.Product.ProductName,
@@ -55,7 +66,31 @@ namespace CashBookApp.WinForm.UI.Sales
 
             dgBasket.DataSource = orderDetails;
 
-            txtAmount.Text = orderDetails.Sum(q => q.Price).ToString();
+
+            dgBasket.Columns[0].Visible = false;
+            dgBasket.Columns[0].HeaderText = "Satış Detay ID";
+            dgBasket.Columns[1].HeaderText = "Stok ID";
+            dgBasket.Columns[2].HeaderText = "Barkod";
+            dgBasket.Columns[3].HeaderText = "Ürün Adı";
+            dgBasket.Columns[4].HeaderText = "Fiyat";
+            dgBasket.Columns[5].HeaderText = "Renk";
+            dgBasket.Columns[6].HeaderText = "Numara";
+
+            dgBasket.Columns[4].DefaultCellStyle.Format = "C2";
+
+            // Add remove button 2 grid
+            dgBasket.Columns.Add(new DataGridViewButtonColumn()
+            {
+                Width = 30,
+                DefaultCellStyle = new DataGridViewCellStyle()
+                {
+                    Padding = new Padding(2),
+                    ForeColor = Color.Red,
+                    Alignment = DataGridViewContentAlignment.MiddleCenter,
+                    NullValue = "  X  "
+                }
+            });
+
 
             lblWarning.Text = string.Format("{0} adet ürün, {1:C} ", orderDetails.Count, orderDetails.Sum(q => q.Price));
         }
@@ -82,21 +117,12 @@ namespace CashBookApp.WinForm.UI.Sales
 
         }
 
-        public void RefreshAll()
-        {
-            foreach (var entity in db.ChangeTracker.Entries())
-            {
-                entity.Reload();
-            }
-        }
-
+        
         public void LoadPayments()
         {
             Order myOrder = db.Order.Where(q => q.IsDeleted == false && q.OrderID == order4Update.OrderID).FirstOrDefault();
 
-
-
-            dgPayments.DataSource = myOrder.Payment.Where(q => q.IsDeleted == false).Select(q => new
+            var orderPayments = db.Payment.Where(q => q.IsDeleted == false && q.Order.Any(x => x.OrderID == myOrder.OrderID)).Select(q => new
             {
                 q.PaymentID,
                 q.Amount,
@@ -104,19 +130,23 @@ namespace CashBookApp.WinForm.UI.Sales
                 q.Description
             }).ToList();
 
+
+            dgPayments.DataSource = orderPayments;
+
+
             dgPayments.Columns[0].Visible = false;
             dgPayments.Columns[0].HeaderText = "Ödeme ID";
             dgPayments.Columns[1].HeaderText = "Tutar (₺)";
             dgPayments.Columns[2].HeaderText = "Ödeme Tipi";
             dgPayments.Columns[3].HeaderText = "Açıklama";
-            
+
         }
 
+    
 
         private void FrmSalesEdit_Load(object sender, EventArgs e)
         {
             this.order4Update = db.Order.Where(q => q.OrderID == this.orderID && q.IsDeleted == false).FirstOrDefault();
-            //this.orderDetails = order4Update.OrderDetail.ToList();
 
             if (order4Update == null)
             {
@@ -125,51 +155,18 @@ namespace CashBookApp.WinForm.UI.Sales
                 return;
             }
 
-            this.ActiveControl = txtBarcode;
-
             LoadBasket();
-            LoadCustomers();
             LoadPayments();
+            LoadCustomers();
 
 
-            dgBasket.Columns[0].Visible = false;
-            dgBasket.Columns[0].HeaderText = "Stok ID";
-            dgBasket.Columns[1].HeaderText = "Barkod";
-            dgBasket.Columns[2].HeaderText = "Ürün Adı";
-            dgBasket.Columns[3].HeaderText = "Fiyat";
-            dgBasket.Columns[4].HeaderText = "Renk";
-            dgBasket.Columns[5].HeaderText = "Numara";
-
-            dgBasket.Columns[3].DefaultCellStyle.Format = "C2";
-
-            // Add remove button 2 grid
-            dgBasket.Columns.Add(new DataGridViewButtonColumn()
-            {
-                Width = 30,
-                DefaultCellStyle = new DataGridViewCellStyle()
-                {
-                    Padding = new Padding(2),
-                    ForeColor = Color.Red,
-                    Alignment = DataGridViewContentAlignment.MiddleCenter,
-                    NullValue = "  X  "
-                }
-            });
-
-            dgBasket.RowTemplate.Height = 40;
-
-
-
-
-            /*************************************************/
+            cmbCustomerName.SelectedValue = order4Update.Customer.CustomerID;
+            txtCustomerPhone.Text = order4Update.Customer.Phone;
 
             dtTransactionTime.Value = order4Update.OrderDate;
             dtTransactionTime.Checked = true;
 
-            if (order4Update.Customer != null)
-            {
-                cmbCustomerName.SelectedItem = order4Update.Customer;
-                txtCustomerPhone.Text = order4Update.Customer.Phone;
-            }
+
 
 
         }
@@ -180,8 +177,7 @@ namespace CashBookApp.WinForm.UI.Sales
             {
                 int paymentID = int.Parse(dgPayments.SelectedRows[0].Cells[0].Value.ToString());
 
-                FormHelper.ShowDialog<FrmSalesPaymentEdit>(paymentID);
-
+                FormHelper.ShowDialog<FrmSalesEditPaymentEdit>(paymentID);
             }
         }
 
@@ -208,15 +204,114 @@ namespace CashBookApp.WinForm.UI.Sales
 
         private void DgBasket_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1 && e.ColumnIndex == 0)
-            {
-                int productID = int.Parse(dgBasket.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                this.order4Update.OrderDetail.Where(q=>q.ProductID == productID);
-                LoadBasket();
+            if (e.RowIndex > -1 && e.ColumnIndex == 7)
+            {
+                int orderDetailID = int.Parse(dgBasket.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                var selectedOrderDetail = db.OrderDetail.Where(q => q.OrderDetailID == orderDetailID).FirstOrDefault();
+                selectedOrderDetail.IsDeleted = true;
+
+                int i = db.SaveChanges();
+                if (i > 0)
+                {
+                    LoadBasket();
+                }
             }
 
             this.ActiveControl = txtBarcode;
+        }
+
+        private void BtnAddPayment_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowDialog<FrmSalesEditPaymentAdd>(this.orderID);
+        }
+
+        private void BtnFinish_Click(object sender, EventArgs e)
+        {
+            /*  3. Müşteriyi satışa ekle   */
+            Order myOrder = db.Order.Where(q => q.OrderID == this.orderID && q.IsDeleted == false).FirstOrDefault();
+
+            if (cmbCustomerName.SelectedItem != null)
+            {
+                // get customerInfo
+                int selectedCustomerID = (cmbCustomerName.SelectedItem as CustomerInfo4Combobox).CustomerID;
+
+                Customer customer = db.Customer.Where(q => q.CustomerID == selectedCustomerID).FirstOrDefault();
+
+                if (customer != null)
+                {
+                    // müşteri numarası güncellensin mi?
+                    if (txtCustomerPhone.Text != customer.Phone)
+                    {
+                        DialogResult isUpdate = MessageHelper.AskMessage("Müşteri telefon numarası güncellensin mi?");
+                        if (isUpdate == DialogResult.Yes)
+                        {
+                            customer.Phone = txtCustomerPhone.Text;
+                        }
+                    }
+
+                    myOrder.Customer = customer;
+                    myOrder.CustomerID = customer.CustomerID;
+                }
+            }
+            else
+            {
+                if (cmbCustomerName.Text != "")
+                {
+                    // create new customer
+                    Customer newCustomer = new Customer();
+                    newCustomer.CreatedAt = DateTime.Now;
+                    newCustomer.FullName = cmbCustomerName.Text;
+                    newCustomer.Phone = txtCustomerPhone.Text;
+
+                    // add customer 2 sales
+                    Customer customerAdded = db.Customer.Add(newCustomer);
+                    myOrder.CustomerID = customerAdded.CustomerID;
+                }
+            }
+
+
+            if (dtTransactionTime.Checked)
+            {
+                myOrder.OrderDate = dtTransactionTime.Value;
+            }
+
+            int i = db.SaveChanges();
+            if (i > 0)
+            {
+                MessageHelper.InfoMessage("Satış değiikleri kaydedildi!");
+            }
+
+            FrmPaymentList frmPaymentList = (FrmPaymentList)Application.OpenForms["FrmPaymentList"];
+            if (frmPaymentList != null)
+            {
+                frmPaymentList.LoadPayments();
+            }
+            // yeni müşteri eklenmiş olabilir, müşterileri yenile
+            LoadCustomers();
+
+        }
+
+        private void CmbCustomerName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbCustomerName.SelectedItem != null)
+            {
+                txtCustomerPhone.Text = ((CustomerInfo4Combobox)cmbCustomerName.SelectedItem).Phone;
+            }
+            else
+            {
+                txtCustomerPhone.Text = "";
+            }
+        }
+
+        private void FrmSalesEdit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FrmSalesList frmSalesList = (FrmSalesList)Application.OpenForms["FrmSalesList"];
+            if (frmSalesList != null)
+            {
+                frmSalesList.LoadOrders();
+            }
         }
     }
 

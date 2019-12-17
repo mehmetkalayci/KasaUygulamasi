@@ -99,7 +99,7 @@ namespace CashBookApp.WinForm.UI.Sales
             if (dgBasket.SelectedRows.Count > 0)
             {
                 int orderDetailID = int.Parse(dgBasket.SelectedRows[0].Cells[0].Value.ToString());
-                FormHelper.ShowDialog<FrmSalesReturnAddDescription4Product>(orderDetailID);
+                FormHelper.ShowDialog<FrmSalesReturnAddDescription>(orderDetailID);
             }
         }
 

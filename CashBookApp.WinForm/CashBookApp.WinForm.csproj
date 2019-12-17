@@ -181,11 +181,17 @@
     <Compile Include="UI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Sales\FrmSalesReturnAddDescription4Product.cs">
+    <Compile Include="UI\Sales\FrmSalesEditPaymentAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Sales\FrmSalesReturnAddDescription4Product.Designer.cs">
-      <DependentUpon>FrmSalesReturnAddDescription4Product.cs</DependentUpon>
+    <Compile Include="UI\Sales\FrmSalesEditPaymentAdd.Designer.cs">
+      <DependentUpon>FrmSalesEditPaymentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesReturnAddDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sales\FrmSalesReturnAddDescription.Designer.cs">
+      <DependentUpon>FrmSalesReturnAddDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Sales\FrmSalesAdd.cs">
       <SubType>Form</SubType>
@@ -211,11 +217,11 @@
     <Compile Include="UI\Sales\FrmSalesReturnAddExpense.Designer.cs">
       <DependentUpon>FrmSalesReturnAddExpense.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Sales\FrmSalesPaymentEdit.cs">
+    <Compile Include="UI\Sales\FrmSalesEditPaymentEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Sales\FrmSalesPaymentEdit.Designer.cs">
-      <DependentUpon>FrmSalesPaymentEdit.cs</DependentUpon>
+    <Compile Include="UI\Sales\FrmSalesEditPaymentEdit.Designer.cs">
+      <DependentUpon>FrmSalesEditPaymentEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Sales\FrmSalesReturn.cs">
       <SubType>Form</SubType>
@@ -285,8 +291,11 @@
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Sales\FrmSalesReturnAddDescription4Product.resx">
-      <DependentUpon>FrmSalesReturnAddDescription4Product.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Sales\FrmSalesEditPaymentAdd.resx">
+      <DependentUpon>FrmSalesEditPaymentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sales\FrmSalesReturnAddDescription.resx">
+      <DependentUpon>FrmSalesReturnAddDescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sales\FrmSalesAdd.resx">
       <DependentUpon>FrmSalesAdd.cs</DependentUpon>
@@ -300,8 +309,8 @@
     <EmbeddedResource Include="UI\Sales\FrmSalesReturnAddExpense.resx">
       <DependentUpon>FrmSalesReturnAddExpense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Sales\FrmSalesPaymentEdit.resx">
-      <DependentUpon>FrmSalesPaymentEdit.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Sales\FrmSalesEditPaymentEdit.resx">
+      <DependentUpon>FrmSalesEditPaymentEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sales\FrmSalesReturn.resx">
       <DependentUpon>FrmSalesReturn.cs</DependentUpon>

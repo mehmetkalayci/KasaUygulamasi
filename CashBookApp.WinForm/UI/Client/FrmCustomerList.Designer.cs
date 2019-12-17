@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonUpdate = new System.Windows.Forms.ToolStripButton();
@@ -53,6 +53,7 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCountShoppings = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripButtonReturn = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -77,7 +78,8 @@
             this.toolStripButtonUpdate,
             this.toolStripButtonFilter,
             this.toolStripSeparator1,
-            this.toolStripButtonExcel});
+            this.toolStripButtonExcel,
+            this.toolStripButtonReturn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3);
@@ -307,11 +309,11 @@
             this.dgDataCustomers.Name = "dgDataCustomers";
             this.dgDataCustomers.ReadOnly = true;
             this.dgDataCustomers.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgDataCustomers.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgDataCustomers.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgDataCustomers.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgDataCustomers.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgDataCustomers.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -365,11 +367,11 @@
             this.dgDataShoppings.Name = "dgDataShoppings";
             this.dgDataShoppings.ReadOnly = true;
             this.dgDataShoppings.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgDataShoppings.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgDataShoppings.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgDataShoppings.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgDataShoppings.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgDataShoppings.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -379,6 +381,7 @@
             this.dgDataShoppings.Size = new System.Drawing.Size(429, 548);
             this.dgDataShoppings.TabIndex = 10;
             this.dgDataShoppings.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDataShoppings_CellContentDoubleClick);
+            this.dgDataShoppings.SelectionChanged += new System.EventHandler(this.DgDataShoppings_SelectionChanged);
             // 
             // metroLabel5
             // 
@@ -406,6 +409,15 @@
             this.toolStripStatusLabelCountShoppings.Name = "toolStripStatusLabelCountShoppings";
             this.toolStripStatusLabelCountShoppings.Size = new System.Drawing.Size(16, 17);
             this.toolStripStatusLabelCountShoppings.Text = "...";
+            // 
+            // toolStripButtonReturn
+            // 
+            this.toolStripButtonReturn.Image = global::CashBookApp.WinForm.Properties.Resources._return;
+            this.toolStripButtonReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonReturn.Name = "toolStripButtonReturn";
+            this.toolStripButtonReturn.Size = new System.Drawing.Size(96, 20);
+            this.toolStripButtonReturn.Text = "İade İşlemleri";
+            this.toolStripButtonReturn.Click += new System.EventHandler(this.ToolStripButtonReturn_Click);
             // 
             // FrmCustomerList
             // 
@@ -465,5 +477,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.StatusStrip statusStrip2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCountShoppings;
+        private System.Windows.Forms.ToolStripButton toolStripButtonReturn;
     }
 }

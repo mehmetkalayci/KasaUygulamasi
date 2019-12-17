@@ -34,7 +34,7 @@ namespace CashBookApp.WinForm.UI.Client
                 q.OrderDate,
                 Pay = q.Payment.Count(z => z.IsDeleted == false) + " adet ödeme",
                 Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString()
-            }).OrderByDescending(q=>q.OrderID).ToList();
+            }).OrderByDescending(q => q.OrderID).ToList();
 
 
 
@@ -50,7 +50,7 @@ namespace CashBookApp.WinForm.UI.Client
 
         public void LoadCustomers()
         {
-            var customers = db.Customer.Where(q=>q.IsDeleted == false).Select(q => new
+            var customers = db.Customer.Where(q => q.IsDeleted == false).Select(q => new
             {
                 q.CustomerID,
                 q.FullName,
@@ -237,6 +237,23 @@ namespace CashBookApp.WinForm.UI.Client
             {
                 MessageHelper.InfoMessage("Listeden satış seçin!");
             }
+        }
+
+        private void DgDataShoppings_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgDataShoppings.SelectedRows.Count > 0)
+            {
+                toolStripButtonReturn.Visible = true;
+            }
+            else
+            {
+                toolStripButtonReturn.Visible = false;
+            }
+        }
+
+        private void ToolStripButtonReturn_Click(object sender, EventArgs e)
+        {
+            DgDataShoppings_CellContentDoubleClick(sender, null);
         }
     }
 }

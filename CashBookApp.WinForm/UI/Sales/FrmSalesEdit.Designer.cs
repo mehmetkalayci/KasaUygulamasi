@@ -37,9 +37,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.dtTransactionTime = new System.Windows.Forms.DateTimePicker();
-            this.txtChange = new System.Windows.Forms.TextBox();
-            this.txtTakenAmount = new System.Windows.Forms.TextBox();
-            this.txtAmount = new System.Windows.Forms.TextBox();
             this.txtCustomerPhone = new System.Windows.Forms.TextBox();
             this.cmbCustomerName = new System.Windows.Forms.ComboBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -48,9 +45,6 @@
             this.btnFinish = new MetroFramework.Controls.MetroButton();
             this.btnAddPayment = new MetroFramework.Controls.MetroButton();
             this.btnDelPayment = new MetroFramework.Controls.MetroButton();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblWarning = new MetroFramework.Controls.MetroLabel();
@@ -84,9 +78,6 @@
             // 
             this.tabPage3.Controls.Add(this.metroLabel4);
             this.tabPage3.Controls.Add(this.dtTransactionTime);
-            this.tabPage3.Controls.Add(this.txtChange);
-            this.tabPage3.Controls.Add(this.txtTakenAmount);
-            this.tabPage3.Controls.Add(this.txtAmount);
             this.tabPage3.Controls.Add(this.txtCustomerPhone);
             this.tabPage3.Controls.Add(this.cmbCustomerName);
             this.tabPage3.Controls.Add(this.metroPanel1);
@@ -94,9 +85,6 @@
             this.tabPage3.Controls.Add(this.btnFinish);
             this.tabPage3.Controls.Add(this.btnAddPayment);
             this.tabPage3.Controls.Add(this.btnDelPayment);
-            this.tabPage3.Controls.Add(this.metroLabel11);
-            this.tabPage3.Controls.Add(this.metroLabel10);
-            this.tabPage3.Controls.Add(this.metroLabel9);
             this.tabPage3.Controls.Add(this.metroLabel8);
             this.tabPage3.Controls.Add(this.metroLabel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 36);
@@ -129,30 +117,6 @@
             this.dtTransactionTime.Size = new System.Drawing.Size(450, 32);
             this.dtTransactionTime.TabIndex = 120;
             // 
-            // txtChange
-            // 
-            this.txtChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtChange.Location = new System.Drawing.Point(341, 236);
-            this.txtChange.Name = "txtChange";
-            this.txtChange.Size = new System.Drawing.Size(130, 32);
-            this.txtChange.TabIndex = 155;
-            // 
-            // txtTakenAmount
-            // 
-            this.txtTakenAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTakenAmount.Location = new System.Drawing.Point(180, 236);
-            this.txtTakenAmount.Name = "txtTakenAmount";
-            this.txtTakenAmount.Size = new System.Drawing.Size(130, 32);
-            this.txtTakenAmount.TabIndex = 155;
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAmount.Location = new System.Drawing.Point(21, 236);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(130, 32);
-            this.txtAmount.TabIndex = 155;
-            // 
             // txtCustomerPhone
             // 
             this.txtCustomerPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -178,6 +142,7 @@
             this.cmbCustomerName.Name = "cmbCustomerName";
             this.cmbCustomerName.Size = new System.Drawing.Size(450, 32);
             this.cmbCustomerName.TabIndex = 153;
+            this.cmbCustomerName.SelectedIndexChanged += new System.EventHandler(this.CmbCustomerName_SelectedIndexChanged);
             // 
             // metroPanel1
             // 
@@ -246,60 +211,32 @@
             // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(341, 468);
+            this.btnFinish.Location = new System.Drawing.Point(21, 217);
             this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(130, 42);
+            this.btnFinish.Size = new System.Drawing.Size(450, 42);
             this.btnFinish.TabIndex = 148;
-            this.btnFinish.Text = "SATIŞI BİTİR";
+            this.btnFinish.Text = "MÜŞTERİ VE İŞLEM TARİHİ DEĞİŞİKLİKLERİNİ KAYDET";
             this.btnFinish.UseSelectable = true;
+            this.btnFinish.Click += new System.EventHandler(this.BtnFinish_Click);
             // 
             // btnAddPayment
             // 
             this.btnAddPayment.Location = new System.Drawing.Point(21, 468);
             this.btnAddPayment.Name = "btnAddPayment";
-            this.btnAddPayment.Size = new System.Drawing.Size(130, 42);
+            this.btnAddPayment.Size = new System.Drawing.Size(220, 42);
             this.btnAddPayment.TabIndex = 149;
             this.btnAddPayment.Text = "ÖDEME EKLE";
             this.btnAddPayment.UseSelectable = true;
+            this.btnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
             // 
             // btnDelPayment
             // 
-            this.btnDelPayment.Location = new System.Drawing.Point(180, 468);
+            this.btnDelPayment.Location = new System.Drawing.Point(251, 468);
             this.btnDelPayment.Name = "btnDelPayment";
-            this.btnDelPayment.Size = new System.Drawing.Size(130, 42);
+            this.btnDelPayment.Size = new System.Drawing.Size(220, 42);
             this.btnDelPayment.TabIndex = 150;
             this.btnDelPayment.Text = "SEÇİLEN ÖDEMEYİ SİL";
             this.btnDelPayment.UseSelectable = true;
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel11.Location = new System.Drawing.Point(341, 214);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel11.TabIndex = 143;
-            this.metroLabel11.Text = "Para Üstü (₺)";
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(180, 214);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(104, 19);
-            this.metroLabel10.TabIndex = 144;
-            this.metroLabel10.Text = "Alınan Ücret (₺)";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel9.Location = new System.Drawing.Point(21, 214);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(100, 19);
-            this.metroLabel9.TabIndex = 145;
-            this.metroLabel9.Text = "İşlem Tutarı (₺)";
             // 
             // metroLabel8
             // 
@@ -443,6 +380,7 @@
             this.Name = "FrmSalesEdit";
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Satışı Düzenle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSalesEdit_FormClosing);
             this.Load += new System.EventHandler(this.FrmSalesEdit_Load);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
@@ -463,9 +401,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.DateTimePicker dtTransactionTime;
-        private System.Windows.Forms.TextBox txtChange;
-        private System.Windows.Forms.TextBox txtTakenAmount;
-        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.TextBox txtCustomerPhone;
         private System.Windows.Forms.ComboBox cmbCustomerName;
         private MetroFramework.Controls.MetroPanel metroPanel1;
@@ -474,9 +409,6 @@
         private MetroFramework.Controls.MetroButton btnFinish;
         private MetroFramework.Controls.MetroButton btnAddPayment;
         private MetroFramework.Controls.MetroButton btnDelPayment;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblWarning;

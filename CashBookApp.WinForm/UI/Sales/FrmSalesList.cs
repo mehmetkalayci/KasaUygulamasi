@@ -161,7 +161,7 @@ namespace CashBookApp.WinForm.UI.Sales
 
         private void DgDataOrders_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ToolStripButtonUpdate_Click(sender, e);
         }
 
         private void ToolStripButtonDelete_Click(object sender, EventArgs e)

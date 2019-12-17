@@ -1,6 +1,7 @@
 ﻿using CashBookApp.WinForm.Helper;
 using CashBookApp.WinForm.Model;
 using CashBookApp.WinForm.UI.CashBook;
+using CashBookApp.WinForm.UI.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -112,6 +113,11 @@ namespace CashBookApp.WinForm.UI.Sales
                     if (frmPaymentList != null)
                     {
                         frmPaymentList.LoadPayments();
+                    }
+                    FrmCustomerList frmCustomerList = (FrmCustomerList)Application.OpenForms["FrmCustomerList"];
+                    if (frmCustomerList != null)
+                    {
+                        frmCustomerList.LoadCustomers();
                     }
                     MessageHelper.InfoMessage("Satış iadesi gideri kaydedildi!");
                 }
