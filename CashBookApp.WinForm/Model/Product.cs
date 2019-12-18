@@ -24,6 +24,7 @@ namespace CashBookApp.WinForm.Model
         public string Barcode { get; set; }
         public string ProductName { get; set; }
         public decimal Price { get; set; }
+        public Nullable<decimal> InstallmentPrice { get; set; }
         public string Size { get; set; }
         public string Color { get; set; }
         public Nullable<int> Quantity { get; set; }

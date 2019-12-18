@@ -285,5 +285,10 @@ namespace CashBookApp.WinForm.UI.Stock
             LoadStocks();
         }
 
+        private void ToolStripButtonAdd2BarcodeList_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

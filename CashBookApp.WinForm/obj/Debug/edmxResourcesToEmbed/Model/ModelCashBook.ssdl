@@ -66,6 +66,7 @@
     <Property Name="Barcode" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar" MaxLength="1024" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="InstallmentPrice" Type="decimal" Precision="10" Scale="2" />
     <Property Name="Size" Type="nvarchar" MaxLength="64" />
     <Property Name="Color" Type="nvarchar" MaxLength="64" />
     <Property Name="Quantity" Type="int" />

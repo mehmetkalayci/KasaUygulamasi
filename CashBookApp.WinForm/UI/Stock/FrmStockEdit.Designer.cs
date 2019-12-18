@@ -43,6 +43,8 @@
             this.txtPrice = new MetroFramework.Controls.MetroTextBox();
             this.txtProductName = new MetroFramework.Controls.MetroTextBox();
             this.txtBarcode = new MetroFramework.Controls.MetroTextBox();
+            this.txtInstallmentPrice = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroLabel8
@@ -51,7 +53,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(75, 326);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel8.TabIndex = 12;
+            this.metroLabel8.TabIndex = 14;
             this.metroLabel8.Text = "Adet";
             // 
             // txtStockQuantity
@@ -79,7 +81,7 @@
             this.txtStockQuantity.SelectionStart = 0;
             this.txtStockQuantity.ShortcutsEnabled = true;
             this.txtStockQuantity.Size = new System.Drawing.Size(110, 23);
-            this.txtStockQuantity.TabIndex = 13;
+            this.txtStockQuantity.TabIndex = 15;
             this.txtStockQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStockQuantity.UseSelectable = true;
             this.txtStockQuantity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -92,7 +94,7 @@
             this.metroLabel7.Location = new System.Drawing.Point(215, 278);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(57, 19);
-            this.metroLabel7.TabIndex = 10;
+            this.metroLabel7.TabIndex = 12;
             this.metroLabel7.Text = "Numara";
             // 
             // txtSize
@@ -120,7 +122,7 @@
             this.txtSize.SelectionStart = 0;
             this.txtSize.ShortcutsEnabled = true;
             this.txtSize.Size = new System.Drawing.Size(110, 23);
-            this.txtSize.TabIndex = 11;
+            this.txtSize.TabIndex = 13;
             this.txtSize.UseSelectable = true;
             this.txtSize.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSize.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -131,7 +133,7 @@
             this.metroLabel6.Location = new System.Drawing.Point(75, 278);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel6.TabIndex = 8;
+            this.metroLabel6.TabIndex = 10;
             this.metroLabel6.Text = "Renk";
             // 
             // txtColor
@@ -159,7 +161,7 @@
             this.txtColor.SelectionStart = 0;
             this.txtColor.ShortcutsEnabled = true;
             this.txtColor.Size = new System.Drawing.Size(110, 23);
-            this.txtColor.TabIndex = 9;
+            this.txtColor.TabIndex = 11;
             this.txtColor.UseSelectable = true;
             this.txtColor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtColor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -215,7 +217,7 @@
             this.btnSave.Location = new System.Drawing.Point(215, 348);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 23);
-            this.btnSave.TabIndex = 14;
+            this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseSelectable = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -226,7 +228,7 @@
             // 
             // 
             this.txtPrice.CustomButton.Image = null;
-            this.txtPrice.CustomButton.Location = new System.Drawing.Point(228, 1);
+            this.txtPrice.CustomButton.Location = new System.Drawing.Point(88, 1);
             this.txtPrice.CustomButton.Name = "";
             this.txtPrice.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -244,7 +246,7 @@
             this.txtPrice.SelectionLength = 0;
             this.txtPrice.SelectionStart = 0;
             this.txtPrice.ShortcutsEnabled = true;
-            this.txtPrice.Size = new System.Drawing.Size(250, 23);
+            this.txtPrice.Size = new System.Drawing.Size(110, 23);
             this.txtPrice.TabIndex = 7;
             this.txtPrice.UseSelectable = true;
             this.txtPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -310,6 +312,45 @@
             this.txtBarcode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBarcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // txtInstallmentPrice
+            // 
+            // 
+            // 
+            // 
+            this.txtInstallmentPrice.CustomButton.Image = null;
+            this.txtInstallmentPrice.CustomButton.Location = new System.Drawing.Point(88, 1);
+            this.txtInstallmentPrice.CustomButton.Name = "";
+            this.txtInstallmentPrice.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtInstallmentPrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtInstallmentPrice.CustomButton.TabIndex = 1;
+            this.txtInstallmentPrice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtInstallmentPrice.CustomButton.UseSelectable = true;
+            this.txtInstallmentPrice.CustomButton.Visible = false;
+            this.txtInstallmentPrice.Lines = new string[0];
+            this.txtInstallmentPrice.Location = new System.Drawing.Point(215, 252);
+            this.txtInstallmentPrice.MaxLength = 32767;
+            this.txtInstallmentPrice.Name = "txtInstallmentPrice";
+            this.txtInstallmentPrice.PasswordChar = '\0';
+            this.txtInstallmentPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtInstallmentPrice.SelectedText = "";
+            this.txtInstallmentPrice.SelectionLength = 0;
+            this.txtInstallmentPrice.SelectionStart = 0;
+            this.txtInstallmentPrice.ShortcutsEnabled = true;
+            this.txtInstallmentPrice.Size = new System.Drawing.Size(110, 23);
+            this.txtInstallmentPrice.TabIndex = 9;
+            this.txtInstallmentPrice.UseSelectable = true;
+            this.txtInstallmentPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtInstallmentPrice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(215, 230);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel1.TabIndex = 8;
+            this.metroLabel1.Text = "Taksitli Fiyat";
+            // 
             // FrmStockEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,10 +364,12 @@
             this.Controls.Add(this.txtColor);
             this.Controls.Add(this.dtCreatedAt);
             this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtInstallmentPrice);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtBarcode);
@@ -359,5 +402,7 @@
         private MetroFramework.Controls.MetroTextBox txtPrice;
         private MetroFramework.Controls.MetroTextBox txtProductName;
         private MetroFramework.Controls.MetroTextBox txtBarcode;
+        private MetroFramework.Controls.MetroTextBox txtInstallmentPrice;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

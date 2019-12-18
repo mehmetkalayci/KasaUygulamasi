@@ -71,6 +71,7 @@
           <Property Name="Barcode" Type="nvarchar" MaxLength="64" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="1024" Nullable="false" />
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="InstallmentPrice" Type="decimal" Precision="10" Scale="2" />
           <Property Name="Size" Type="nvarchar" MaxLength="64" />
           <Property Name="Color" Type="nvarchar" MaxLength="64" />
           <Property Name="Quantity" Type="int" />
@@ -291,6 +292,7 @@
           <Property Name="Barcode" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Name="ProductName" Type="String" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="InstallmentPrice" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="Size" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Name="Color" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Name="Quantity" Type="Int32" />
@@ -427,6 +429,7 @@
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="Color" ColumnName="Color" />
                 <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="InstallmentPrice" ColumnName="InstallmentPrice" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="Barcode" ColumnName="Barcode" />

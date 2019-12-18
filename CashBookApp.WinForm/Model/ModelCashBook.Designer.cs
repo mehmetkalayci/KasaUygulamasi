@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Admin\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\Model\ModelCashBook.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Mehmet\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\Model\ModelCashBook.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

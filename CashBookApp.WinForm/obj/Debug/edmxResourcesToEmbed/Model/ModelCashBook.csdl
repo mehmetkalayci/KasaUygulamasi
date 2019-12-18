@@ -96,6 +96,7 @@
     <Property Name="Barcode" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
     <Property Name="ProductName" Type="String" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
     <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="InstallmentPrice" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="Size" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
     <Property Name="Color" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
     <Property Name="Quantity" Type="Int32" />

@@ -29,6 +29,7 @@ namespace CashBookApp.WinForm.UI.Stock
             txtBarcode.Text =
             txtProductName.Text =
             txtPrice.Text =
+            txtInstallmentPrice.Text =
             txtColor.Text =
             txtSize.Text =
             txtStockQuantity.Text =
@@ -64,17 +65,30 @@ namespace CashBookApp.WinForm.UI.Stock
                     MessageHelper.InfoMessage("Fiyat girin!");
                     return;
                 }
-                if (!txtPrice.Text.IsDecimal())
+                if (!txtPrice.Text.Trim().IsDecimal())
                 {
                     MessageHelper.InfoMessage("Fiyat bilgisini kontrol edin!");
                     return;
                 }
+                if (String.IsNullOrEmpty(txtInstallmentPrice.Text.Trim()))
+                {
+                    MessageHelper.InfoMessage("Taksitli fiyat girin!");
+                    return;
+                }
+                if (!txtInstallmentPrice.Text.Trim().IsDecimal())
+                {
+                    MessageHelper.InfoMessage("Taksitli fiyat bilgisini kontrol edin!");
+                    return;
+                }
+
 
 
                 Product newProduct = new Product();
                 newProduct.Barcode = txtBarcode.Text;
                 newProduct.ProductName = txtProductName.Text;
                 newProduct.Price = decimal.Parse(txtPrice.Text);
+                newProduct.InstallmentPrice = decimal.Parse(txtInstallmentPrice.Text);
+
                 if (dtCreatedAt.Checked)
                 {
                     newProduct.CreatedAt = dtCreatedAt.Value;

@@ -16,19 +16,13 @@
         "Entry"
         {
         "MsmKey" = "8:_0CD2121AD30770FB20D9DE0EACE96802"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0FE4C3775E56484DA481BAFEBE65F398"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_517ABF330199E459970C3EA3B2BCDD95"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_6247D4D227A3EE5DAEA22D7BA2A0AFC4"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_8126D230E361F1D0D34FEB49AA057C44"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -75,8 +69,14 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_821A2F4FB424421CA45DB7F96DCE4E95"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A21EBCDE735537575A676B3D56F2BF96"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -87,20 +87,26 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_ABB31CB2C54A45AC8927DC67A421DF07"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BD9762C4409E9DFA78E30BA25B4EAAB0"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_D929DB33C8364FDA57A765D57961874B"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,7 +124,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DF295720E3CF42C39C75BD648A177E12"
+        "OwnerKey" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -249,7 +255,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NET Framework 4.6.1    "
+                "FrameworkVersion" = "8:.NET Framework 4.6.1      "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=671728"
                 }
@@ -286,26 +292,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0FE4C3775E56484DA481BAFEBE65F398"
-            {
-            "SourcePath" = "8:..\\..\\..\\cashier.ico"
-            "TargetName" = "8:cashier.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_74ECFF0D69D34AE4AE40C1061816467F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_517ABF330199E459970C3EA3B2BCDD95"
@@ -461,6 +447,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_821A2F4FB424421CA45DB7F96DCE4E95"
+            {
+            "SourcePath" = "8:..\\..\\..\\cashier.ico"
+            "TargetName" = "8:cashier.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_74ECFF0D69D34AE4AE40C1061816467F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A21EBCDE735537575A676B3D56F2BF96"
             {
             "AssemblyRegister" = "3:1"
@@ -490,6 +496,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ABB31CB2C54A45AC8927DC67A421DF07"
+            {
+            "SourcePath" = "8:..\\_Assets\\code128.ttf"
+            "TargetName" = "8:code128.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_6A1A4EFA2FCD478683EB588E5A1F1791"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:5"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BD9762C4409E9DFA78E30BA25B4EAAB0"
@@ -580,6 +606,17 @@
         }
         "Folder"
         {
+            "{1525181F-901A-416C-8A58-119130FE478E}:_6A1A4EFA2FCD478683EB588E5A1F1791"
+            {
+            "Name" = "8:#1911"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:FontsFolder"
+                "Folders"
+                {
+                }
+            }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_74ECFF0D69D34AE4AE40C1061816467F"
             {
             "DefaultLocation" = "8:C:\\[ProductName]"
@@ -642,7 +679,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Kasa Takip"
         "ProductCode" = "8:{F1EAB3D3-F979-45BC-B229-0F1B8C2AD812}"
-        "PackageCode" = "8:{B894F2F0-BA34-4133-B5F9-A290B67C18FF}"
+        "PackageCode" = "8:{0489FE07-3C4B-41F5-8D69-7F7702B5E21E}"
         "UpgradeCode" = "8:{000A7B3E-0DDA-44CF-B834-D8DF15A95EF9}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -762,7 +799,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5F1CEB5756B049D29D1078C505302225"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_66035015FE1C4D909EE8B228565DB636"
             {
             "Name" = "8:Kasa Takip"
             "Arguments" = "8:"
@@ -770,10 +807,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_DF295720E3CF42C39C75BD648A177E12"
+            "Target" = "8:_AC2151022DFA4AE2B0E63BC94930D198"
             "Folder" = "8:_E9CEB11470814B7CADFB4C64476C9220"
             "WorkingFolder" = "8:_74ECFF0D69D34AE4AE40C1061816467F"
-            "Icon" = "8:_0FE4C3775E56484DA481BAFEBE65F398"
+            "Icon" = "8:_821A2F4FB424421CA45DB7F96DCE4E95"
             "Feature" = "8:"
             }
         }
@@ -1281,7 +1318,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DF295720E3CF42C39C75BD648A177E12"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_AC2151022DFA4AE2B0E63BC94930D198"
             {
             "SourcePath" = "8:..\\CashBookApp.WinForm\\obj\\Debug\\Kasa Takip.exe"
             "TargetName" = "8:"

@@ -81,3 +81,4 @@ C:\Users\Mehmet\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBook
 C:\Users\Mehmet\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.csproj.CopyComplete
 C:\Users\Mehmet\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\Kasa Takip.exe
 C:\Users\Mehmet\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\Kasa Takip.pdb
+C:\Users\Mehmet\Desktop\YENİ\CashBookApp\CashBookApp.WinForm\obj\Debug\CashBookApp.WinForm.csprojAssemblyReference.cache

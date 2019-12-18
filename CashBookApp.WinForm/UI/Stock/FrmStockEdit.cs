@@ -55,11 +55,21 @@ namespace CashBookApp.WinForm.UI.Stock
                     MessageHelper.InfoMessage("Fiyat bilgisini kontrol edin!");
                     return;
                 }
-
+                if (String.IsNullOrEmpty(txtInstallmentPrice.Text.Trim()))
+                {
+                    MessageHelper.InfoMessage("Taksitli fiyat girin!");
+                    return;
+                }
+                if (!txtInstallmentPrice.Text.Trim().IsDecimal())
+                {
+                    MessageHelper.InfoMessage("Taksitli fiyat bilgisini kontrol edin!");
+                    return;
+                }
 
                 product4Update.Barcode = txtBarcode.Text;
                 product4Update.ProductName = txtProductName.Text;
                 product4Update.Price = decimal.Parse(txtPrice.Text);
+                product4Update.InstallmentPrice = decimal.Parse(txtInstallmentPrice.Text);
                 if (dtCreatedAt.Checked)
                 {
                     product4Update.CreatedAt = dtCreatedAt.Value;
@@ -131,6 +141,7 @@ namespace CashBookApp.WinForm.UI.Stock
             txtBarcode.Text = product4Update.Barcode;
             txtProductName.Text = product4Update.ProductName;
             txtPrice.Text = product4Update.Price.ToString();
+            txtInstallmentPrice.Text = product4Update.InstallmentPrice.ToString();
             dtCreatedAt.Value = product4Update.CreatedAt;
             txtColor.Text = product4Update.Color;
             txtSize.Text = product4Update.Size;

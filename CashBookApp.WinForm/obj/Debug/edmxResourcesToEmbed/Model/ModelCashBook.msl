@@ -64,6 +64,7 @@
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           <ScalarProperty Name="Color" ColumnName="Color" />
           <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="InstallmentPrice" ColumnName="InstallmentPrice" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="Barcode" ColumnName="Barcode" />
