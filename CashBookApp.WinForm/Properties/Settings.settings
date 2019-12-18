@@ -21,7 +21,7 @@
       <Value Profile="(Default)">500</Value>
     </Setting>
     <Setting Name="UpdateURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://telgrafla.com/update/laninas/update.xml</Value>
+      <Value Profile="(Default)">http://telgrafla.com/updates/laninas/app.xml</Value>
     </Setting>
   </Settings>
 </SettingsFile>

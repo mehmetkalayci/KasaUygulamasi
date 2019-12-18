@@ -97,7 +97,7 @@ namespace CashBookApp.WinForm.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://telgrafla.com/update/laninas/update.xml")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://telgrafla.com/updates/laninas/app.xml")]
         public string UpdateURL {
             get {
                 return ((string)(this["UpdateURL"]));
