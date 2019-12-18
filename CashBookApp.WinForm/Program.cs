@@ -23,10 +23,6 @@ namespace CashBookApp.WinForm
             System.Globalization.CultureInfo cultureInfo = new System.Globalization.CultureInfo("tr-TR");
             cultureInfo.NumberFormat.CurrencySymbol = "₺";
 
-            Application.Run(new FrmMain());
-
-
-            /*
             FrmLogin frmLogin = new FrmLogin();
             Application.Run(frmLogin);
 
@@ -35,7 +31,7 @@ namespace CashBookApp.WinForm
             {
                 Application.Run(new FrmMain());
             }
-            */
+            
         }
     }
 }
