@@ -43,7 +43,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(75, 176);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(140, 19);
-            this.metroLabel3.TabIndex = 11;
+            this.metroLabel3.TabIndex = 4;
             this.metroLabel3.Text = "Eski Şifrenizi Onaylayın";
             // 
             // txtOldPassword
@@ -71,7 +71,7 @@
             this.txtOldPassword.SelectionStart = 0;
             this.txtOldPassword.ShortcutsEnabled = true;
             this.txtOldPassword.Size = new System.Drawing.Size(250, 23);
-            this.txtOldPassword.TabIndex = 12;
+            this.txtOldPassword.TabIndex = 5;
             this.txtOldPassword.UseSelectable = true;
             this.txtOldPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtOldPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -81,7 +81,7 @@
             this.btnLogin.Location = new System.Drawing.Point(250, 227);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 13;
+            this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Kaydet";
             this.btnLogin.UseSelectable = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
@@ -92,7 +92,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(75, 128);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Yeni Şifre";
             // 
             // txtNewPassword
@@ -120,7 +120,7 @@
             this.txtNewPassword.SelectionStart = 0;
             this.txtNewPassword.ShortcutsEnabled = true;
             this.txtNewPassword.Size = new System.Drawing.Size(250, 23);
-            this.txtNewPassword.TabIndex = 10;
+            this.txtNewPassword.TabIndex = 3;
             this.txtNewPassword.UseSelectable = true;
             this.txtNewPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNewPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -131,7 +131,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(75, 80);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(106, 19);
-            this.metroLabel2.TabIndex = 7;
+            this.metroLabel2.TabIndex = 0;
             this.metroLabel2.Text = "Yeni Kullanıcı Adı";
             // 
             // txtUsername
@@ -159,7 +159,7 @@
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(250, 23);
-            this.txtUsername.TabIndex = 8;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.UseSelectable = true;
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

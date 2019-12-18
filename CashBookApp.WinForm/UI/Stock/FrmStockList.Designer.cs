@@ -113,7 +113,7 @@
             this.splitContainer1.Size = new System.Drawing.Size(1060, 620);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.SplitterWidth = 3;
-            this.splitContainer1.TabIndex = 3;
+            this.splitContainer1.TabIndex = 0;
             // 
             // btnFilter
             // 
@@ -121,7 +121,7 @@
             this.btnFilter.Location = new System.Drawing.Point(109, 438);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
-            this.btnFilter.TabIndex = 19;
+            this.btnFilter.TabIndex = 17;
             this.btnFilter.Text = "Filtrele";
             this.btnFilter.UseSelectable = true;
             this.btnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
@@ -131,7 +131,7 @@
             this.btnClear.Location = new System.Drawing.Point(14, 438);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 20;
+            this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Temizle";
             this.btnClear.UseSelectable = true;
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
@@ -145,7 +145,7 @@
             this.dtCreatedAtBefore.Name = "dtCreatedAtBefore";
             this.dtCreatedAtBefore.ShowCheckBox = true;
             this.dtCreatedAtBefore.Size = new System.Drawing.Size(170, 29);
-            this.dtCreatedAtBefore.TabIndex = 18;
+            this.dtCreatedAtBefore.TabIndex = 16;
             this.dtCreatedAtBefore.ValueChanged += new System.EventHandler(this.NmMore_ValueChanged);
             // 
             // metroLabel8
@@ -154,7 +154,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(14, 381);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(132, 19);
-            this.metroLabel8.TabIndex = 17;
+            this.metroLabel8.TabIndex = 15;
             this.metroLabel8.Text = "Ürün Kayıt Tarihi, Bitiş";
             this.metroLabel8.WrapToLine = true;
             // 
@@ -167,7 +167,7 @@
             this.dtCreatedAtAfter.Name = "dtCreatedAtAfter";
             this.dtCreatedAtAfter.ShowCheckBox = true;
             this.dtCreatedAtAfter.Size = new System.Drawing.Size(170, 29);
-            this.dtCreatedAtAfter.TabIndex = 16;
+            this.dtCreatedAtAfter.TabIndex = 14;
             this.dtCreatedAtAfter.ValueChanged += new System.EventHandler(this.NmMore_ValueChanged);
             // 
             // metroLabel7
@@ -176,7 +176,7 @@
             this.metroLabel7.Location = new System.Drawing.Point(14, 327);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(163, 19);
-            this.metroLabel7.TabIndex = 15;
+            this.metroLabel7.TabIndex = 13;
             this.metroLabel7.Text = "Ürün Kayıt Tarihi, Başlangıç";
             this.metroLabel7.WrapToLine = true;
             // 
@@ -186,7 +186,7 @@
             this.chkLess.Location = new System.Drawing.Point(14, 283);
             this.chkLess.Name = "chkLess";
             this.chkLess.Size = new System.Drawing.Size(108, 15);
-            this.chkLess.TabIndex = 13;
+            this.chkLess.TabIndex = 11;
             this.chkLess.Text = "Stok Adedi, Bitiş";
             this.chkLess.UseSelectable = true;
             this.chkLess.CheckedChanged += new System.EventHandler(this.ChkMore_CheckedChanged);
@@ -197,7 +197,7 @@
             this.metroLabel6.Location = new System.Drawing.Point(14, 185);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(57, 19);
-            this.metroLabel6.TabIndex = 9;
+            this.metroLabel6.TabIndex = 7;
             this.metroLabel6.Text = "Numara";
             // 
             // metroLabel5
@@ -206,7 +206,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(14, 137);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel5.TabIndex = 7;
+            this.metroLabel5.TabIndex = 5;
             this.metroLabel5.Text = "Renk";
             // 
             // metroLabel2
@@ -224,7 +224,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(14, 89);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(61, 19);
-            this.metroLabel4.TabIndex = 5;
+            this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "Ürün Adı";
             // 
             // metroLabel1
@@ -242,7 +242,7 @@
             this.chkMore.Location = new System.Drawing.Point(14, 236);
             this.chkMore.Name = "chkMore";
             this.chkMore.Size = new System.Drawing.Size(136, 15);
-            this.chkMore.TabIndex = 11;
+            this.chkMore.TabIndex = 9;
             this.chkMore.Text = "Stok Adedi, Başlangıç";
             this.chkMore.UseSelectable = true;
             this.chkMore.CheckedChanged += new System.EventHandler(this.ChkMore_CheckedChanged);
@@ -272,7 +272,7 @@
             this.txtSize.SelectionStart = 0;
             this.txtSize.ShortcutsEnabled = true;
             this.txtSize.Size = new System.Drawing.Size(170, 23);
-            this.txtSize.TabIndex = 10;
+            this.txtSize.TabIndex = 8;
             this.txtSize.UseSelectable = true;
             this.txtSize.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSize.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -303,7 +303,7 @@
             this.txtColor.SelectionStart = 0;
             this.txtColor.ShortcutsEnabled = true;
             this.txtColor.Size = new System.Drawing.Size(170, 23);
-            this.txtColor.TabIndex = 8;
+            this.txtColor.TabIndex = 6;
             this.txtColor.UseSelectable = true;
             this.txtColor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtColor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -334,7 +334,7 @@
             this.txtProductName.SelectionStart = 0;
             this.txtProductName.ShortcutsEnabled = true;
             this.txtProductName.Size = new System.Drawing.Size(170, 23);
-            this.txtProductName.TabIndex = 6;
+            this.txtProductName.TabIndex = 4;
             this.txtProductName.UseSelectable = true;
             this.txtProductName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtProductName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -376,7 +376,7 @@
             this.nmLess.Location = new System.Drawing.Point(14, 304);
             this.nmLess.Name = "nmLess";
             this.nmLess.Size = new System.Drawing.Size(170, 20);
-            this.nmLess.TabIndex = 14;
+            this.nmLess.TabIndex = 12;
             this.nmLess.ValueChanged += new System.EventHandler(this.NmMore_ValueChanged);
             // 
             // nmMore
@@ -384,7 +384,7 @@
             this.nmMore.Location = new System.Drawing.Point(14, 257);
             this.nmMore.Name = "nmMore";
             this.nmMore.Size = new System.Drawing.Size(170, 20);
-            this.nmMore.TabIndex = 12;
+            this.nmMore.TabIndex = 10;
             this.nmMore.ValueChanged += new System.EventHandler(this.NmMore_ValueChanged);
             // 
             // dgDataStocks
@@ -414,7 +414,7 @@
             this.dgDataStocks.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgDataStocks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDataStocks.Size = new System.Drawing.Size(855, 567);
-            this.dgDataStocks.TabIndex = 4;
+            this.dgDataStocks.TabIndex = 1;
             this.dgDataStocks.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDataStocks_CellContentDoubleClick);
             // 
             // toolStrip1
@@ -436,7 +436,7 @@
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(855, 29);
-            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.TabIndex = 0;
             // 
             // toolStripButtonAdd
             // 

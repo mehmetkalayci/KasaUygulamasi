@@ -78,7 +78,7 @@
             this.btnSave.Location = new System.Drawing.Point(288, 131);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseSelectable = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -89,11 +89,11 @@
             this.chkProducts.Location = new System.Drawing.Point(75, 135);
             this.chkProducts.Name = "chkProducts";
             this.chkProducts.Size = new System.Drawing.Size(77, 15);
-            this.chkProducts.TabIndex = 3;
+            this.chkProducts.TabIndex = 2;
             this.chkProducts.Text = "Stoğa Ekle";
             this.chkProducts.UseSelectable = true;
             // 
-            // FrmReturnAddDescription4Product
+            // FrmSalesReturnAddDescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +104,7 @@
             this.Controls.Add(this.metroLabel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmReturnAddDescription4Product";
+            this.Name = "FrmSalesReturnAddDescription";
             this.Resizable = false;
             this.Text = "İade Açıklaması";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

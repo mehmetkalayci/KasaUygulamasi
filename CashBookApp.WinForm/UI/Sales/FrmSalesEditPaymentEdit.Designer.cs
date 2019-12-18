@@ -45,7 +45,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(75, 236);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel4.TabIndex = 35;
+            this.metroLabel4.TabIndex = 6;
             this.metroLabel4.Text = "Açıklama";
             // 
             // txtDescription
@@ -75,7 +75,7 @@
             this.txtDescription.ShortcutsEnabled = true;
             this.txtDescription.Size = new System.Drawing.Size(250, 46);
             this.txtDescription.Style = MetroFramework.MetroColorStyle.Black;
-            this.txtDescription.TabIndex = 36;
+            this.txtDescription.TabIndex = 7;
             this.txtDescription.UseSelectable = true;
             this.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -86,7 +86,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(75, 182);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(79, 19);
-            this.metroLabel3.TabIndex = 33;
+            this.metroLabel3.TabIndex = 4;
             this.metroLabel3.Text = "Ödeme Tipi";
             // 
             // metroLabel2
@@ -95,7 +95,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(75, 134);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel2.TabIndex = 31;
+            this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Tutar";
             // 
             // cmbPaymentType
@@ -105,7 +105,7 @@
             this.cmbPaymentType.Location = new System.Drawing.Point(75, 204);
             this.cmbPaymentType.Name = "cmbPaymentType";
             this.cmbPaymentType.Size = new System.Drawing.Size(250, 29);
-            this.cmbPaymentType.TabIndex = 34;
+            this.cmbPaymentType.TabIndex = 5;
             this.cmbPaymentType.UseSelectable = true;
             // 
             // btnSave
@@ -113,7 +113,7 @@
             this.btnSave.Location = new System.Drawing.Point(225, 310);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 23);
-            this.btnSave.TabIndex = 37;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseSelectable = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -128,7 +128,7 @@
             this.dtTransactionTime.Name = "dtTransactionTime";
             this.dtTransactionTime.ShowCheckBox = true;
             this.dtTransactionTime.Size = new System.Drawing.Size(250, 29);
-            this.dtTransactionTime.TabIndex = 30;
+            this.dtTransactionTime.TabIndex = 1;
             // 
             // txtAmount
             // 
@@ -155,7 +155,7 @@
             this.txtAmount.SelectionStart = 0;
             this.txtAmount.ShortcutsEnabled = true;
             this.txtAmount.Size = new System.Drawing.Size(250, 23);
-            this.txtAmount.TabIndex = 32;
+            this.txtAmount.TabIndex = 3;
             this.txtAmount.UseSelectable = true;
             this.txtAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -166,10 +166,10 @@
             this.metroLabel1.Location = new System.Drawing.Point(75, 80);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(91, 19);
-            this.metroLabel1.TabIndex = 29;
+            this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "İşlem  Zamanı";
             // 
-            // FrmSalesPaymentEdit
+            // FrmSalesEditPaymentEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -185,7 +185,7 @@
             this.Controls.Add(this.metroLabel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmSalesPaymentEdit";
+            this.Name = "FrmSalesEditPaymentEdit";
             this.Resizable = false;
             this.Text = "Satış Ödemesi Düzenle";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

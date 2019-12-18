@@ -52,7 +52,7 @@
             this.tlBackupRestore.Location = new System.Drawing.Point(340, 243);
             this.tlBackupRestore.Name = "tlBackupRestore";
             this.tlBackupRestore.Size = new System.Drawing.Size(150, 70);
-            this.tlBackupRestore.TabIndex = 2;
+            this.tlBackupRestore.TabIndex = 6;
             this.tlBackupRestore.Text = "Yedekle && \r\nGeri Yükle";
             this.tlBackupRestore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tlBackupRestore.TileImage = global::CashBookApp.WinForm.Properties.Resources.servers;
@@ -70,7 +70,7 @@
             this.tlSalesList.Location = new System.Drawing.Point(28, 243);
             this.tlSalesList.Name = "tlSalesList";
             this.tlSalesList.Size = new System.Drawing.Size(150, 70);
-            this.tlSalesList.TabIndex = 1;
+            this.tlSalesList.TabIndex = 4;
             this.tlSalesList.Text = "Satış Listesi";
             this.tlSalesList.TileImage = ((System.Drawing.Image)(resources.GetObject("tlSalesList.TileImage")));
             this.tlSalesList.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -87,7 +87,7 @@
             this.tlExit.Location = new System.Drawing.Point(496, 243);
             this.tlExit.Name = "tlExit";
             this.tlExit.Size = new System.Drawing.Size(150, 146);
-            this.tlExit.TabIndex = 0;
+            this.tlExit.TabIndex = 11;
             this.tlExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tlExit.TileImage = global::CashBookApp.WinForm.Properties.Resources.close;
             this.tlExit.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,7 +123,7 @@
             this.tlAddExpense.Location = new System.Drawing.Point(184, 87);
             this.tlAddExpense.Name = "tlAddExpense";
             this.tlAddExpense.Size = new System.Drawing.Size(150, 150);
-            this.tlAddExpense.TabIndex = 0;
+            this.tlAddExpense.TabIndex = 1;
             this.tlAddExpense.Text = "Kasa Çıkışları";
             this.tlAddExpense.TileImage = global::CashBookApp.WinForm.Properties.Resources.turkish_lira;
             this.tlAddExpense.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,7 +140,7 @@
             this.tlUserSettings.Location = new System.Drawing.Point(184, 319);
             this.tlUserSettings.Name = "tlUserSettings";
             this.tlUserSettings.Size = new System.Drawing.Size(150, 70);
-            this.tlUserSettings.TabIndex = 0;
+            this.tlUserSettings.TabIndex = 8;
             this.tlUserSettings.Text = "Kullanıcı Ayarları";
             this.tlUserSettings.TileImage = global::CashBookApp.WinForm.Properties.Resources.user_settings;
             this.tlUserSettings.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -157,7 +157,7 @@
             this.tlCashBook.Location = new System.Drawing.Point(340, 87);
             this.tlCashBook.Name = "tlCashBook";
             this.tlCashBook.Size = new System.Drawing.Size(150, 150);
-            this.tlCashBook.TabIndex = 0;
+            this.tlCashBook.TabIndex = 2;
             this.tlCashBook.Text = "Gün Sonu";
             this.tlCashBook.TileImage = global::CashBookApp.WinForm.Properties.Resources.approve;
             this.tlCashBook.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,7 +174,7 @@
             this.tlStocks.Location = new System.Drawing.Point(496, 87);
             this.tlStocks.Name = "tlStocks";
             this.tlStocks.Size = new System.Drawing.Size(150, 150);
-            this.tlStocks.TabIndex = 0;
+            this.tlStocks.TabIndex = 3;
             this.tlStocks.Text = "Stok İşlemleri";
             this.tlStocks.TileImage = global::CashBookApp.WinForm.Properties.Resources.package_add;
             this.tlStocks.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,7 +191,7 @@
             this.tlLock.Location = new System.Drawing.Point(418, 319);
             this.tlLock.Name = "tlLock";
             this.tlLock.Size = new System.Drawing.Size(72, 70);
-            this.tlLock.TabIndex = 0;
+            this.tlLock.TabIndex = 10;
             this.tlLock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tlLock.TileImage = global::CashBookApp.WinForm.Properties.Resources.padlock;
             this.tlLock.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,7 +210,7 @@
             this.tlCustomers.Location = new System.Drawing.Point(184, 243);
             this.tlCustomers.Name = "tlCustomers";
             this.tlCustomers.Size = new System.Drawing.Size(150, 70);
-            this.tlCustomers.TabIndex = 0;
+            this.tlCustomers.TabIndex = 5;
             this.tlCustomers.Text = "Müşteri Ara";
             this.tlCustomers.TileImage = global::CashBookApp.WinForm.Properties.Resources.search_person;
             this.tlCustomers.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -227,7 +227,7 @@
             this.tlAbout.Location = new System.Drawing.Point(340, 319);
             this.tlAbout.Name = "tlAbout";
             this.tlAbout.Size = new System.Drawing.Size(72, 70);
-            this.tlAbout.TabIndex = 0;
+            this.tlAbout.TabIndex = 9;
             this.tlAbout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tlAbout.TileImage = global::CashBookApp.WinForm.Properties.Resources.about;
             this.tlAbout.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -246,7 +246,7 @@
             this.tlSearchStock.Location = new System.Drawing.Point(28, 319);
             this.tlSearchStock.Name = "tlSearchStock";
             this.tlSearchStock.Size = new System.Drawing.Size(150, 70);
-            this.tlSearchStock.TabIndex = 0;
+            this.tlSearchStock.TabIndex = 7;
             this.tlSearchStock.Text = "Stok Ara";
             this.tlSearchStock.TileImage = global::CashBookApp.WinForm.Properties.Resources.package_search;
             this.tlSearchStock.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;

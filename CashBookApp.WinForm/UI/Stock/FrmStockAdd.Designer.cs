@@ -51,7 +51,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(75, 326);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel8.TabIndex = 31;
+            this.metroLabel8.TabIndex = 12;
             this.metroLabel8.Text = "Adet";
             // 
             // txtStockQuantity
@@ -79,7 +79,7 @@
             this.txtStockQuantity.SelectionStart = 0;
             this.txtStockQuantity.ShortcutsEnabled = true;
             this.txtStockQuantity.Size = new System.Drawing.Size(110, 23);
-            this.txtStockQuantity.TabIndex = 32;
+            this.txtStockQuantity.TabIndex = 13;
             this.txtStockQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStockQuantity.UseSelectable = true;
             this.txtStockQuantity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -92,7 +92,7 @@
             this.metroLabel7.Location = new System.Drawing.Point(215, 278);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(57, 19);
-            this.metroLabel7.TabIndex = 29;
+            this.metroLabel7.TabIndex = 10;
             this.metroLabel7.Text = "Numara";
             // 
             // txtSize
@@ -120,7 +120,7 @@
             this.txtSize.SelectionStart = 0;
             this.txtSize.ShortcutsEnabled = true;
             this.txtSize.Size = new System.Drawing.Size(110, 23);
-            this.txtSize.TabIndex = 30;
+            this.txtSize.TabIndex = 11;
             this.txtSize.UseSelectable = true;
             this.txtSize.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSize.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -131,7 +131,7 @@
             this.metroLabel6.Location = new System.Drawing.Point(75, 278);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel6.TabIndex = 27;
+            this.metroLabel6.TabIndex = 8;
             this.metroLabel6.Text = "Renk";
             // 
             // txtColor
@@ -159,7 +159,7 @@
             this.txtColor.SelectionStart = 0;
             this.txtColor.ShortcutsEnabled = true;
             this.txtColor.Size = new System.Drawing.Size(110, 23);
-            this.txtColor.TabIndex = 28;
+            this.txtColor.TabIndex = 9;
             this.txtColor.UseSelectable = true;
             this.txtColor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtColor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -172,7 +172,7 @@
             this.dtCreatedAt.Name = "dtCreatedAt";
             this.dtCreatedAt.ShowCheckBox = true;
             this.dtCreatedAt.Size = new System.Drawing.Size(250, 29);
-            this.dtCreatedAt.TabIndex = 26;
+            this.dtCreatedAt.TabIndex = 1;
             // 
             // metroLabel5
             // 
@@ -180,7 +180,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(75, 80);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(92, 19);
-            this.metroLabel5.TabIndex = 25;
+            this.metroLabel5.TabIndex = 0;
             this.metroLabel5.Text = "Eklenme Tarihi";
             // 
             // metroLabel4
@@ -189,7 +189,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(75, 230);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(36, 19);
-            this.metroLabel4.TabIndex = 23;
+            this.metroLabel4.TabIndex = 6;
             this.metroLabel4.Text = "Fiyat";
             // 
             // metroLabel3
@@ -198,7 +198,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(75, 182);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(58, 19);
-            this.metroLabel3.TabIndex = 21;
+            this.metroLabel3.TabIndex = 4;
             this.metroLabel3.Text = "Stok Adı";
             // 
             // metroLabel2
@@ -207,7 +207,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(75, 134);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel2.TabIndex = 17;
+            this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Barkod";
             // 
             // btnSave
@@ -215,7 +215,7 @@
             this.btnSave.Location = new System.Drawing.Point(215, 348);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 23);
-            this.btnSave.TabIndex = 33;
+            this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseSelectable = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -245,7 +245,7 @@
             this.txtPrice.SelectionStart = 0;
             this.txtPrice.ShortcutsEnabled = true;
             this.txtPrice.Size = new System.Drawing.Size(250, 23);
-            this.txtPrice.TabIndex = 24;
+            this.txtPrice.TabIndex = 7;
             this.txtPrice.UseSelectable = true;
             this.txtPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPrice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -275,7 +275,7 @@
             this.txtProductName.SelectionStart = 0;
             this.txtProductName.ShortcutsEnabled = true;
             this.txtProductName.Size = new System.Drawing.Size(250, 23);
-            this.txtProductName.TabIndex = 22;
+            this.txtProductName.TabIndex = 5;
             this.txtProductName.UseSelectable = true;
             this.txtProductName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtProductName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -305,7 +305,7 @@
             this.txtBarcode.SelectionStart = 0;
             this.txtBarcode.ShortcutsEnabled = true;
             this.txtBarcode.Size = new System.Drawing.Size(250, 23);
-            this.txtBarcode.TabIndex = 18;
+            this.txtBarcode.TabIndex = 3;
             this.txtBarcode.UseSelectable = true;
             this.txtBarcode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBarcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

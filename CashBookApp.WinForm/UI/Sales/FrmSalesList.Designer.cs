@@ -104,7 +104,7 @@
             this.splitContainer1.Size = new System.Drawing.Size(1060, 620);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.SplitterWidth = 3;
-            this.splitContainer1.TabIndex = 5;
+            this.splitContainer1.TabIndex = 0;
             // 
             // btnFilter
             // 
@@ -112,7 +112,7 @@
             this.btnFilter.Location = new System.Drawing.Point(109, 248);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
-            this.btnFilter.TabIndex = 38;
+            this.btnFilter.TabIndex = 9;
             this.btnFilter.Text = "Filtrele";
             this.btnFilter.UseSelectable = true;
             this.btnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
@@ -122,7 +122,7 @@
             this.btnClear.Location = new System.Drawing.Point(14, 248);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 39;
+            this.btnClear.TabIndex = 10;
             this.btnClear.Text = "Temizle";
             this.btnClear.UseSelectable = true;
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
@@ -136,7 +136,7 @@
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.ShowCheckBox = true;
             this.dtEndDate.Size = new System.Drawing.Size(170, 29);
-            this.dtEndDate.TabIndex = 37;
+            this.dtEndDate.TabIndex = 8;
             this.dtEndDate.ValueChanged += new System.EventHandler(this.DtStartDate_ValueChanged);
             // 
             // metroLabel8
@@ -145,7 +145,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(14, 191);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel8.TabIndex = 36;
+            this.metroLabel8.TabIndex = 7;
             this.metroLabel8.Text = "Bitiş Tarihi";
             this.metroLabel8.WrapToLine = true;
             // 
@@ -158,7 +158,7 @@
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.ShowCheckBox = true;
             this.dtStartDate.Size = new System.Drawing.Size(170, 29);
-            this.dtStartDate.TabIndex = 35;
+            this.dtStartDate.TabIndex = 6;
             this.dtStartDate.ValueChanged += new System.EventHandler(this.DtStartDate_ValueChanged);
             // 
             // metroLabel7
@@ -167,7 +167,7 @@
             this.metroLabel7.Location = new System.Drawing.Point(14, 137);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(97, 19);
-            this.metroLabel7.TabIndex = 34;
+            this.metroLabel7.TabIndex = 5;
             this.metroLabel7.Text = "Başlangıç Tarihi";
             this.metroLabel7.WrapToLine = true;
             // 
@@ -177,7 +177,7 @@
             this.metroLabel9.Location = new System.Drawing.Point(14, 89);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(97, 19);
-            this.metroLabel9.TabIndex = 24;
+            this.metroLabel9.TabIndex = 3;
             this.metroLabel9.Text = "Müşteri Telefon";
             // 
             // metroLabel10
@@ -186,7 +186,7 @@
             this.metroLabel10.Location = new System.Drawing.Point(14, 41);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(113, 19);
-            this.metroLabel10.TabIndex = 22;
+            this.metroLabel10.TabIndex = 1;
             this.metroLabel10.Text = "Müşteri Ad Soyad";
             // 
             // txtCustomerPhone
@@ -214,7 +214,7 @@
             this.txtCustomerPhone.SelectionStart = 0;
             this.txtCustomerPhone.ShortcutsEnabled = true;
             this.txtCustomerPhone.Size = new System.Drawing.Size(170, 23);
-            this.txtCustomerPhone.TabIndex = 25;
+            this.txtCustomerPhone.TabIndex = 4;
             this.txtCustomerPhone.UseSelectable = true;
             this.txtCustomerPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCustomerPhone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -245,7 +245,7 @@
             this.txtCustomerName.SelectionStart = 0;
             this.txtCustomerName.ShortcutsEnabled = true;
             this.txtCustomerName.Size = new System.Drawing.Size(170, 23);
-            this.txtCustomerName.TabIndex = 23;
+            this.txtCustomerName.TabIndex = 2;
             this.txtCustomerName.UseSelectable = true;
             this.txtCustomerName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCustomerName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -282,7 +282,7 @@
             this.splitContainer2.Size = new System.Drawing.Size(857, 591);
             this.splitContainer2.SplitterDistance = global::CashBookApp.WinForm.Properties.Settings.Default.SalesListSplitter;
             this.splitContainer2.SplitterWidth = 5;
-            this.splitContainer2.TabIndex = 4;
+            this.splitContainer2.TabIndex = 0;
             // 
             // dgDataOrders
             // 
@@ -311,7 +311,7 @@
             this.dgDataOrders.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgDataOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDataOrders.Size = new System.Drawing.Size(498, 548);
-            this.dgDataOrders.TabIndex = 9;
+            this.dgDataOrders.TabIndex = 1;
             this.dgDataOrders.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDataOrders_CellContentDoubleClick);
             this.dgDataOrders.SelectionChanged += new System.EventHandler(this.DgDataOrders_SelectionChanged);
             // 
@@ -321,7 +321,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(0, 0);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(498, 19);
-            this.metroLabel3.TabIndex = 6;
+            this.metroLabel3.TabIndex = 0;
             this.metroLabel3.Text = "Satış Listesi";
             // 
             // statusStrip1
@@ -334,7 +334,7 @@
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.statusStrip1.Size = new System.Drawing.Size(498, 22);
             this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.TabIndex = 2;
             // 
             // toolStripStatusLabelCountOrders
             // 
@@ -369,7 +369,7 @@
             this.dgDataOrderDetails.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgDataOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDataOrderDetails.Size = new System.Drawing.Size(350, 548);
-            this.dgDataOrderDetails.TabIndex = 10;
+            this.dgDataOrderDetails.TabIndex = 1;
             // 
             // metroLabel5
             // 
@@ -377,7 +377,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(0, 0);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(350, 19);
-            this.metroLabel5.TabIndex = 9;
+            this.metroLabel5.TabIndex = 0;
             this.metroLabel5.Text = "Satış Detayları";
             // 
             // statusStrip2
@@ -390,7 +390,7 @@
             this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.statusStrip2.Size = new System.Drawing.Size(350, 22);
             this.statusStrip2.SizingGrip = false;
-            this.statusStrip2.TabIndex = 7;
+            this.statusStrip2.TabIndex = 2;
             // 
             // toolStripStatusLabelCountOrderDetails
             // 
@@ -415,7 +415,7 @@
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(857, 29);
-            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.TabIndex = 1;
             // 
             // toolStripButtonDelete
             // 

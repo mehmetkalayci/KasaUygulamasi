@@ -72,7 +72,7 @@
             this.tabControl2.Padding = new System.Drawing.Point(25, 10);
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(500, 576);
-            this.tabControl2.TabIndex = 122;
+            this.tabControl2.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -102,7 +102,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(21, 13);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(76, 19);
-            this.metroLabel4.TabIndex = 156;
+            this.metroLabel4.TabIndex = 0;
             this.metroLabel4.Text = "İşlem Tarihi";
             // 
             // dtTransactionTime
@@ -115,7 +115,7 @@
             this.dtTransactionTime.Name = "dtTransactionTime";
             this.dtTransactionTime.ShowCheckBox = true;
             this.dtTransactionTime.Size = new System.Drawing.Size(450, 32);
-            this.dtTransactionTime.TabIndex = 120;
+            this.dtTransactionTime.TabIndex = 1;
             // 
             // txtCustomerPhone
             // 
@@ -123,7 +123,7 @@
             this.txtCustomerPhone.Location = new System.Drawing.Point(21, 169);
             this.txtCustomerPhone.Name = "txtCustomerPhone";
             this.txtCustomerPhone.Size = new System.Drawing.Size(450, 32);
-            this.txtCustomerPhone.TabIndex = 154;
+            this.txtCustomerPhone.TabIndex = 5;
             // 
             // cmbCustomerName
             // 
@@ -141,7 +141,7 @@
             this.cmbCustomerName.MaxLength = 64;
             this.cmbCustomerName.Name = "cmbCustomerName";
             this.cmbCustomerName.Size = new System.Drawing.Size(450, 32);
-            this.cmbCustomerName.TabIndex = 153;
+            this.cmbCustomerName.TabIndex = 3;
             this.cmbCustomerName.SelectedIndexChanged += new System.EventHandler(this.CmbCustomerName_SelectedIndexChanged);
             // 
             // metroPanel1
@@ -196,7 +196,7 @@
             this.dgPayments.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgPayments.Size = new System.Drawing.Size(448, 148);
-            this.dgPayments.TabIndex = 8;
+            this.dgPayments.TabIndex = 0;
             this.dgPayments.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgPayments_CellContentDoubleClick);
             // 
             // metroLabel2
@@ -206,7 +206,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(21, 281);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(101, 19);
-            this.metroLabel2.TabIndex = 151;
+            this.metroLabel2.TabIndex = 7;
             this.metroLabel2.Text = "Ödeme Bilgileri";
             // 
             // btnFinish
@@ -214,7 +214,7 @@
             this.btnFinish.Location = new System.Drawing.Point(21, 217);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(450, 42);
-            this.btnFinish.TabIndex = 148;
+            this.btnFinish.TabIndex = 6;
             this.btnFinish.Text = "MÜŞTERİ VE İŞLEM TARİHİ DEĞİŞİKLİKLERİNİ KAYDET";
             this.btnFinish.UseSelectable = true;
             this.btnFinish.Click += new System.EventHandler(this.BtnFinish_Click);
@@ -224,7 +224,7 @@
             this.btnAddPayment.Location = new System.Drawing.Point(21, 468);
             this.btnAddPayment.Name = "btnAddPayment";
             this.btnAddPayment.Size = new System.Drawing.Size(220, 42);
-            this.btnAddPayment.TabIndex = 149;
+            this.btnAddPayment.TabIndex = 8;
             this.btnAddPayment.Text = "ÖDEME EKLE";
             this.btnAddPayment.UseSelectable = true;
             this.btnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
@@ -234,7 +234,7 @@
             this.btnDelPayment.Location = new System.Drawing.Point(251, 468);
             this.btnDelPayment.Name = "btnDelPayment";
             this.btnDelPayment.Size = new System.Drawing.Size(220, 42);
-            this.btnDelPayment.TabIndex = 150;
+            this.btnDelPayment.TabIndex = 9;
             this.btnDelPayment.Text = "SEÇİLEN ÖDEMEYİ SİL";
             this.btnDelPayment.UseSelectable = true;
             // 
@@ -245,7 +245,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(21, 147);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(103, 19);
-            this.metroLabel8.TabIndex = 146;
+            this.metroLabel8.TabIndex = 4;
             this.metroLabel8.Text = "Müşteri Telefon";
             // 
             // metroLabel1
@@ -255,7 +255,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(21, 80);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(118, 19);
-            this.metroLabel1.TabIndex = 147;
+            this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Müşteri Ad Soyad";
             // 
             // lblWarning
@@ -266,7 +266,7 @@
             this.lblWarning.Location = new System.Drawing.Point(150, 100);
             this.lblWarning.Name = "lblWarning";
             this.lblWarning.Size = new System.Drawing.Size(362, 33);
-            this.lblWarning.TabIndex = 120;
+            this.lblWarning.TabIndex = 0;
             this.lblWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblWarning.UseCustomForeColor = true;
             // 
@@ -280,7 +280,7 @@
             this.tabControl1.Padding = new System.Drawing.Point(25, 10);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(500, 577);
-            this.tabControl1.TabIndex = 121;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -302,7 +302,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(6, 14);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(85, 19);
-            this.metroLabel3.TabIndex = 148;
+            this.metroLabel3.TabIndex = 0;
             this.metroLabel3.Text = "Barkod Girin";
             // 
             // dgBasket
@@ -332,7 +332,7 @@
             this.dgBasket.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgBasket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBasket.Size = new System.Drawing.Size(480, 450);
-            this.dgBasket.TabIndex = 6;
+            this.dgBasket.TabIndex = 2;
             this.dgBasket.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgBasket_CellClick);
             // 
             // txtBarcode
@@ -363,7 +363,7 @@
             this.txtBarcode.SelectionStart = 0;
             this.txtBarcode.ShortcutsEnabled = true;
             this.txtBarcode.Size = new System.Drawing.Size(480, 32);
-            this.txtBarcode.TabIndex = 5;
+            this.txtBarcode.TabIndex = 1;
             this.txtBarcode.UseSelectable = true;
             this.txtBarcode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBarcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

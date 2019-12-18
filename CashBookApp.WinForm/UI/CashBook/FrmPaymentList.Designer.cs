@@ -107,7 +107,7 @@
             this.splitContainer1.Size = new System.Drawing.Size(1060, 620);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.SplitterWidth = 3;
-            this.splitContainer1.TabIndex = 7;
+            this.splitContainer1.TabIndex = 0;
             // 
             // metroLabel5
             // 
@@ -115,7 +115,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(14, 9);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(167, 19);
-            this.metroLabel5.TabIndex = 67;
+            this.metroLabel5.TabIndex = 0;
             this.metroLabel5.Text = "Arama kriterlerini belirleyin";
             // 
             // btnFilter
@@ -123,7 +123,7 @@
             this.btnFilter.Location = new System.Drawing.Point(109, 277);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
-            this.btnFilter.TabIndex = 66;
+            this.btnFilter.TabIndex = 10;
             this.btnFilter.Text = "Filtrele";
             this.btnFilter.UseSelectable = true;
             this.btnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
@@ -133,7 +133,7 @@
             this.btnClean.Location = new System.Drawing.Point(14, 277);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(75, 23);
-            this.btnClean.TabIndex = 66;
+            this.btnClean.TabIndex = 11;
             this.btnClean.Text = "Temizle";
             this.btnClean.UseSelectable = true;
             this.btnClean.Click += new System.EventHandler(this.BtnClean_Click);
@@ -144,7 +144,7 @@
             this.chkExpenses.Location = new System.Drawing.Point(14, 256);
             this.chkExpenses.Name = "chkExpenses";
             this.chkExpenses.Size = new System.Drawing.Size(104, 15);
-            this.chkExpenses.TabIndex = 65;
+            this.chkExpenses.TabIndex = 9;
             this.chkExpenses.Text = "Sadece Giderler";
             this.chkExpenses.UseSelectable = true;
             this.chkExpenses.CheckedChanged += new System.EventHandler(this.ChkExpenses_CheckedChanged);
@@ -155,7 +155,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(14, 205);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel4.TabIndex = 64;
+            this.metroLabel4.TabIndex = 7;
             this.metroLabel4.Text = "Açıklama";
             // 
             // txtDescription
@@ -183,7 +183,7 @@
             this.txtDescription.SelectionStart = 0;
             this.txtDescription.ShortcutsEnabled = true;
             this.txtDescription.Size = new System.Drawing.Size(170, 23);
-            this.txtDescription.TabIndex = 63;
+            this.txtDescription.TabIndex = 8;
             this.txtDescription.UseSelectable = true;
             this.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -196,7 +196,7 @@
             this.cmbPaymentType.Location = new System.Drawing.Point(14, 173);
             this.cmbPaymentType.Name = "cmbPaymentType";
             this.cmbPaymentType.Size = new System.Drawing.Size(170, 29);
-            this.cmbPaymentType.TabIndex = 62;
+            this.cmbPaymentType.TabIndex = 6;
             this.cmbPaymentType.UseSelectable = true;
             this.cmbPaymentType.SelectedIndexChanged += new System.EventHandler(this.CmbPaymentType_SelectedIndexChanged);
             // 
@@ -206,7 +206,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(14, 151);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(79, 19);
-            this.metroLabel3.TabIndex = 61;
+            this.metroLabel3.TabIndex = 5;
             this.metroLabel3.Text = "Ödeme Tipi";
             // 
             // metroLabel2
@@ -215,7 +215,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(14, 97);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel2.TabIndex = 60;
+            this.metroLabel2.TabIndex = 3;
             this.metroLabel2.Text = "Bitiş Tarihi";
             // 
             // dtTransactionTimeEnd
@@ -226,7 +226,7 @@
             this.dtTransactionTimeEnd.Name = "dtTransactionTimeEnd";
             this.dtTransactionTimeEnd.ShowCheckBox = true;
             this.dtTransactionTimeEnd.Size = new System.Drawing.Size(170, 29);
-            this.dtTransactionTimeEnd.TabIndex = 59;
+            this.dtTransactionTimeEnd.TabIndex = 4;
             this.dtTransactionTimeEnd.ValueChanged += new System.EventHandler(this.DtTransactionTimeEnd_ValueChanged);
             // 
             // metroLabel1
@@ -235,7 +235,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(14, 43);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(97, 19);
-            this.metroLabel1.TabIndex = 58;
+            this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "Başlangıç Tarihi";
             // 
             // dtTransactionTimeStart
@@ -246,7 +246,7 @@
             this.dtTransactionTimeStart.Name = "dtTransactionTimeStart";
             this.dtTransactionTimeStart.ShowCheckBox = true;
             this.dtTransactionTimeStart.Size = new System.Drawing.Size(170, 29);
-            this.dtTransactionTimeStart.TabIndex = 57;
+            this.dtTransactionTimeStart.TabIndex = 2;
             this.dtTransactionTimeStart.ValueChanged += new System.EventHandler(this.DtTransactionTimeEnd_ValueChanged);
             // 
             // splitContainer2
@@ -276,7 +276,7 @@
             this.splitContainer2.Size = new System.Drawing.Size(857, 620);
             this.splitContainer2.SplitterDistance = global::CashBookApp.WinForm.Properties.Settings.Default.SummarySplitterDistance;
             this.splitContainer2.SplitterWidth = 3;
-            this.splitContainer2.TabIndex = 27;
+            this.splitContainer2.TabIndex = 0;
             // 
             // dgSummary
             // 
@@ -305,7 +305,7 @@
             this.dgSummary.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgSummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgSummary.Size = new System.Drawing.Size(855, 101);
-            this.dgSummary.TabIndex = 76;
+            this.dgSummary.TabIndex = 1;
             // 
             // statusStrip2
             // 
@@ -317,7 +317,7 @@
             this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.statusStrip2.Size = new System.Drawing.Size(855, 22);
             this.statusStrip2.SizingGrip = false;
-            this.statusStrip2.TabIndex = 75;
+            this.statusStrip2.TabIndex = 2;
             // 
             // toolStripStatusLabelSummary
             // 
@@ -332,7 +332,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(0, 0);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(855, 25);
-            this.metroLabel8.TabIndex = 73;
+            this.metroLabel8.TabIndex = 0;
             this.metroLabel8.Text = "Özet";
             this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -363,7 +363,7 @@
             this.dgPaymentList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgPaymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgPaymentList.Size = new System.Drawing.Size(855, 389);
-            this.dgPaymentList.TabIndex = 75;
+            this.dgPaymentList.TabIndex = 2;
             this.dgPaymentList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgPaymentList_CellContentDoubleClick);
             // 
             // toolStrip2
@@ -383,7 +383,7 @@
             this.toolStrip2.Padding = new System.Windows.Forms.Padding(3);
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip2.Size = new System.Drawing.Size(855, 29);
-            this.toolStrip2.TabIndex = 74;
+            this.toolStrip2.TabIndex = 0;
             // 
             // toolStripButtonDelete
             // 
@@ -471,7 +471,7 @@
             this.metroLabel7.Location = new System.Drawing.Point(0, 0);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(855, 25);
-            this.metroLabel7.TabIndex = 72;
+            this.metroLabel7.TabIndex = 1;
             this.metroLabel7.Text = "İşlemler";
             this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -485,7 +485,7 @@
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.statusStrip1.Size = new System.Drawing.Size(855, 22);
             this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 71;
+            this.statusStrip1.TabIndex = 3;
             // 
             // toolStripStatusLabelTransactionCount
             // 

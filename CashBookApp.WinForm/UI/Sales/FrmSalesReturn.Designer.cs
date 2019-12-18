@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgBasket = new System.Windows.Forms.DataGridView();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnAddExpense = new MetroFramework.Controls.MetroButton();
@@ -45,8 +45,8 @@
             // 
             // dgBasket
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgBasket.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgBasket.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgBasket.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgBasket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -57,11 +57,11 @@
             this.dgBasket.MultiSelect = false;
             this.dgBasket.Name = "dgBasket";
             this.dgBasket.RowHeadersVisible = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgBasket.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgBasket.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgBasket.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgBasket.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgBasket.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
@@ -69,7 +69,7 @@
             this.dgBasket.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgBasket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBasket.Size = new System.Drawing.Size(354, 254);
-            this.dgBasket.TabIndex = 7;
+            this.dgBasket.TabIndex = 1;
             this.dgBasket.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgBasket_CellContentDoubleClick);
             // 
             // metroLabel1
@@ -78,7 +78,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(23, 60);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(52, 19);
-            this.metroLabel1.TabIndex = 8;
+            this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Ürünler";
             // 
             // btnAddExpense
@@ -86,7 +86,7 @@
             this.btnAddExpense.Location = new System.Drawing.Point(566, 342);
             this.btnAddExpense.Name = "btnAddExpense";
             this.btnAddExpense.Size = new System.Drawing.Size(171, 26);
-            this.btnAddExpense.TabIndex = 9;
+            this.btnAddExpense.TabIndex = 6;
             this.btnAddExpense.Text = "İade Gideri Ekle";
             this.btnAddExpense.UseSelectable = true;
             this.btnAddExpense.Click += new System.EventHandler(this.BtnAddExpense_Click);
@@ -96,7 +96,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(23, 342);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(354, 88);
-            this.metroLabel2.TabIndex = 10;
+            this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "İade İşlemi:\r\n1. İade edilecek ürüne çift tıklayıp, ürünü iade olarak etiketleyin" +
     ".\r\n2. Kasaya Gider Ekle \'ye tıklayıp iade işlemini tamamlayın.";
             this.metroLabel2.WrapToLine = true;
@@ -107,13 +107,13 @@
             this.metroLabel3.Location = new System.Drawing.Point(383, 60);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(88, 19);
-            this.metroLabel3.TabIndex = 12;
+            this.metroLabel3.TabIndex = 3;
             this.metroLabel3.Text = "İade Giderleri";
             // 
             // dgPayments
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgPayments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgPayments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgPayments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgPayments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -124,11 +124,11 @@
             this.dgPayments.MultiSelect = false;
             this.dgPayments.Name = "dgPayments";
             this.dgPayments.RowHeadersVisible = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgPayments.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgPayments.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgPayments.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgPayments.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgPayments.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.ButtonFace;
@@ -136,14 +136,14 @@
             this.dgPayments.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgPayments.Size = new System.Drawing.Size(354, 254);
-            this.dgPayments.TabIndex = 11;
+            this.dgPayments.TabIndex = 4;
             // 
             // btnDel
             // 
             this.btnDel.Location = new System.Drawing.Point(383, 342);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(171, 26);
-            this.btnDel.TabIndex = 13;
+            this.btnDel.TabIndex = 5;
             this.btnDel.Text = "Seçili Olan Ödemeyi Sil";
             this.btnDel.UseSelectable = true;
             this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);

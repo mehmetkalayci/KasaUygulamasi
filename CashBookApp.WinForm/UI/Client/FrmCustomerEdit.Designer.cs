@@ -45,7 +45,7 @@
             this.dtCreatedAt.Name = "dtCreatedAt";
             this.dtCreatedAt.ShowCheckBox = true;
             this.dtCreatedAt.Size = new System.Drawing.Size(250, 29);
-            this.dtCreatedAt.TabIndex = 41;
+            this.dtCreatedAt.TabIndex = 1;
             // 
             // metroLabel5
             // 
@@ -53,7 +53,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(75, 80);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(92, 19);
-            this.metroLabel5.TabIndex = 40;
+            this.metroLabel5.TabIndex = 0;
             this.metroLabel5.Text = "Eklenme Tarihi";
             // 
             // metroLabel3
@@ -62,7 +62,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(75, 182);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel3.TabIndex = 36;
+            this.metroLabel3.TabIndex = 4;
             this.metroLabel3.Text = "Telefon";
             // 
             // metroLabel2
@@ -71,7 +71,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(75, 134);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel2.TabIndex = 34;
+            this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Ad Soyad";
             // 
             // btnSave
@@ -79,7 +79,7 @@
             this.btnSave.Location = new System.Drawing.Point(215, 233);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 23);
-            this.btnSave.TabIndex = 48;
+            this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseSelectable = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -109,7 +109,7 @@
             this.txtPhone.SelectionStart = 0;
             this.txtPhone.ShortcutsEnabled = true;
             this.txtPhone.Size = new System.Drawing.Size(250, 23);
-            this.txtPhone.TabIndex = 37;
+            this.txtPhone.TabIndex = 5;
             this.txtPhone.UseSelectable = true;
             this.txtPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPhone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -139,7 +139,7 @@
             this.txtFullName.SelectionStart = 0;
             this.txtFullName.ShortcutsEnabled = true;
             this.txtFullName.Size = new System.Drawing.Size(250, 23);
-            this.txtFullName.TabIndex = 35;
+            this.txtFullName.TabIndex = 3;
             this.txtFullName.UseSelectable = true;
             this.txtFullName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFullName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

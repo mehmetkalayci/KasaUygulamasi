@@ -41,7 +41,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(75, 80);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(79, 19);
-            this.metroLabel5.TabIndex = 40;
+            this.metroLabel5.TabIndex = 0;
             this.metroLabel5.Text = "Kullanıcı Adı";
             // 
             // metroLabel2
@@ -50,7 +50,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(75, 128);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(46, 19);
-            this.metroLabel2.TabIndex = 34;
+            this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Parola";
             // 
             // btnLogin
@@ -58,7 +58,7 @@
             this.btnLogin.Location = new System.Drawing.Point(215, 179);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(110, 23);
-            this.btnLogin.TabIndex = 48;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Giriş";
             this.btnLogin.UseSelectable = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
@@ -90,7 +90,7 @@
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(250, 23);
-            this.txtUsername.TabIndex = 39;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = global::CashBookApp.WinForm.Properties.Settings.Default.Username;
             this.txtUsername.UseSelectable = true;
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -121,7 +121,7 @@
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(250, 23);
-            this.txtPassword.TabIndex = 35;
+            this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSelectable = true;
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
