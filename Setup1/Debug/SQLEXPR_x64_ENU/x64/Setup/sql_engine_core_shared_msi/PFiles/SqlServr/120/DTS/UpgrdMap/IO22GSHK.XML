@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Extensions xmlns="http://www.microsoft.com/SqlServer/Dts/Extensions.xsd">
+  <Tasks>
+    <!-- DEFAULT TASKS -->
+    <Task Identifier="Attunity.CdcControlTask" Model=".NET">
+      <CreationName>Attunity.SqlServer.CDCControlTask.CdcControlTask, Attunity.SqlServer.CDCControlTask, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ASExecuteDDLTask" Model=".NET">
+      <CreationName>Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask, Microsoft.SqlServer.ASTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.BulkInsertTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DataProfilingTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.DataProfilingTask.DataProfilingTask, Microsoft.SqlServer.DataProfilingTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DMQueryTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask, Microsoft.SqlServer.DMQueryTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DTSProcessingTask" Model=".NET">
+      <CreationName>Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask, Microsoft.SqlServer.ASTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ExecutePackageTask" Model="COM">
+      <CreationName>SSIS.ExecutePackageTask.4</CreationName>
+      <CreationName>{4F6B1254-7507-43BA-A8B3-E9FF02083699}</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ExecuteProcess" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess, Microsoft.SqlServer.ExecProcTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ExecuteSQLTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ExpressionTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.ExpressionTask.ExpressionTask, Microsoft.SqlServer.ExpressionTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.FileSystemTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.FtpTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask, Microsoft.SqlServer.FtpTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.MessageQueueTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask, Microsoft.SqlServer.MSMQTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.Pipeline" Model="COM">
+      <CreationName>SSIS.Pipeline.4</CreationName>
+      <CreationName>{1CF081CA-677D-4561-967A-D06798F62DD6}</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ReplacementTask" Model="COM">
+      <CreationName>SSIS.ReplacementTask.4</CreationName>
+      <CreationName>{8E789515-A52C-4C06-8503-E797EA8292CD}</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ScriptTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.SendMailTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TransferDatabaseTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask, Microsoft.SqlServer.TransferDatabasesTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TransferErrorMessagesTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask, Microsoft.SqlServer.TransferErrorMessagesTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TransferJobsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask, Microsoft.SqlServer.TransferJobsTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TransferLoginsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferLoginsTask.TransferLoginsTask, Microsoft.SqlServer.TransferLoginsTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TransferObjectsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferObjectsTask.TransferObjectsTask, Microsoft.SqlServer.TransferObjectsTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TransferSqlServerObjectsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferSqlServerObjectsTask.TransferSqlServerObjectsTask, Microsoft.SqlServer.TransferSqlServerObjectsTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TransferStoredProceduresTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferStoredProceduresTask.TransferStoredProceduresTask, Microsoft.SqlServer.TransferStoredProceduresTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.WebServiceTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask, Microsoft.SqlServer.WebServiceTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.WmiDataReaderTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask, Microsoft.SqlServer.WMIDRTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.WmiEventWatcherTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask, Microsoft.SqlServer.WMIEWTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.XMLTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <!-- DATA COLLECTOR -->
+    <Task Identifier="Microsoft.CacheWindowMaintainanceTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.Collector.Tasks.CacheWindowMaintainanceTask, Microsoft.SqlServer.Management.CollectorTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.FileAccessTask" Model="COM">
+      <CreationName>DTS.FileAccessTask.3</CreationName>
+      <CreationName>{74592534-3421-42FC-9C14-BFB153DBC435}</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.GenerateTSQLPackageTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.Collector.Tasks.GenerateTSQLPackageTask, Microsoft.SqlServer.Management.CollectorTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.UpdateRowCountsTask" Model="COM">
+      <CreationName>DTS.UpdateRowCountsTask.3</CreationName>
+      <CreationName>{3329C4EB-0351-4C75-B4D5-BDAC853226D5}</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ResetRowCountsTask" Model="COM">
+      <CreationName>DTS.ResetRowCountsTask.3</CreationName>
+      <CreationName>{28C6D9E3-3761-4C47-884A-518A38CB2805}</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.TraceStartScriptTask" Model="COM">
+      <CreationName>DTS.TraceStartScriptTask.3</CreationName>
+      <CreationName>{90A7D851-72EE-4DF1-955C-59A78DBFE083}</CreationName>
+    </Task>
+    <!-- MAINTENANCE PLANS -->
+    <Task Identifier="Microsoft.DbMaintenanceBackupTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceBackupTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceCheckIntegrityTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceCheckIntegrityTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceDefragmentIndexTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceDefragmentIndexTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceExecuteAgentJobTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceExecuteAgentJobTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceFileCleanupTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceFileCleanupTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceHistoryCleanupTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceHistoryCleanupTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceNotifyOperatorTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceNotifyOperatorTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceReindexTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceReindexTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceShrinkTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceShrinkTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceTSQLExecuteTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceTSQLExecuteTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.DbMaintenanceUpdateStatisticsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceUpdateStatisticsTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.ReportingTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.ReportingTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.SubPlanPostExecuteTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Management.DatabaseMaintenance.SubPlanPostExecuteTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <!-- STOCK IDENTIFIERS -->
+    <Task Identifier="STOCK:SQLTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:ScriptTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:ExecuteProcessTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess, Microsoft.SqlServer.ExecProcTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:ExecutePackageTask" Model="COM">
+      <CreationName>SSIS.ExecutePackageTask.4</CreationName>
+      <CreationName>{4F6B1254-7507-43BA-A8B3-E9FF02083699}</CreationName>
+    </Task>
+    <Task Identifier="STOCK:PipelineTask" Model="COM">
+      <CreationName>SSIS.Pipeline.4</CreationName>
+      <CreationName>{1CF081CA-677D-4561-967A-D06798F62DD6}</CreationName>
+    </Task>
+    <Task Identifier="STOCK:FTPTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask, Microsoft.SqlServer.FtpTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:SendMailTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:MSMQTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask, Microsoft.SqlServer.MSMQTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:FileSystemTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:BulkInsertTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:XMLTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:WmiDataReaderTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask, Microsoft.SqlServer.WMIDRTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:WmiEventWatcherTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask, Microsoft.SqlServer.WMIEWTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:TransferStoredProceduresTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferStoredProceduresTask.TransferStoredProceduresTask, Microsoft.SqlServer.TransferStoredProceduresTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:TransferLoginsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferLoginsTask.TransferLoginsTask, Microsoft.SqlServer.TransferLoginsTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:TransferErrorMessagesTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask, Microsoft.SqlServer.TransferErrorMessagesTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:TransferJobsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask, Microsoft.SqlServer.TransferJobsTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:WebServiceTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask, Microsoft.SqlServer.WebServiceTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:TransferSqlServerObjectsTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferSqlServerObjectsTask.TransferSqlServerObjectsTask, Microsoft.SqlServer.TransferSqlServerObjectsTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="STOCK:TransferDatabaseTask" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask, Microsoft.SqlServer.TransferDatabasesTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Task>
+    <Task Identifier="Microsoft.Package" Model="COM">
+      <CreationName>SSIS.Package.4</CreationName>      
+      <CreationName>{02102D82-3E9A-48AE-8A3F-AC8C01F4A044}</CreationName>
+      <CreationName>SSIS.Package</CreationName>
+    </Task>
+  </Tasks>
+  <PipelineComponents>
+    <!-- ATTUNITY -->
+    <PipelineComponent Identifier="Attunity.CdcSourceComponent" Model=".NET">
+      <CreationName>Attunity.SqlServer.CDCSrc.CdcSourceComponent, Attunity.SqlServer.CDCSrc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c</CreationName>
+      <TypeConverter name="StateVariable">Attunity.SqlServer.CDCSrc.PackageVariablesTypeConverter, Attunity.SqlServer.CDCSrc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c</TypeConverter>
+      <TypeConverter name="CDCProcessingMode">Attunity.SqlServer.CDCSrc.CdcProcessingMode, Attunity.SqlServer.CDCSrc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c</TypeConverter>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Attunity.CdcSplitterComponent" Model=".NET">
+      <CreationName>Attunity.SqlServer.CDCSplit.CdcSplitterComponent, Attunity.SqlServer.CDCSplit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c</CreationName>
+      <TypeConverter name="OutputType">Attunity.SqlServer.CDCSplit.OutputType, Attunity.SqlServer.CDCSplit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c</TypeConverter>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Attunity.SSISODBCDst" Model="COM">
+      <CreationName>AttunitySSISODBCDst.4</CreationName>
+      <CreationName>{51B271F1-3B7E-4875-870E-62A0456FE2AD}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Attunity.SSISODBCSrc" Model="COM">
+      <CreationName>AttunitySSISODBCSrc.4</CreationName>
+      <CreationName>{F8600F4A-E321-42F4-AA59-DA00FA374EA5}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Attunity.SSISOraDst" Model="COM">
+      <CreationName>AttunitySSISOraDst.5</CreationName>
+      <CreationName>{25D09A8C-3B80-47D2-ABD7-DDB162127CD3}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Attunity.SSISOraSrc" Model="COM">
+      <CreationName>AttunitySSISOraSrc.5</CreationName>
+      <CreationName>{99174350-FEF6-4FEF-9859-9C48518D1227}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Attunity.SSISTeraDst" Model="COM">
+      <CreationName>AttunitySSISTeraDst.5</CreationName>
+      <CreationName>{36228690-67BF-4951-AAC1-AB2DD242147D}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Attunity.SSISTeraSrc" Model="COM">
+      <CreationName>AttunitySSISTeraSrc.5</CreationName>
+      <CreationName>{3F430F77-D6C1-4817-B1CF-8F8E0BB5D0A0}</CreationName>
+    </PipelineComponent>
+    <!-- DEFAULT -->
+    <PipelineComponent Identifier="Microsoft.ADONETDestination" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+      <UITypeEditor name="TableOrViewName">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Aggregate" Model="COM">
+      <CreationName>DTSTransform.Aggregate.4</CreationName>
+      <CreationName>{5ADC3E0D-2722-4394-9195-0543C18AB53A}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.BDD" Model="COM">
+      <CreationName>DTSTransform.BalancedDataDistributor.3</CreationName>
+      <CreationName>{77E9F664-6D5E-420B-962B-2E87E61897BE}</CreationName>
+      <CreationName>DTSTransform.BalancedDataDistributor</CreationName>
+    </PipelineComponent>	
+    <PipelineComponent Identifier="Microsoft.Cache" Model="COM">
+      <CreationName>DTSTransform.Cache.3</CreationName>
+      <CreationName>{D9E9689B-7258-488F-B955-265F90D52ED8}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.CharacterMap" Model="COM">
+      <CreationName>DTSTransform.CharacterMap.4</CreationName>
+      <CreationName>{B8706948-9D67-4E81-9C88-24EED2F1BC4A}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.ConditionalSplit" Model="COM">
+      <CreationName>DTSTransform.ConditionalSplit.4</CreationName>
+      <CreationName>{6FA01478-82BB-40D8-B16F-690406F18AEE}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.CopyMap" Model="COM">
+      <CreationName>DTSTransform.CopyMap.4</CreationName>
+      <CreationName>{D308460C-4353-4DA6-A457-B41EE51769F6}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.DataConvert" Model="COM">
+      <CreationName>DTSTransform.DataConvert.4</CreationName>
+      <CreationName>{A6616787-31C0-4890-BA71-3D47422F4454}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.DataCorrectionComponent" Model=".NET">
+      <CreationName>Microsoft.Ssdqs.Component.DataCorrection.Logic.DataCorrectionComponent, Microsoft.Ssdqs.Component.DataCorrection, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.DataReaderDestinationAdapter" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Pipeline.DataReaderDestinationAdapter, Microsoft.SqlServer.DataReaderDest, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.DataReaderSourceAdapter" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+      <TypeConverter name="AccessMode">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</TypeConverter>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+      <UITypeEditor name="TableOrViewName">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.DerivedColumn" Model="COM">
+      <CreationName>DTSTransform.DerivedColumn.4</CreationName>
+      <CreationName>{18E9A11B-7393-47C5-9D47-687BE04A6B09}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.ExcelDestination" Model="COM">
+      <CreationName>DTSAdapter.ExcelDestination.4</CreationName>
+      <CreationName>{90E2E609-1207-4CB0-A8CE-CC7B8CFE2510}</CreationName>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.ExcelSource" Model="COM">
+      <CreationName>DTSAdapter.ExcelSource.4</CreationName>
+      <CreationName>{9F5C585F-2F02-4622-B273-F75D52419D4A}</CreationName>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Extractor" Model="COM">
+      <CreationName>TxFileExtractor.Extractor.4</CreationName>
+      <CreationName>{AC2C07E7-6818-4D65-B66D-0B1664211568}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.FlatFileDestination" Model="COM">
+      <CreationName>DTSAdapter.FlatFileDestination.4</CreationName>
+      <CreationName>{FD4FFB90-EECF-4B5A-A3A7-DE2E1FA8052C}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.FlatFileSource" Model="COM">
+      <CreationName>DTSAdapter.FlatFileSource.4</CreationName>
+      <CreationName>{C4D48377-EFD6-4C95-9A0B-049219453431}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.FuzzyGrouping" Model="COM">
+      <CreationName>DTSTransform.GroupDups.4</CreationName>
+      <CreationName>{045EB6AE-C5ED-49E8-BD21-C6696E456564}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.FuzzyLookup" Model="COM">
+      <CreationName>DTSTransform.BestMatch.4</CreationName>
+      <CreationName>{AD9B9B83-DB60-4188-B57D-93C5155DFACC}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Inserter" Model="COM">
+      <CreationName>TxFileInserter.Inserter.4</CreationName>
+      <CreationName>{22DF5994-EFB6-4299-BDD6-82077BBF00BC}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Lineage" Model="COM">
+      <CreationName>DTSTransform.Lineage.4</CreationName>
+      <CreationName>{EFFA6B56-84CA-4314-B3C7-F8B576630156}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Lookup" Model="COM">
+      <CreationName>DTSTransform.Lookup.4</CreationName>
+      <CreationName>{9345248B-9709-4C04-90C1-0853F8B68EE8}</CreationName>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+      <UITypeEditor name="SqlCommandParam">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.ManagedComponentHost" Model="COM">
+      <CreationName>DTS.ManagedComponentWrapper.4</CreationName>
+      <CreationName>{33D831DE-5DCF-48F0-B431-4D327B9E785D}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Merge" Model="COM">
+      <CreationName>DTSTransform.Merge.4</CreationName>
+      <CreationName>{FF3FEC06-FAA6-4874-B061-7BEB17A0C215}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.MergeJoin" Model="COM">
+      <CreationName>DTSTransform.MergeJoin.4</CreationName>
+      <CreationName>{C6811950-DD25-48CF-A846-9856185FCB8E}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Multicast" Model="COM">
+      <CreationName>DTSTransform.Multicast.4</CreationName>
+      <CreationName>{5A44DC2D-5A32-4F6C-8918-C005CD951CFD}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.OData" Model=".NET">
+      <CreationName>Microsoft.SqlServer.IntegrationServices.OData.ODataSource, Microsoft.SqlServer.IntegrationServices.ODataSrc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </PipelineComponent>    
+    <PipelineComponent Identifier="Microsoft.OLEDBCommand" Model="COM">
+      <CreationName>DTSTransform.OLEDBCommand.4</CreationName>
+      <CreationName>{6B22199D-347E-45F2-A439-AD5C434BD431}</CreationName>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.OLEDBDestination" Model="COM">
+      <CreationName>DTSAdapter.OLEDBDestination.4</CreationName>
+      <CreationName>{63F60893-F24D-421A-A481-86C53A0ADBA8}</CreationName>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.OLEDBSource" Model="COM">
+      <CreationName>DTSAdapter.OLEDBSource.4</CreationName>
+      <CreationName>{D1AA3237-CE07-40F9-AA7D-DB75A2552BAC}</CreationName>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.PctSampling" Model="COM">
+      <CreationName>DTSTransform.PctSampling.4</CreationName>
+      <CreationName>{5E2975CC-9B12-4769-A3BF-9E7CF3E134F7}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Pivot" Model="COM">
+      <CreationName>DTSTransform.Pivot.4</CreationName>
+      <CreationName>{1D55C0C7-52E2-4F6F-BD01-25F7B4A8813D}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.PXPipelineDMQuery" Model="COM">
+      <CreationName>MSMDPP.PXPipelineDMQuery.4</CreationName>
+      <CreationName>{63622C8E-BE4C-4981-954E-E54526FE38C4}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.PXPipelineProcessDimension" Model="COM">
+      <CreationName>MSMDPP.PXPipelineProcessDimension.4</CreationName>
+      <CreationName>{924A5D7E-DC21-4AC9-AE3E-B87B43C61570}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.PXPipelineProcessDM" Model="COM">
+      <CreationName>MSMDPP.PXPipelineProcessDM.4</CreationName>
+      <CreationName>{1378724A-1297-4BB6-8D42-6D671B299037}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.PXPipelineProcessPartition" Model="COM">
+      <CreationName>MSMDPP.PXPipelineProcessPartition.4</CreationName>
+      <CreationName>{9FF88729-AC02-4441-94C3-11B57655D23B}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.RawDestination" Model="COM">
+      <CreationName>DTSAdapter.RawDestination.4</CreationName>
+      <CreationName>{F84A449B-F8ED-483A-BD9F-9337E8CAD27E}</CreationName>
+      <UITypeEditor name="FileName">Microsoft.DataTransformationServices.Controls.NonValidatingFileNameEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.RawSource" Model="COM">
+      <CreationName>DTSAdapter.RawSource.4</CreationName>
+      <CreationName>{4B28FC70-0618-449E-81E7-C5B9E77D308D}</CreationName>
+      <UITypeEditor name="FileName">Microsoft.DataTransformationServices.Controls.NonValidatingFileNameEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.RecordsetDestination" Model="COM">
+      <CreationName>DTSAdapter.RecordsetDestination.4</CreationName>
+      <CreationName>{B11B6C93-0A23-43DB-9AAB-1228D0EE314C}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.RowCount" Model="COM">
+      <CreationName>DTSTransform.RowCount.4</CreationName>
+      <CreationName>{BA5B06BC-5EC0-47EC-BFE8-036AB26C6A02}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.RowSampling" Model="COM">
+      <CreationName>DTSTransform.RowSampling.4</CreationName>
+      <CreationName>{D69604FF-D1EB-4E41-AE48-1F132F18E17F}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.SAPBIDestination" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.SapBw.Components.SapBwSourceBWLoader, Microsoft.SqlServer.SapBiComponents, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.SAPBISource" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.SapBw.Components.SapBwSourceOHS, Microsoft.SqlServer.SapBiComponents, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.SCD" Model="COM">
+      <CreationName>DTSTransform.SCD.4</CreationName>
+      <CreationName>{336FEC0D-D431-4A78-A231-67B65C5E06A2}</CreationName>
+      <UITypeEditor name="SqlCommand">Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.ScriptComponentHost" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost, Microsoft.SqlServer.TxScript, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+      <TypeConverter name="ScriptLanguage">Microsoft.SqlServer.VSTAHosting.ScriptingLanguages, Microsoft.SqlServer.VSTAScriptingLib, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</TypeConverter>
+      <UITypeEditor name="ReadOnlyVariables">Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+      <UITypeEditor name="ReadWriteVariables">Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</UITypeEditor>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.Sort" Model="COM">
+      <CreationName>DTSTransform.Sort.4</CreationName>
+      <CreationName>{5C680814-BA33-4C2E-86E2-E36F74189C1D}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.SqlCEDestinationAdapter" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Pipeline.SqlCEDestinationAdapter, Microsoft.SqlServer.SqlCEDest, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.SQLPDWDestinationAdapter" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Pipeline.SQLPDWDestinationAdapter, Microsoft.SqlServer.ISSQLPDWDest, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.SQLServerDestination" Model="COM">
+      <CreationName>DTSAdapter.SQLServerDestination.4</CreationName>
+      <CreationName>{E6CBD480-2E7E-4419-A475-07A015FA2FF6}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.TermExtraction" Model="COM">
+      <CreationName>DTSTransform.TermExtraction.4</CreationName>
+      <CreationName>{3C705BCA-E5EC-43AD-B733-37890C7430B5}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.TermLookup" Model="COM">
+      <CreationName>DTSTransform.TermLookup.4</CreationName>
+      <CreationName>{B91A578F-C1F1-4815-B14D-73E756272B1C}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.UnionAll" Model="COM">
+      <CreationName>DTSTransform.UnionAll.4</CreationName>
+      <CreationName>{190DA0CA-EB43-4D46-A47C-FAD498103565}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.UnPivot" Model="COM">
+      <CreationName>DTSTransform.UnPivot.4</CreationName>
+      <CreationName>{69E6B4F1-5C46-4E29-BA44-8F354FB954F5}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.XmlSourceAdapter" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter, Microsoft.SqlServer.XmlSrc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+      <TypeConverter name="XMLIntegerMapping">Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter, Microsoft.SqlServer.XmlSrc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</TypeConverter>
+    </PipelineComponent>
+    <!-- DATA COLLECTOR -->
+    <PipelineComponent Identifier="Microsoft.TxPerfCounters" Model="COM">
+      <CreationName>DataCollectorTransform.TxPerfCounters.3</CreationName>
+      <CreationName>{8CA6FBB1-A53D-4D7C-808F-AC38E25E1E80}</CreationName>
+    </PipelineComponent>
+    <PipelineComponent Identifier="Microsoft.TxTopQueries" Model="COM">
+      <CreationName>DataCollectorTransform.TxTopQueries.3</CreationName>
+      <CreationName>{4B87F42C-8D0E-4074-A643-EF2753588924}</CreationName>
+    </PipelineComponent>
+  </PipelineComponents>
+  <ConnectionManagers>
+    <ConnectionManager Identifier="ADO" Model="COM">
+      <CreationName>DTS.ConnectionManagerAdo.4</CreationName>
+      <CreationName>{FFEDAAC9-D6BD-4E6B-90AB-D4D296B5096A}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="ADO.NET" Model="COM">
+      <CreationName>DTS.ConnectionManagerAdoNet.4</CreationName>
+      <CreationName>{D5353B56-34DA-4C97-AC94-722B91013E89}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="CACHE" Model="COM">
+      <CreationName>DTS.ConnectionManagerCache.3</CreationName>
+      <CreationName>{1CC36899-A0ED-4899-892C-ED1CE92B2438}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="DQS" Model=".NET">
+      <CreationName>Microsoft.Ssdqs.Component.DataQualityConnectionManager.Logic.DataQualityConnector, Microsoft.Ssdqs.Component.DataQualityConnectionManager, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="EXCEL" Model="COM">
+      <CreationName>DTS.ConnectionManagerExcel.4</CreationName>
+      <CreationName>{16C5E8E5-3B93-45AE-B266-F53A30110591}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="FILE" Model="COM">
+      <CreationName>DTS.ConnectionManagerFile.4</CreationName>
+      <CreationName>{35C9F584-5881-4C0D-BE60-CC357DF0DA71}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="FLATFILE" Model="COM">
+      <CreationName>DTS.ConnectionManagerFlatFile.4</CreationName>
+      <CreationName>{27833D52-88A7-43FF-BBB8-993D92BF2054}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="FTP" Model="COM">
+      <CreationName>DTS.ConnectionManagerFtp.4</CreationName>
+      <CreationName>{D104A621-755C-4B5C-9CD8-42C981868647}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="HTTP" Model="COM">
+      <CreationName>DTS.ConnectionManagerHttp.4</CreationName>
+      <CreationName>{A4F38AF2-DB25-4BCA-B0F6-025235B6873B}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="MSMQ" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn, Microsoft.SqlServer.ManagedConnections, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="MSOLAP100" Model="COM">
+      <CreationName>DTS.ConnectionManagerOlap.4</CreationName>
+      <CreationName>{05B2302B-4C20-43FD-92B3-3A067A037436}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="MSORA" Model="COM">
+      <CreationName>AttunitySSISOraConnections.5</CreationName>
+      <CreationName>{F9DD586F-44BF-4F87-9621-BD56460D6044}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="MSTERA" Model="COM">
+      <CreationName>AttunitySSISTeraConnections.5</CreationName>
+      <CreationName>{FCEFCC17-49C8-4D9D-A892-FA5C8821A6B0}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="MULTIFILE" Model="COM">
+      <CreationName>DTS.ConnectionManagerMultiFile.4</CreationName>
+      <CreationName>{24BC3F86-AD7A-4A2D-B55E-A11132D655F4}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="MULTIFLATFILE" Model="COM">
+      <CreationName>DTS.ConnectionManagerMultiFlatFile.4</CreationName>
+      <CreationName>{4A67FF3E-5F04-499C-BEE1-C65CA3BCC939}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="ODATA" Model=".NET">
+      <CreationName>Microsoft.SqlServer.IntegrationServices.OData.ODataConnectionManager, Microsoft.SqlServer.IntegrationServices.ODataConnectionManager, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </ConnectionManager>    
+    <ConnectionManager Identifier="ODBC" Model="COM">
+      <CreationName>DTS.ConnectionManagerOdbc.4</CreationName>
+      <CreationName>{1818FF09-AF4D-4EA8-8C9D-0AB43B5775E5}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="OLEDB" Model="COM">
+      <CreationName>DTS.ConnectionManagerOleDb.4</CreationName>
+      <CreationName>{F3F3005C-C3CB-4C61-B2A9-056035E4D8F2}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="SAPBI" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.SapBw.ConnectionManager.SapBwConnectionManager, Microsoft.SqlServer.SapBiConnectionManager, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </ConnectionManager>    
+    <ConnectionManager Identifier="SMOServer" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.ManagedConnections.SMOServerConn, Microsoft.SqlServer.ManagedConnections, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="SMTP" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn, Microsoft.SqlServer.ManagedConnections, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="SQLMOBILE" Model="COM">
+      <CreationName>DTS.ConnectionManagerSqlMobile.4</CreationName>
+      <CreationName>{718015B1-3A1D-443C-8DE3-E2FB38E202F3}</CreationName>
+    </ConnectionManager>
+    <ConnectionManager Identifier="WMI" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.ManagedConnections.WMIConn, Microsoft.SqlServer.ManagedConnections, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </ConnectionManager>
+  </ConnectionManagers>
+  <Enumerators>
+    <Enumerator Identifier="Microsoft.ForEachADOEnumerator" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Enumerator>
+    <Enumerator Identifier="Microsoft.ForEachFileEnumerator" Model="COM">
+      <CreationName>DTS.ForEachFileEnumerator.4</CreationName>
+      <CreationName>{A47505FB-B208-46D4-81D7-9884F08DD3D0}</CreationName>
+    </Enumerator>
+    <Enumerator Identifier="Microsoft.ForEachFromVarEnumerator" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Runtime.Enumerators.FromVar.ForEachFromVarEnumerator, Microsoft.SqlServer.ForEachFromVarEnumerator, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Enumerator>
+    <Enumerator Identifier="Microsoft.ForEachItemEnumerator" Model="COM">
+      <CreationName>DTS.ForEachItemEnumerator.4</CreationName>
+      <CreationName>{500A81E3-EDFE-45A9-88DA-2A2AECB19B35}</CreationName>
+    </Enumerator>
+    <Enumerator Identifier="Microsoft.ForEachNodeListEnumerator" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Runtime.Enumerators.NodeList.ForEachNodeListEnumerator, Microsoft.SqlServer.ForEachNodeListEnumerator, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Enumerator>
+    <Enumerator Identifier="Microsoft.ForEachSchemaRowsetEnumerator" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachSchemaRowsetEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Enumerator>
+    <Enumerator Identifier="Microsoft.ForEachSMOEnumerator" Model=".NET">
+      <CreationName>Microsoft.SqlServer.Dts.Runtime.Enumerators.SMO.ForEachSMOEnumerator, Microsoft.SqlServer.ForEachSMOEnumerator, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</CreationName>
+    </Enumerator>
+    <!-- DATA COLLECTOR -->
+    <Enumerator Identifier="Microsoft.ForEachDbEnumerator" Model="COM">
+      <CreationName>DC.ForEachDbEnumerator.3</CreationName>
+      <CreationName>{B1889A56-DFAF-4128-BC46-91143524FC3F}</CreationName>
+    </Enumerator>
+    <Enumerator Identifier="Microsoft.ForEachEventEnumerator" Model="COM">
+      <CreationName>DC.ForEachEventEnumerator.3</CreationName>
+      <CreationName>{875A4D88-7967-4888-9B86-AE372B2E5D02}</CreationName>
+    </Enumerator>
+  </Enumerators>
+  <LogProviders>
+    <LogProvider Identifier="Microsoft.LogProviderEventLog" Model="COM">
+      <CreationName>DTS.LogProviderEventLog.4</CreationName>
+      <CreationName>{9158C969-ECFE-4310-B5ED-2F28FF23E9A4}</CreationName>
+    </LogProvider>
+    <LogProvider Identifier="Microsoft.LogProviderSQLProfiler" Model="COM">
+      <CreationName>DTS.LogProviderSQLProfiler.4</CreationName>
+      <CreationName>{16E4D2F0-B3AA-478C-960A-5AEE5D5E4A5F}</CreationName>
+    </LogProvider>
+    <LogProvider Identifier="Microsoft.LogProviderSQLServer" Model="COM">
+      <CreationName>DTS.LogProviderSQLServer.4</CreationName>
+      <CreationName>{7AAEB244-E2A1-4F6A-907F-EB630B08FC11}</CreationName>
+    </LogProvider>
+    <LogProvider Identifier="Microsoft.LogProviderTextFile" Model="COM">
+      <CreationName>DTS.LogProviderTextFile.4</CreationName>
+      <CreationName>{B554698F-2465-4191-A16B-6558F598E474}</CreationName>
+    </LogProvider>
+    <LogProvider Identifier="Microsoft.LogProviderXMLFile" Model="COM">
+      <CreationName>DTS.LogProviderXMLFile.4</CreationName>
+      <CreationName>{3E7F2475-46B6-4E93-A6C1-3763504B97D3}</CreationName>
+    </LogProvider>
+  </LogProviders>
+</Extensions>

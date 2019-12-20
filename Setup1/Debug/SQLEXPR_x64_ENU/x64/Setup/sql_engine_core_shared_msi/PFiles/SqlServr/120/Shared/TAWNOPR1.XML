@@ -1,0 +1,584 @@
+<!-- <?xml version="1.0" encoding="UTF-16"?> -->
+<instrumentationManifest	xmlns="http://schemas.microsoft.com/win/2004/08/events"
+							xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace"
+							xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
+							xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+
+	<instrumentation>
+		<counters	xmlns="http://schemas.microsoft.com/win/2005/12/counters"
+					xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events"
+					schemaVersion="1.1">
+
+			<provider	applicationIdentity = "hkengperfctrs.dll"
+						providerType = "userMode"
+						symbol = "PerfCtrs"
+						providerName = "XTP Database Engine"
+						providerGuid = "{A22F85A5-C5E9-4083-98E3-FD418D83E706}">
+
+				<counterSet	guid = "{CF3E6C37-FE47-43E3-ADFB-74D48B3E838E}"
+							uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions"
+							name = "XTP Transactions"
+							symbol = "XtpTx"
+							description = "The XTP Transactions performance object contains counters related to XTP engine transactions in SQL Server."
+							instances = "multipleAggregate">
+
+					<counter 	id = "1"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxCreatedPerSec"
+								name = "Transactions created/sec"
+								symbol = "TxCreatedPerSec"
+								description = "The number of transactions created in the system (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "2"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxReadOnlyPreparedPerSec"
+								name = "Read-only transactions prepared/sec"
+								symbol = "TxReadOnlyPreparedPerSec"
+								description = "The number of read-only transactions that were prepared for commit processing, per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "3"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxAbortsPerSec"
+								name = "Transactions aborted/sec"
+								symbol = "TxAbortsPerSec"
+								description = "The number of transactions that aborted (both by the user and the system, on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "4"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxUserAbortsPerSec"
+								name = "Transactions aborted by user/sec"
+								symbol = "TxUserAbortsPerSec"
+								description = "The number of transactions that were aborted by the user (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "5"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxValidationFailuresPerSec"
+								name = "Transaction validation failures/sec"
+								symbol = "TxValidationFailuresPerSec"
+								description = "The number of transactions that failed validation processing (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "6"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxCommitDepsTakenPerSec"
+								name = "Commit dependencies taken/sec"
+								symbol = "TxCommitDepsTakenPerSec"
+								description = "The number of commit dependencies taken by transactions (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "7"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxCommitDepsFailedPerSec"
+								name = "Cascading aborts/sec"
+								symbol = "TxCommitDepsFailedPerSec"
+								description = "The number of transactions that rolled back to due a commit dependency rollback (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "8"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxSavePointsCreatedPerSec"
+								name = "Save points created/sec"
+								symbol = "TxSavePointsCreatedPerSec"
+								description = "The number of save points created (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "9"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxSavePointRollbacksPerSec"
+								name = "Save point rollbacks/sec"
+								symbol = "TxSavePointRollbacksPerSec"
+								description = "The number of times a transaction rolled back to a save point (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "10"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Transactions.TxSavePointRefreshesPerSec"
+								name = "Save point refreshes/sec"
+								symbol = "TxSavePointRefreshesPerSec"
+								description = "The number of times a savepoint was &quot;&quot;refreshed&quot;&quot;, (on average), per second. A savepoint refresh is when an existing savepoint is reset to the current point in the transaction's lifetime."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+				</counterSet>
+				<counterSet	guid = "{1F1B87E5-3080-469F-8FC5-5B93A1E3F54A}"
+							uri = "Microsoft.SqlServer.XTP.PerfCounters.Log"
+							name = "XTP Transaction Log"
+							symbol = "XtpLog"
+							description = "The XTP Transaction Log performance object contains counters related to XTP transaction logging in SQL Server."
+							instances = "multipleAggregate">
+
+					<counter 	id = "1"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Log.LogBytesWrittenPerSec"
+								name = "Log bytes written/sec"
+								symbol = "LogBytesWrittenPerSec"
+								description = "The number of bytes written to the SQL Server transaction log by the XTP engine (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "2"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Log.LogRecordsWrittenPerSec"
+								name = "Log records written/sec"
+								symbol = "LogRecordsWrittenPerSec"
+								description = "The number of records written to the SQL Server transaction log by the XTP engine (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+				</counterSet>
+				<counterSet	guid = "{49A38992-CE40-4E36-B744-06434002CB34}"
+							uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor"
+							name = "XTP Cursors"
+							symbol = "XtpCursor"
+							description = "The XTP Cursors performance object contains counters related to internal XTP engine cursors. Cursors are the low-level building blocks the XTP engine uses to process T-SQL queries. As such, a user does not typically have direct control over them."
+							instances = "multipleAggregate">
+
+					<counter 	id = "1"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorScansStartedPerSec"
+								name = "Cursor scans started/sec"
+								symbol = "CursorScansStartedPerSec"
+								description = "The number of cursor scans started (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "2"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorRowsReturnedPerSec"
+								name = "Rows returned/sec"
+								symbol = "CursorRowsReturnedPerSec"
+								description = "The number of rows returned by cursors (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "3"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorRowsTouchedPerSec"
+								name = "Rows touched/sec"
+								symbol = "CursorRowsTouchedPerSec"
+								description = "The number of rows touched by cursors (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "4"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorExpiringRowsTouchedPerSec"
+								name = "Tentatively-deleted rows touched/sec"
+								symbol = "CursorExpiringRowsTouchedPerSec"
+								description = "The number of expiring rows touched by cursors (on average), per second. A row is expiring if the transaction that deleted it is still active (i.e. has not yet committed or aborted.)"
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "5"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorExpiredRowsTouchedPerSec"
+								name = "Expired rows touched/sec"
+								symbol = "CursorExpiredRowsTouchedPerSec"
+								description = "The number of expired rows touched by cursors (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "6"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorExpiredRowsRemovedPerSec"
+								name = "Expired rows removed/sec"
+								symbol = "CursorExpiredRowsRemovedPerSec"
+								description = "The number of expired rows removed by cursors (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					
+					<!-- This counter seems to never actually be incremented in the engine, yet it is exposed in HkSystemStats::CursorScanRetries. -->
+					<counter 	id = "7"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorScanRetriesPerSec"
+								name = "Dusty corner scan retries/sec (user-issued)"
+								symbol = "CursorScanRetriesPerSec"
+								description = "The number of scan retries due to write conflicts during dusty corner sweeps issued by a user's full-table scan (on average), per second. This is a very low-level counter, not intended for customer use."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					
+					<counter 	id = "8"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorWriteConflictsPerSec"
+								name = "Cursor write conflicts/sec"
+								symbol = "CursorWriteConflictsPerSec"
+								description = "The number of write-write conflicts to the same row version (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "9"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorUniqueViolationsPerSec"
+								name = "Cursor unique violations/sec"
+								symbol = "CursorUniqueViolationsPerSec"
+								description = "The number of unique-constraint violations (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1"  >
+					</counter>
+					<counter 	id = "10"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorInsertsPerSec"
+								name = "Cursor inserts/sec"
+								symbol = "CursorInsertsPerSec"
+								description = "The number of cursor inserts (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "11"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorUpdatesPerSec"
+								name = "Cursor updates/sec"
+								symbol = "CursorUpdatesPerSec"
+								description = "The number of cursor updates (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "12"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Cursor.CursorDeletesPerSec"
+								name = "Cursor deletes/sec"
+								symbol = "CursorDeletesPerSec"
+								description = "The number of cursor deletes (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+				</counterSet>
+				<counterSet	guid = "{F27F03BD-36CC-4366-9DC3-6F956E90F5AC}"
+							uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc"
+							name = "XTP Garbage Collection"
+							symbol = "XtpGc"
+							description = "The XTP Garbage Collection performance object contains counters related to the XTP engine's garbage collector."
+							instances = "multipleAggregate">
+
+					<counter 	id = "1"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.RowsProcessedPerSec"
+								name = "Rows processed/sec"
+								symbol = "RowsProcessedPerSec"
+								description = "The number of rows processed by the garbage collector (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "2"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.RowsProcessedPerSecNoSweepNeeded"
+								name = "Rows processed/sec (no sweep needed)"
+								symbol = "RowsProcessedPerSecNoSweepNeeded"
+								description = "The number of rows processed by the garbage collector that will not require a dusty corner sweep (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "3"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.RowsProcessedPerSecFirstInBucket"
+								name = "Rows processed/sec (first in bucket)"
+								symbol = "RowsProcessedPerSecFirstInBucket"
+								description = "The number of rows processed by the garbage collector that were first in the corresponding hash bucket (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "4"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.RowsProcessedPerSecFirstInBucketRemoved"
+								name = "Rows processed/sec (first in bucket and removed)"
+								symbol = "RowsProcessedPerSecFirstInBucketRemoved"
+								description = "The number of rows processed by the garbage collector that were first in the corresponding hash bucket, and were able to be removed immediately (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "5"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.RowsProcessedPerSecMarkedForUnlink"
+								name = "Rows processed/sec (marked for unlink)"
+								symbol = "RowsProcessedPerSecMarkedForUnlink"
+								description = "The number of rows processed by the garbage collector that were already marked for unlink (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "6"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.ParallelAssistCount"
+								name = "Parallel GC work item/sec"
+								symbol = "GcAssistCountPerSec"
+								description = "The number of times a parallel thread has executed a GC work item."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "7"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.IdleWorkerCount"
+								name = "Main GC work items/sec"
+								symbol = "GcIdleWorkCountPerSec"
+								description = "The number of work items processed by the main GC thread."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "8"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.SweepScansStartedPerSec"
+								name = "Sweep scans started/sec"
+								symbol = "SweepScansStartedPerSec"
+								description = "The number of dusty corner sweep scans started (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "9"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.SweepRowsTouchedPerSec"
+								name = "Sweep rows touched/sec"
+								symbol = "SweepRowsTouchedPerSec"
+								description = "The number of rows touched during dusty corner sweeps (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "10"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.SweepExpiringRowsTouchedPerSec"
+								name = "Sweep expiring rows touched/sec"
+								symbol = "SweepExpiringRowsTouchedPerSec"
+								description = "The number of expiring rows touched during dusty corner sweeps (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "11"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.SweepExpiredRowsTouchedPerSec"
+								name = "Sweep expired rows touched/sec"
+								symbol = "SweepExpiredRowsTouchedPerSec"
+								description = "The number of expired rows touched during dusty corner sweeps (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "12"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.SweepExpiredRowsRemovedPerSec"
+								name = "Sweep expired rows removed/sec"
+								symbol = "SweepExpiredRowsRemovedPerSec"
+								description = "The number of expired rows removed during dusty corner sweeps (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "13"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Gc.SweepScanRetriesPerSec"
+								name = "Dusty corner scan retries/sec (GC-issued)"
+								symbol = "SweepScanRetriesPerSec"
+								description = "The number of scan retries due to write conflicts during dusty corner sweeps issued by the garbage collector (on average), per second. This is a very low-level counter, not intended for customer use."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+				</counterSet>
+				<counterSet	guid = "{7AFF1EB2-8288-41C4-B3DA-D8385EC56A10}"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Phantom"
+								name = "XTP Phantom Processor"
+								symbol = "XtpPhantom"
+								description = "The XTP Phantom Processor performance object contains counters related to the XTP engine's phantom processing subsystem. This component is responsible for detecting phantom rows in transactions running at the SERIALIZABLE isolation level."
+								instances = "multipleAggregate">
+
+					<counter 	id = "1"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Phantom.PhantomScansStartedPerSec"
+								name = "Phantom scans started/sec"
+								symbol = "PhantomScansStartedPerSec"
+								description = "The number of phantom scans started (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "2"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Phantom.PhantomRowsTouchedPerSec"
+								name = "Phantom rows touched/sec"
+								symbol = "PhantomRowsTouchedPerSec"
+								description = "The number of rows touched by phantom scans (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "3"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Phantom.PhantomExpiringRowsTouchedPerSec"
+								name = "Phantom expiring rows touched/sec"
+								symbol = "PhantomExpiringRowsTouchedPerSec"
+								description = "The number of expiring rows touched by phantom scans (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "4"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Phantom.PhantomExpiredRowsTouchedPerSec"
+								name = "Phantom expired rows touched/sec"
+								symbol = "PhantomExpiredRowsTouchedPerSec"
+								description = "The number of expired rows touched by phantom scans (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "5"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Phantom.PhantomExpiredRowsRemovedPerSec"
+								name = "Phantom expired rows removed/sec"
+								symbol = "PhantomExpiredRowsRemovedPerSec"
+								description = "The number of expired rows removed by phantom scans (on average), per second."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+					<counter 	id = "6"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Phantom.PhantomScanRetriesPerSec"
+								name = "Dusty corner scan retries/sec (Phantom-issued)"
+								symbol = "PhantomScanRetriesPerSec"
+								description = "The number of scan retries due to write conflicts during dusty corner sweeps issued by the phantom processor (on average), per second. This is a very low-level counter, not intended for customer use."
+								type = "perf_counter_counter"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "-1">
+					</counter>
+				</counterSet>
+				<counterSet	guid = "{620b5130-4496-4460-a62e-d5c73b018226}"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage"
+								name = "XTP Storage"
+								symbol = "XtpStorage"
+								description = "The XTP Storage performance object contains counters related to the XTP engine's storage subsystem. This includes checkpointing and merge of checkpoint files."
+								instances = "multipleAggregate">
+
+					<counter 	id = "1"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.MergeRequestsOutstanding"
+								name = "Merge Requests Outstanding"
+								symbol = "MergeRequestsOutstandingCtr"
+								description = "The number of merge requests outstanding since the server started."
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+					<counter 	id = "2"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.MergePolicyEvaluations"
+								name = "Merge Policy Evaluations"
+								symbol = "MergePolicyEvaluationsCtr"
+								description = "The number of merge policy evaluations since the server started."
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+					<counter 	id = "3"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.MergesInstalled"
+								name = "Merges Installed"
+								symbol = "MergesInstalledCtr"
+								description = "The number of merges successfully installed."
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+					<counter 	id = "4"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.MergesAbandoned"
+								name = "Merges Abandoned"
+								symbol = "MergesAbandonedCtr"
+								description = "The number of merges abandoned due to failure."
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+					<counter 	id = "5"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.CoreMergesCompleted"
+								name = "Core Merges Completed"
+								symbol = "CoreMergesCompletedCtr"
+								description = "The number of core merges completed by the merge worker thread. These merges still need to be installed."
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+					<counter 	id = "6"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.TotalFilesMerged"
+								name = "Total Files Merged"
+								symbol = "TotalFilesMergedCtr"
+								description = "The total number of source files merged. This count can be used to find the average number of source files in the merge"
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+					<counter 	id = "7"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.CheckpointsCompleted"
+								name = "Checkpoints Completed"
+								symbol = "CheckpointsCompletedCtr"
+								description = "Count of checkpoints processed by offline checkpoint thread"
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+					<counter 	id = "8"
+								uri = "Microsoft.SqlServer.XTP.PerfCounters.Storage.CheckpointsClosed"
+								name = "Checkpoints Closed"
+								symbol = "CheckpointsClosedCtr"
+								description = "Count of checkpoints closed done by online agent"
+								type = "perf_counter_large_rawcount"
+								detailLevel = "advanced"
+								aggregate = "sum"
+								defaultScale = "0">
+					</counter>
+				</counterSet>
+			</provider>
+		</counters>
+	</instrumentation>
+</instrumentationManifest>

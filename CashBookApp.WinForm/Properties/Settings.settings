@@ -17,9 +17,6 @@
     <Setting Name="ShowSummaryInPayments" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="SalesListSplitter" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">500</Value>
-    </Setting>
     <Setting Name="UpdateURL" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://telgrafla.com/updates/laninas/app.xml</Value>
     </Setting>

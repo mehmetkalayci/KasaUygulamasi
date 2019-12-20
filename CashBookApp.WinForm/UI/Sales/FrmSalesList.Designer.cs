@@ -57,8 +57,6 @@
             this.toolStripButtonFilter = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonExcel = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonReturn = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -263,7 +261,6 @@
             // splitContainer2
             // 
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer2.DataBindings.Add(new System.Windows.Forms.Binding("SplitterDistance", global::CashBookApp.WinForm.Properties.Settings.Default, "SalesListSplitter", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 29);
             this.splitContainer2.Name = "splitContainer2";
@@ -280,7 +277,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.metroLabel5);
             this.splitContainer2.Panel2.Controls.Add(this.statusStrip2);
             this.splitContainer2.Size = new System.Drawing.Size(857, 591);
-            this.splitContainer2.SplitterDistance = global::CashBookApp.WinForm.Properties.Settings.Default.SalesListSplitter;
+            this.splitContainer2.SplitterDistance = 500;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -407,9 +404,7 @@
             this.toolStripButtonUpdate,
             this.toolStripButtonFilter,
             this.toolStripSeparator1,
-            this.toolStripButtonExcel,
-            this.toolStripSeparator2,
-            this.toolStripButtonReturn});
+            this.toolStripButtonExcel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3);
@@ -462,20 +457,6 @@
             this.toolStripButtonExcel.Size = new System.Drawing.Size(114, 20);
             this.toolStripButtonExcel.Text = "Excel\'e Aktar";
             this.toolStripButtonExcel.Click += new System.EventHandler(this.ToolStripButtonExcel_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 23);
-            // 
-            // toolStripButtonReturn
-            // 
-            this.toolStripButtonReturn.Image = global::CashBookApp.WinForm.Properties.Resources._return;
-            this.toolStripButtonReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonReturn.Name = "toolStripButtonReturn";
-            this.toolStripButtonReturn.Size = new System.Drawing.Size(96, 20);
-            this.toolStripButtonReturn.Text = "İade İşlemleri";
-            this.toolStripButtonReturn.Click += new System.EventHandler(this.ToolStripButtonReturn_Click);
             // 
             // FrmSalesList
             // 
@@ -538,8 +519,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroTextBox txtCustomerPhone;
         private MetroFramework.Controls.MetroTextBox txtCustomerName;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButtonReturn;
         private System.Windows.Forms.DataGridView dgDataOrders;
     }
 }

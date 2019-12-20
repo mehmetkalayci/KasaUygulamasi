@@ -24,6 +24,24 @@ namespace CashBookApp.WinForm.UI.CashBook
 
         #region functions
 
+
+        private void ApplyStyle2Grid()
+        {
+            for (int i = 0; i < dgPaymentList.Rows.Count; i++)
+            {
+                object dgval = dgPaymentList.Rows[i].Cells["IsExpense"].Value;
+
+                if (dgval != null && bool.Parse(dgval.ToString()))
+                {
+                    dgPaymentList.Rows[i].DefaultCellStyle.BackColor = Color.OrangeRed;
+                }
+                else
+                {
+                    dgPaymentList.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+            }
+        }
+
         void ResetFilter()
         {
             dtTransactionTimeStart.Value = dtTransactionTimeEnd.Value = DateTime.Today.Date;
@@ -96,7 +114,9 @@ namespace CashBookApp.WinForm.UI.CashBook
             decimal income = paymentSummary.Sum(q => q.Income);
             decimal expense = paymentSummary.Sum(q => q.Expense);
 
-            toolStripStatusLabelSummary.Text = string.Format("GELİR NAKİT+KART={0}     -     GİDER NAKİT+KART={1}     -     GELİR KALAN={2}",income, expense, income-expense);
+            toolStripStatusLabelSummary.Text = string.Format("GELİR NAKİT+KART={0}     -     GİDER NAKİT+KART={1}     -     GELİR KALAN={2}", income, expense, income - expense);
+
+            ApplyStyle2Grid();
         }
 
         public void LoadFilter()
@@ -185,6 +205,7 @@ namespace CashBookApp.WinForm.UI.CashBook
             decimal expense = salesSummary.Sum(q => q.Expense);
 
             toolStripStatusLabelSummary.Text = string.Format("GELİR NAKİT+KART={0}     -     GİDER NAKİT+KART={1}     -     GELİR KALAN={2}", income, expense, income - expense);
+            ApplyStyle2Grid();
         }
 
         #endregion
@@ -299,7 +320,7 @@ namespace CashBookApp.WinForm.UI.CashBook
         {
             try
             {
-                if (dgPaymentList.SelectedRows.Count > 0)
+                if (dgPaymentList.SelectedRows.Count > 0 && dgPaymentList.SelectedRows[0].Cells[0].Value != null)
                 {
                     int paymentID = int.Parse(dgPaymentList.SelectedRows[0].Cells[0].Value.ToString());
 
@@ -374,7 +395,40 @@ namespace CashBookApp.WinForm.UI.CashBook
 
         private void DgPaymentList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ToolStripButtonUpdate_Click(sender, e);
+            try
+            {
+                if (dgPaymentList.SelectedRows.Count > 0 && dgPaymentList.SelectedRows[0].Cells[0].Value != null)
+                {
+                    int paymentID = int.Parse(dgPaymentList.SelectedRows[0].Cells[0].Value.ToString());
+
+
+                    // check if it's in orderpayment
+                    Payment selectedPayment = db.Payment.Where(q => q.PaymentID == paymentID && q.IsDeleted == false).FirstOrDefault();
+
+                    int countOrders = selectedPayment.Order.Count;
+
+                    if (countOrders > 0)
+                    {
+                        // MessageBox.Show("Satış düzenleyi aç");
+                        int orderID = selectedPayment.Order.FirstOrDefault().OrderID;
+                        FormHelper.ShowDialog<Sales.FrmSalesEdit>(orderID);
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Kasa işlem düzenleyi aç");
+                        FormHelper.ShowDialog<FrmPaymentEdit>(paymentID);
+                    }
+
+                }
+                else
+                {
+                    MessageHelper.InfoMessage("Listeden işlem seçin!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageHelper.ErrorMessage(ex);
+            }
         }
     }
 }

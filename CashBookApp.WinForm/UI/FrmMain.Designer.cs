@@ -279,6 +279,7 @@
             this.Controls.Add(this.tlAbout);
             this.Controls.Add(this.tlSearchStock);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::CashBookApp.WinForm.Properties.Settings.Default, "ProgramName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.IsCloseable = false;
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.Resizable = false;

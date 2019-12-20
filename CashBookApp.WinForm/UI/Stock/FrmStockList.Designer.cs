@@ -63,6 +63,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelStockQuantity = new System.Windows.Forms.ToolStripStatusLabel();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.toolStripButtonBarcodeForm = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -430,7 +431,8 @@
             this.toolStripButtonExcel,
             this.toolStripSeparator2,
             this.toolStripLabel1,
-            this.toolStripTextBoxStockQuantityLimit});
+            this.toolStripTextBoxStockQuantityLimit,
+            this.toolStripButtonBarcodeForm});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3);
@@ -542,6 +544,15 @@
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // toolStripButtonBarcodeForm
+            // 
+            this.toolStripButtonBarcodeForm.Image = global::CashBookApp.WinForm.Properties.Resources.barcode;
+            this.toolStripButtonBarcodeForm.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonBarcodeForm.Name = "toolStripButtonBarcodeForm";
+            this.toolStripButtonBarcodeForm.Size = new System.Drawing.Size(103, 20);
+            this.toolStripButtonBarcodeForm.Text = "Barkod Hazırla";
+            this.toolStripButtonBarcodeForm.Click += new System.EventHandler(this.ToolStripButtonBarcodeForm_Click);
+            // 
             // FrmStockList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,5 +615,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelStockQuantity;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
         private System.Windows.Forms.DataGridView dgDataStocks;
+        private System.Windows.Forms.ToolStripButton toolStripButtonBarcodeForm;
     }
 }

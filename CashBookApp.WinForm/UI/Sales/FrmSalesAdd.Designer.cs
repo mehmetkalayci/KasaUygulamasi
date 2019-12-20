@@ -234,7 +234,7 @@
             // dtTransactionTime
             // 
             this.dtTransactionTime.Checked = false;
-            this.dtTransactionTime.CustomFormat = "dd.MM.yyyy hh:mm";
+            this.dtTransactionTime.CustomFormat = "dd.MM.yyyy HH:mm";
             this.dtTransactionTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtTransactionTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtTransactionTime.Location = new System.Drawing.Point(21, 35);

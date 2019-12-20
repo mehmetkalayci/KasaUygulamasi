@@ -241,7 +241,15 @@ namespace CashBookApp.WinForm.UI.Stock
 
         private void DgDataStocks_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ToolStripButtonUpdate_Click(sender, e);
+            if (dgDataStocks.SelectedRows.Count > 0 && dgDataStocks.SelectedRows[0].Cells[0].Value != null)
+            {
+                int stockID = int.Parse(dgDataStocks.SelectedRows[0].Cells[0].Value.ToString());
+                FormHelper.ShowDialog<FrmStockEdit>(stockID);
+            }
+            else
+            {
+                MessageHelper.InfoMessage("Listeden stok seçin!");
+            }
         }
 
         #endregion
@@ -285,10 +293,9 @@ namespace CashBookApp.WinForm.UI.Stock
             LoadStocks();
         }
 
-        private void ToolStripButtonAdd2BarcodeList_Click(object sender, EventArgs e)
+        private void ToolStripButtonBarcodeForm_Click(object sender, EventArgs e)
         {
-
-
+            FormHelper.Show<FrmStockList4Barcode>();
         }
     }
 }

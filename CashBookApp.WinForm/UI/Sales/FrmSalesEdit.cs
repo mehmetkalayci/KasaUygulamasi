@@ -117,7 +117,7 @@ namespace CashBookApp.WinForm.UI.Sales
 
         }
 
-        
+
         public void LoadPayments()
         {
             Order myOrder = db.Order.Where(q => q.IsDeleted == false && q.OrderID == order4Update.OrderID).FirstOrDefault();
@@ -142,7 +142,7 @@ namespace CashBookApp.WinForm.UI.Sales
 
         }
 
-    
+
 
         private void FrmSalesEdit_Load(object sender, EventArgs e)
         {
@@ -312,6 +312,55 @@ namespace CashBookApp.WinForm.UI.Sales
             {
                 frmSalesList.LoadOrders();
             }
+        }
+
+        private void btnDelPayment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgPayments.SelectedRows.Count > 0)
+                {
+                    int paymentID = int.Parse(dgPayments.SelectedRows[0].Cells[0].Value.ToString());
+
+                    if (MessageHelper.AskMessage("Ödeme silinsin mi?") == DialogResult.Yes)
+                    {
+                        Payment selectedPayment = db.Payment.Where(q => q.PaymentID == paymentID && q.IsDeleted == false).FirstOrDefault();
+                        selectedPayment.IsDeleted = true;
+
+                        int num = db.SaveChanges();
+
+                        if (num > 0)
+                        {
+                            LoadPayments();
+
+                            FrmPaymentList frmPaymentList = (FrmPaymentList)Application.OpenForms["FrmPaymentList"];
+                            if (frmPaymentList != null)
+                            {
+                                frmPaymentList.LoadPayments();
+                            }
+
+                            MessageHelper.InfoMessage("Ödeme silindi!");
+                        }
+                        else
+                        {
+                            MessageHelper.InfoMessage("Hata!");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageHelper.InfoMessage("Listeden ödeme seçin!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageHelper.ErrorMessage(ex);
+            }
+        }
+
+        private void BtnReturn_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowDialog<FrmSalesReturn>(this.orderID);
         }
     }
 

@@ -17,5 +17,17 @@ namespace CashBookApp.WinForm.UI
         {
             InitializeComponent();
         }
+
+        public bool IsCloseable { get; set; } = true;
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape && IsCloseable)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

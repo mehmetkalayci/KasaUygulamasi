@@ -114,7 +114,7 @@
             this.txtPassword.Location = new System.Drawing.Point(75, 150);
             this.txtPassword.MaxLength = 64;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
@@ -123,6 +123,7 @@
             this.txtPassword.Size = new System.Drawing.Size(250, 23);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSelectable = true;
+            this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -137,6 +138,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
+            this.IsCloseable = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";

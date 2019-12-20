@@ -1,6 +1,7 @@
 ﻿using CashBookApp.WinForm.UI;
 using CashBookApp.WinForm.UI.Sales;
 using CashBookApp.WinForm.UI.Setting;
+using CashBookApp.WinForm.UI.Stock;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace CashBookApp.WinForm
 
             System.Globalization.CultureInfo cultureInfo = new System.Globalization.CultureInfo("tr-TR");
             cultureInfo.NumberFormat.CurrencySymbol = "₺";
+
+
 
             FrmLogin frmLogin = new FrmLogin();
             Application.Run(frmLogin);

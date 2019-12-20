@@ -96,7 +96,7 @@ namespace CashBookApp.WinForm.UI.Sales
                 }
                 payment4Update.PaymentTypeID = (cmbPaymentType.SelectedItem as PaymentType).PaymentTypeID;
                 payment4Update.Description = txtDescription.Text;
-                payment4Update.IsExpense = false;
+                //payment4Update.IsExpense = false;
 
 
                 int i = db.SaveChanges();

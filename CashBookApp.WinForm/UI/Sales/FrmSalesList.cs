@@ -148,7 +148,7 @@ namespace CashBookApp.WinForm.UI.Sales
 
         private void DgDataOrders_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgDataOrders.SelectedRows.Count > 0)
+            if (dgDataOrders.SelectedRows.Count > 0 && dgDataOrders.SelectedRows[0].Cells[0].Value != null)
             {
                 int orderID = int.Parse(dgDataOrders.SelectedRows[0].Cells[0].Value.ToString());
                 LoadOrderDetails(orderID);
@@ -161,7 +161,15 @@ namespace CashBookApp.WinForm.UI.Sales
 
         private void DgDataOrders_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ToolStripButtonUpdate_Click(sender, e);
+            if (dgDataOrders.SelectedRows.Count > 0 && dgDataOrders.SelectedRows[0].Cells[0].Value != null)
+            {
+                int orderID = int.Parse(dgDataOrders.SelectedRows[0].Cells[0].Value.ToString());
+                FormHelper.ShowDialog<FrmSalesEdit>(orderID);
+            }
+            else
+            {
+                MessageHelper.InfoMessage("Listeden satış seçin!");
+            }
         }
 
         private void ToolStripButtonDelete_Click(object sender, EventArgs e)
@@ -219,7 +227,7 @@ namespace CashBookApp.WinForm.UI.Sales
 
         private void ToolStripButtonUpdate_Click(object sender, EventArgs e)
         {
-            if (dgDataOrders.SelectedRows.Count > 0)
+            if (dgDataOrders.SelectedRows.Count > 0 && dgDataOrders.SelectedRows[0].Cells[0].Value!= null)
             {
                 int orderID = int.Parse(dgDataOrders.SelectedRows[0].Cells[0].Value.ToString());
                 FormHelper.ShowDialog<FrmSalesEdit>(orderID);
@@ -264,17 +272,5 @@ namespace CashBookApp.WinForm.UI.Sales
             ResetFilter();
         }
 
-        private void ToolStripButtonReturn_Click(object sender, EventArgs e)
-        {
-            if (dgDataOrders.SelectedRows.Count > 0)
-            {
-                int orderID = int.Parse(dgDataOrders.SelectedRows[0].Cells[0].Value.ToString());
-                FormHelper.ShowDialog<FrmSalesReturn>(orderID);
-            }
-            else
-            {
-                MessageHelper.InfoMessage("Listeden satış seçin!");
-            }
-        }
     }
 }

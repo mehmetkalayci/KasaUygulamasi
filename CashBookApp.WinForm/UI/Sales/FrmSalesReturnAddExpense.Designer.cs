@@ -121,7 +121,7 @@
             // dtTransactionTime
             // 
             this.dtTransactionTime.Checked = false;
-            this.dtTransactionTime.CustomFormat = "dd MMMM yyyy  hh:mm:ss";
+            this.dtTransactionTime.CustomFormat = "dd MMMM yyyy  HH:mm:ss";
             this.dtTransactionTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtTransactionTime.Location = new System.Drawing.Point(75, 102);
             this.dtTransactionTime.MinimumSize = new System.Drawing.Size(0, 29);

@@ -36,7 +36,6 @@
             this.toolStripButtonFilter = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonExcel = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonReturn = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnFilter = new MetroFramework.Controls.MetroButton();
             this.btnClear = new MetroFramework.Controls.MetroButton();
@@ -78,8 +77,7 @@
             this.toolStripButtonUpdate,
             this.toolStripButtonFilter,
             this.toolStripSeparator1,
-            this.toolStripButtonExcel,
-            this.toolStripButtonReturn});
+            this.toolStripButtonExcel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3);
@@ -132,15 +130,6 @@
             this.toolStripButtonExcel.Size = new System.Drawing.Size(114, 20);
             this.toolStripButtonExcel.Text = "Excel\'e Aktar";
             this.toolStripButtonExcel.Click += new System.EventHandler(this.ToolStripButtonExcel_Click);
-            // 
-            // toolStripButtonReturn
-            // 
-            this.toolStripButtonReturn.Image = global::CashBookApp.WinForm.Properties.Resources._return;
-            this.toolStripButtonReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonReturn.Name = "toolStripButtonReturn";
-            this.toolStripButtonReturn.Size = new System.Drawing.Size(96, 20);
-            this.toolStripButtonReturn.Text = "İade İşlemleri";
-            this.toolStripButtonReturn.Click += new System.EventHandler(this.ToolStripButtonReturn_Click);
             // 
             // splitContainer1
             // 
@@ -389,8 +378,6 @@
             this.dgDataShoppings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDataShoppings.Size = new System.Drawing.Size(429, 548);
             this.dgDataShoppings.TabIndex = 0;
-            this.dgDataShoppings.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDataShoppings_CellContentDoubleClick);
-            this.dgDataShoppings.SelectionChanged += new System.EventHandler(this.DgDataShoppings_SelectionChanged);
             // 
             // metroLabel5
             // 
@@ -477,6 +464,5 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.StatusStrip statusStrip2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCountShoppings;
-        private System.Windows.Forms.ToolStripButton toolStripButtonReturn;
     }
 }

@@ -107,5 +107,6 @@ namespace CashBookApp.WinForm.UI
         {
             AutoUpdater.Start(Properties.Settings.Default.UpdateURL);
         }
+
     }
 }

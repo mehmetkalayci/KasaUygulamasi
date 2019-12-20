@@ -153,6 +153,7 @@ namespace CashBookApp.WinForm.UI.Client
                         {
                             LoadCustomers();
 
+
                             /*
                              BURAYA ANASAYFADAKİ MÜŞTERİLERİ GÜNCELLEME METODU EKLENECEK
                              */
@@ -178,7 +179,7 @@ namespace CashBookApp.WinForm.UI.Client
 
         private void ToolStripButtonUpdate_Click(object sender, EventArgs e)
         {
-            if (dgDataCustomers.SelectedRows.Count > 0)
+            if (dgDataCustomers.SelectedRows.Count > 0 && dgDataCustomers.SelectedRows[0].Cells[0].Value != null)
             {
                 int customerID = int.Parse(dgDataCustomers.SelectedRows[0].Cells[0].Value.ToString());
                 FormHelper.ShowDialog<FrmCustomerEdit>(customerID);
@@ -204,7 +205,15 @@ namespace CashBookApp.WinForm.UI.Client
 
         private void DgDataCustomers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ToolStripButtonUpdate_Click(sender, e);
+            if (dgDataCustomers.SelectedRows.Count > 0 && dgDataCustomers.SelectedRows[0].Cells[0].Value != null)
+            {
+                int customerID = int.Parse(dgDataCustomers.SelectedRows[0].Cells[0].Value.ToString());
+                FormHelper.ShowDialog<FrmCustomerEdit>(customerID);
+            }
+            else
+            {
+                MessageHelper.InfoMessage("Listeden müşteri seçin!");
+            }
         }
 
         private void FrmCustomerList_Load(object sender, EventArgs e)
@@ -215,7 +224,7 @@ namespace CashBookApp.WinForm.UI.Client
 
         private void DgDataCustomers_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgDataCustomers.SelectedRows.Count > 0)
+            if (dgDataCustomers.SelectedRows.Count > 0 && dgDataCustomers.SelectedRows[0].Cells[0].Value != null)
             {
                 int customerID = int.Parse(dgDataCustomers.SelectedRows[0].Cells[0].Value.ToString());
                 LoadShoppings(customerID);
@@ -226,34 +235,5 @@ namespace CashBookApp.WinForm.UI.Client
             }
         }
 
-        private void DgDataShoppings_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgDataShoppings.SelectedRows.Count > 0)
-            {
-                int orderID = int.Parse(dgDataShoppings.SelectedRows[0].Cells[0].Value.ToString());
-                FormHelper.ShowDialog<FrmSalesReturn>(orderID);
-            }
-            else
-            {
-                MessageHelper.InfoMessage("Listeden satış seçin!");
-            }
-        }
-
-        private void DgDataShoppings_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgDataShoppings.SelectedRows.Count > 0)
-            {
-                toolStripButtonReturn.Visible = true;
-            }
-            else
-            {
-                toolStripButtonReturn.Visible = false;
-            }
-        }
-
-        private void ToolStripButtonReturn_Click(object sender, EventArgs e)
-        {
-            DgDataShoppings_CellContentDoubleClick(sender, null);
-        }
     }
 }

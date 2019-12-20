@@ -98,7 +98,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(354, 88);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "İade İşlemi:\r\n1. İade edilecek ürüne çift tıklayıp, ürünü iade olarak etiketleyin" +
-    ".\r\n2. Kasaya Gider Ekle \'ye tıklayıp iade işlemini tamamlayın.";
+    ".\r\n2. İade Gideri Ekle \'ye tıklayıp iade işlemini tamamlayın.";
             this.metroLabel2.WrapToLine = true;
             // 
             // metroLabel3
