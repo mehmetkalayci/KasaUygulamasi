@@ -135,11 +135,13 @@ namespace CashBookApp.WinForm.UI.Sales
             dgBasket.Columns[0].HeaderText = "Stok ID";
             dgBasket.Columns[1].HeaderText = "Barkod";
             dgBasket.Columns[2].HeaderText = "Ürün Adı";
+
             dgBasket.Columns[3].HeaderText = "Fiyat";
+            dgBasket.Columns[3].DefaultCellStyle.Format = "C";
+
             dgBasket.Columns[4].HeaderText = "Renk";
             dgBasket.Columns[5].HeaderText = "Numara";
 
-            dgBasket.Columns[3].DefaultCellStyle.Format = "C2";
 
             // Add remove button 2 grid
             dgBasket.Columns.Add(new DataGridViewButtonColumn()
