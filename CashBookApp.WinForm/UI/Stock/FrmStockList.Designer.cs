@@ -60,10 +60,10 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBoxStockQuantityLimit = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButtonBarcodeForm = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelStockQuantity = new System.Windows.Forms.ToolStripStatusLabel();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.toolStripButtonBarcodeForm = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -520,6 +520,16 @@
     "en limitin altındaki ürünler renkli gösterilecek.";
             this.toolStripTextBoxStockQuantityLimit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToolStripTextBoxStockQuantityLimit_KeyDown);
             // 
+            // toolStripButtonBarcodeForm
+            // 
+            this.toolStripButtonBarcodeForm.Image = global::CashBookApp.WinForm.Properties.Resources.barcode;
+            this.toolStripButtonBarcodeForm.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonBarcodeForm.Name = "toolStripButtonBarcodeForm";
+            this.toolStripButtonBarcodeForm.Size = new System.Drawing.Size(103, 20);
+            this.toolStripButtonBarcodeForm.Text = "Barkod Hazırla";
+            this.toolStripButtonBarcodeForm.Visible = false;
+            this.toolStripButtonBarcodeForm.Click += new System.EventHandler(this.ToolStripButtonBarcodeForm_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -543,15 +553,6 @@
             this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // toolStripButtonBarcodeForm
-            // 
-            this.toolStripButtonBarcodeForm.Image = global::CashBookApp.WinForm.Properties.Resources.barcode;
-            this.toolStripButtonBarcodeForm.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonBarcodeForm.Name = "toolStripButtonBarcodeForm";
-            this.toolStripButtonBarcodeForm.Size = new System.Drawing.Size(103, 20);
-            this.toolStripButtonBarcodeForm.Text = "Barkod Hazırla";
-            this.toolStripButtonBarcodeForm.Click += new System.EventHandler(this.ToolStripButtonBarcodeForm_Click);
             // 
             // FrmStockList
             // 
