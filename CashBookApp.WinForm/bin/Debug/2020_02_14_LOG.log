@@ -1,0 +1,23 @@
+<logEntry>
+  <Date>14.02.2020 00:55:16</Date>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Unable to determine the principal end of the 'CashBookModel.FK_Order_Customer' relationship. Multiple added entities may have the same primary key.</Message>
+    <Stack>   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at CashBookApp.WinForm.UI.Sales.FrmSalesAdd.BtnFinish_Click(Object sender, EventArgs e) in C:\Users\win10\Desktop\CashBookApp\CashBookApp.WinForm\UI\Sales\FrmSalesAdd.cs:line 368</Stack>
+    <InnerException>
+      <Source>EntityFramework</Source>
+      <Message>Unable to determine the principal end of the 'CashBookModel.FK_Order_Customer' relationship. Multiple added entities may have the same primary key.</Message>
+      <Stack>   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.RegisterEntityReferentialConstraints(IEntityStateEntry stateEntry, Boolean currentValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.RegisterReferentialConstraints(IEntityStateEntry stateEntry)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.PullModifiedEntriesFromStateManager()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()</Stack>
+    </InnerException>
+  </Exception>
+</logEntry>

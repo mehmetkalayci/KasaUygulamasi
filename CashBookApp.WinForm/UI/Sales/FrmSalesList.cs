@@ -45,7 +45,7 @@ namespace CashBookApp.WinForm.UI.Sales
                 q.Customer.FullName,
                 q.Customer.Phone,
                 Pay = q.Payment.Count(z => z.IsDeleted == false) + " adet ödeme",
-                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString()
+                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount)
             }).OrderByDescending(q => q.OrderID).ToList();
 
             dgDataOrders.DataSource = orders;
@@ -57,7 +57,9 @@ namespace CashBookApp.WinForm.UI.Sales
             dgDataOrders.Columns[2].HeaderText = "Müşteri Ad Soyad";
             dgDataOrders.Columns[3].HeaderText = "Müşteri Telefon";
             dgDataOrders.Columns[4].HeaderText = "Ödemeler";
+
             dgDataOrders.Columns[5].HeaderText = "Ödenen Tutar";
+            dgDataOrders.Columns[5].DefaultCellStyle.Format = "C";
         }
 
         void FilterOrders()
@@ -69,7 +71,7 @@ namespace CashBookApp.WinForm.UI.Sales
                 q.Customer.FullName,
                 q.Customer.Phone,
                 Pay = q.Payment.Count(z => z.IsDeleted == false) + " adet ödeme",
-                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString()
+                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount)
             }).AsQueryable();
 
             if (txtCustomerName.Text.Trim().Length > 0)
@@ -114,7 +116,9 @@ namespace CashBookApp.WinForm.UI.Sales
             dgDataOrders.Columns[2].HeaderText = "Müşteri Ad Soyad";
             dgDataOrders.Columns[3].HeaderText = "Müşteri Telefon";
             dgDataOrders.Columns[4].HeaderText = "Ödemeler";
+
             dgDataOrders.Columns[5].HeaderText = "Ödenen Tutar";
+            dgDataOrders.Columns[5].DefaultCellStyle.Format = "C";
         }
 
         void LoadOrderDetails(int orderID)
@@ -132,8 +136,12 @@ namespace CashBookApp.WinForm.UI.Sales
 
             dgDataOrderDetails.Columns[0].HeaderText = "Barkod";
             dgDataOrderDetails.Columns[1].HeaderText = "Ürün Adı";
+
             dgDataOrderDetails.Columns[2].HeaderText = "Fiyat";
+            dgDataOrderDetails.Columns[2].DefaultCellStyle.Format = "C";
+
             dgDataOrderDetails.Columns[3].HeaderText = "Şu anki Fiyat";
+            dgDataOrderDetails.Columns[3].DefaultCellStyle.Format = "C";
         }
 
         #endregion

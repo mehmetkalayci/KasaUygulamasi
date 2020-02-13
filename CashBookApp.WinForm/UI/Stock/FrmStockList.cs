@@ -66,7 +66,10 @@ namespace CashBookApp.WinForm.UI.Stock
             dgDataStocks.Columns[0].HeaderText = "Stok ID";
             dgDataStocks.Columns[1].HeaderText = "Barkod";
             dgDataStocks.Columns[2].HeaderText = "Ürün Adı";
+
             dgDataStocks.Columns[3].HeaderText = "Fiyat";
+            dgDataStocks.Columns[3].DefaultCellStyle.Format = "C";
+
             dgDataStocks.Columns[4].HeaderText = "Renk";
             dgDataStocks.Columns[5].HeaderText = "Numara";
             dgDataStocks.Columns[6].HeaderText = "Adet";
@@ -132,7 +135,10 @@ namespace CashBookApp.WinForm.UI.Stock
             dgDataStocks.Columns[0].HeaderText = "Stok ID";
             dgDataStocks.Columns[1].HeaderText = "Barkod";
             dgDataStocks.Columns[2].HeaderText = "Ürün Adı";
+
             dgDataStocks.Columns[3].HeaderText = "Fiyat";
+            dgDataStocks.Columns[3].DefaultCellStyle.Format = "C";
+
             dgDataStocks.Columns[4].HeaderText = "Renk";
             dgDataStocks.Columns[5].HeaderText = "Numara";
             dgDataStocks.Columns[6].HeaderText = "Adet";

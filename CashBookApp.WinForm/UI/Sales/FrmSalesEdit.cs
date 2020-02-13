@@ -72,11 +72,14 @@ namespace CashBookApp.WinForm.UI.Sales
             dgBasket.Columns[1].HeaderText = "Stok ID";
             dgBasket.Columns[2].HeaderText = "Barkod";
             dgBasket.Columns[3].HeaderText = "Ürün Adı";
+
             dgBasket.Columns[4].HeaderText = "Fiyat";
+            dgBasket.Columns[4].DefaultCellStyle.Format = "C";
+
+
             dgBasket.Columns[5].HeaderText = "Renk";
             dgBasket.Columns[6].HeaderText = "Numara";
 
-            dgBasket.Columns[4].DefaultCellStyle.Format = "C2";
 
             // Add remove button 2 grid
             dgBasket.Columns.Add(new DataGridViewButtonColumn()
@@ -136,7 +139,10 @@ namespace CashBookApp.WinForm.UI.Sales
 
             dgPayments.Columns[0].Visible = false;
             dgPayments.Columns[0].HeaderText = "Ödeme ID";
+
             dgPayments.Columns[1].HeaderText = "Tutar (₺)";
+            //dgPayments.Columns[1].DefaultCellStyle.Format = "C";
+
             dgPayments.Columns[2].HeaderText = "Ödeme Tipi";
             dgPayments.Columns[3].HeaderText = "Açıklama";
 
