@@ -33,7 +33,7 @@ namespace CashBookApp.WinForm.UI.Client
                 q.OrderID,
                 q.OrderDate,
                 Pay = q.Payment.Count(z => z.IsDeleted == false) + " adet ödeme",
-                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString()
+                Total = q.Payment.Sum(x => x.IsExpense ? -x.Amount : x.Amount).ToString("C")
             }).OrderByDescending(q => q.OrderID).ToList();
 
 
@@ -44,7 +44,10 @@ namespace CashBookApp.WinForm.UI.Client
             dgDataShoppings.Columns[0].Visible = false;
             dgDataShoppings.Columns[0].HeaderText = "Satış ID";
             dgDataShoppings.Columns[1].HeaderText = "Satış Tarihi";
+
             dgDataShoppings.Columns[2].HeaderText = "Ödemeler";
+            dgDataShoppings.Columns[2].DefaultCellStyle.Format = "C";
+
             dgDataShoppings.Columns[3].HeaderText = "Ödenen Tutar";
         }
 
