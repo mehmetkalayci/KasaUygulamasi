@@ -158,15 +158,22 @@ namespace CashBookApp.WinForm.UI.Sales
             LoadBasket();
             LoadPayments();
             LoadCustomers();
+            try
+            {
 
 
-            cmbCustomerName.SelectedValue = order4Update.Customer.CustomerID;
-            txtCustomerPhone.Text = order4Update.Customer.Phone;
+                cmbCustomerName.SelectedValue = order4Update.Customer.CustomerID;
+                txtCustomerPhone.Text = order4Update.Customer.Phone;
 
-            dtTransactionTime.Value = order4Update.OrderDate;
-            dtTransactionTime.Checked = true;
+                dtTransactionTime.Value = order4Update.OrderDate;
+                dtTransactionTime.Checked = true;
 
 
+            }
+            catch 
+            {
+
+            }
 
 
         }

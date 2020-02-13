@@ -83,7 +83,7 @@ namespace CashBookApp.WinForm.Helper
                 Range CR = (Range)worksheet.Cells[1, 1];
                 CR.Select();
 
-                worksheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+                worksheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, false);
 
                 worksheet.Columns.AutoFit();
                 Microsoft.Office.Interop.Excel.Range currentCell = worksheet.Rows[1];

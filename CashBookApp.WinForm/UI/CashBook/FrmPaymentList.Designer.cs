@@ -45,8 +45,7 @@
             this.dtTransactionTimeStart = new MetroFramework.Controls.MetroDateTime();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgSummary = new System.Windows.Forms.DataGridView();
-            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelSummary = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblSummary = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.dgPaymentList = new System.Windows.Forms.DataGridView();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -71,7 +70,6 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSummary)).BeginInit();
-            this.statusStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPaymentList)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -262,7 +260,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.dgSummary);
-            this.splitContainer2.Panel1.Controls.Add(this.statusStrip2);
+            this.splitContainer2.Panel1.Controls.Add(this.lblSummary);
             this.splitContainer2.Panel1.Controls.Add(this.metroLabel8);
             this.splitContainer2.Panel1MinSize = 150;
             // 
@@ -305,26 +303,17 @@
             this.dgSummary.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgSummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgSummary.Size = new System.Drawing.Size(855, 101);
-            this.dgSummary.TabIndex = 1;
+            this.dgSummary.TabIndex = 4;
             // 
-            // statusStrip2
+            // lblSummary
             // 
-            this.statusStrip2.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelSummary});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 126);
-            this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.statusStrip2.Size = new System.Drawing.Size(855, 22);
-            this.statusStrip2.SizingGrip = false;
-            this.statusStrip2.TabIndex = 2;
-            // 
-            // toolStripStatusLabelSummary
-            // 
-            this.toolStripStatusLabelSummary.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripStatusLabelSummary.Name = "toolStripStatusLabelSummary";
-            this.toolStripStatusLabelSummary.Size = new System.Drawing.Size(16, 17);
-            this.toolStripStatusLabelSummary.Text = "...";
+            this.lblSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblSummary.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblSummary.Location = new System.Drawing.Point(0, 126);
+            this.lblSummary.Name = "lblSummary";
+            this.lblSummary.Size = new System.Drawing.Size(855, 22);
+            this.lblSummary.TabIndex = 3;
+            this.lblSummary.Text = "...";
             // 
             // metroLabel8
             // 
@@ -509,14 +498,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgSummary)).EndInit();
-            this.statusStrip2.ResumeLayout(false);
-            this.statusStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPaymentList)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
@@ -541,8 +527,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroDateTime dtTransactionTimeStart;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.StatusStrip statusStrip2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSummary;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelTransactionCount;
@@ -557,7 +541,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButtonSummary;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private System.Windows.Forms.DataGridView dgSummary;
         private System.Windows.Forms.DataGridView dgPaymentList;
+        private System.Windows.Forms.DataGridView dgSummary;
+        private MetroFramework.Controls.MetroLabel lblSummary;
     }
 }

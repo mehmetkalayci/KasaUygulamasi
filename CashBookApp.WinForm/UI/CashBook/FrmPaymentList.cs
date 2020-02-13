@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,7 +72,10 @@ namespace CashBookApp.WinForm.UI.CashBook
             /* Payment Grid */
             dgPaymentList.Columns[0].HeaderText = "İşlem ID";
             dgPaymentList.Columns[1].HeaderText = "İşlem Zamanı";
+
             dgPaymentList.Columns[2].HeaderText = "Tutar";
+            dgPaymentList.Columns[2].DefaultCellStyle.Format = "C";
+
             dgPaymentList.Columns[3].HeaderText = "Ödeme Tipi";
             dgPaymentList.Columns[4].HeaderText = "Açıklama";
             dgPaymentList.Columns[5].HeaderText = "Gider Mi?";
@@ -106,15 +110,24 @@ namespace CashBookApp.WinForm.UI.CashBook
             /* Summary Grid */
             dgSummary.Columns[0].HeaderText = "Ödeme Yöntemi";
             dgSummary.Columns[1].HeaderText = "Gelir";
+            dgSummary.Columns[1].DefaultCellStyle.Format = "C";
+
             dgSummary.Columns[2].HeaderText = "Gider";
+            dgSummary.Columns[2].DefaultCellStyle.Format = "C";
+
             dgSummary.Columns[3].HeaderText = "Toplam";
+            dgSummary.Columns[3].DefaultCellStyle.Format = "C";
+
+
             dgSummary.Columns[4].HeaderText = "Gelir İşlem Sayısı";
             dgSummary.Columns[5].HeaderText = "Gider İşlem Sayısı";
 
             decimal income = paymentSummary.Sum(q => q.Income);
             decimal expense = paymentSummary.Sum(q => q.Expense);
 
-            toolStripStatusLabelSummary.Text = string.Format("GELİR NAKİT+KART={0}     -     GİDER NAKİT+KART={1}     -     GELİR KALAN={2}", income, expense, income - expense);
+            // MessageBox.Show(CultureInfo.CurrentCulture.NumberFormat.CurrencyGroupSeparator);
+
+            lblSummary.Text = string.Format("GELİR NAKİT+KART={0:C}     -     GİDER NAKİT+KART={1:C}     -     GELİR KALAN={2:C}", income, expense, income - expense);
 
             ApplyStyle2Grid();
         }
@@ -171,7 +184,10 @@ namespace CashBookApp.WinForm.UI.CashBook
 
             dgPaymentList.Columns[0].HeaderText = "İşlem ID";
             dgPaymentList.Columns[1].HeaderText = "İşlem Zamanı";
+
             dgPaymentList.Columns[2].HeaderText = "Tutar";
+            dgPaymentList.Columns[2].DefaultCellStyle.Format = "C";
+
             dgPaymentList.Columns[3].HeaderText = "Ödeme Tipi";
             dgPaymentList.Columns[4].HeaderText = "Açıklama";
             dgPaymentList.Columns[5].HeaderText = "Gider Mi?";
@@ -194,9 +210,18 @@ namespace CashBookApp.WinForm.UI.CashBook
             dgSummary.DataSource = salesSummary;
             /* Summary Grid */
             dgSummary.Columns[0].HeaderText = "Ödeme Yöntemi";
+
             dgSummary.Columns[1].HeaderText = "Gelir";
+            dgSummary.Columns[1].DefaultCellStyle.Format = "C";
+
             dgSummary.Columns[2].HeaderText = "Gider";
+            dgSummary.Columns[2].DefaultCellStyle.Format = "C";
+
             dgSummary.Columns[3].HeaderText = "Toplam";
+            dgSummary.Columns[3].DefaultCellStyle.Format = "C";
+
+
+
             dgSummary.Columns[4].HeaderText = "Gelir İşlem Sayısı";
             dgSummary.Columns[5].HeaderText = "Gider İşlem Sayısı";
 
@@ -204,7 +229,7 @@ namespace CashBookApp.WinForm.UI.CashBook
             decimal income = salesSummary.Sum(q => q.Income);
             decimal expense = salesSummary.Sum(q => q.Expense);
 
-            toolStripStatusLabelSummary.Text = string.Format("GELİR NAKİT+KART={0}     -     GİDER NAKİT+KART={1}     -     GELİR KALAN={2}", income, expense, income - expense);
+            lblSummary.Text = string.Format("GELİR NAKİT+KART={0:C}     -     GİDER NAKİT+KART={1:C}     -     GELİR KALAN={2:C}", income, expense, income - expense);
             ApplyStyle2Grid();
         }
 
